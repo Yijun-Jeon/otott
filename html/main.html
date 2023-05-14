@@ -99,6 +99,21 @@
         width: 500px;
         height: auto;
       }
+      #main-top-aside {
+        height: 60px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .inner-menu-item {
+        float: left;
+        position: relative;
+      }
+      .inner-menu-item:hover {
+        background: purple;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -134,6 +149,25 @@
     <header id="main-header">
       <img class="main-logo" src="../img/logo.png" alt="" />
     </header>
+    <section id="main_section">
+      <aside id="main-top-aside">
+        <ul class="inner-menu">
+          <li class="inner-menu-item">
+            <span class="menu-title">ALL</span>
+          </li>
+          <li class="inner-menu-item">
+            <span class="menu-title">OTT별</span>
+          </li>
+          <li class="inner-menu-item">
+            <span class="menu-title">장르별</span>
+          </li>
+          <li class="inner-menu-item">
+            <span class="menu-title">Editor's Pick</span>
+          </li>
+        </ul>
+      </aside>
+      <article></article>
+    </section>
     <footer class="main_footer"></footer>
   </body>
 </html>
