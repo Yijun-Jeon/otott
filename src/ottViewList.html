@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>OTOTT's Viewers Ranking by OTT</title>
-    <!-- <link rel="list-stylesheet" href="css/list.css"> -->
+    <link rel="stylesheet" href="../css/initial.css" />
     <style>
       .list-nav-items {
         position: relative;
@@ -144,17 +144,34 @@
     </style>
   </head>
   <body>
-    <nav id="list-nav">
-      <img scr="http://placehold.it/100x50" alt="otott image" />
-      <ul class="list-nav-items">
-        <li>
-          <a href="main.html">ALL</a>
-        </li>
-        <li><a href="menu.html">OTT별</a></li>
-        <li>장르별</li>
-        <li>Editor's Pick</li>
-      </ul>
-      <div id="search-box"></div>
+    <nav id="main-navigation">
+      <div class="pull-left">
+        <a class="nav-logo-mini" href="main.html">
+          <span>OTOTT</span>
+        </a>
+      </div>
+      <div class="pull-right">
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
+            <a class="nav-menu-title" href="main.html">ALL</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-menu-title" href="ottMenu.html">OTT별</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-menu-title" href="genreMenu.html">장르별</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-menu-title" href="editorMenu.html">Editor's Pick</a>
+          </li>
+        </ul>
+        <div class="nav-search-bar">
+          <form>
+            <input type="text" class="input-search" />
+            <input type="submit" class="input-search-submit" value="검색" />
+          </form>
+        </div>
+      </div>
     </nav>
     <section id="list-section">
       <aside>
