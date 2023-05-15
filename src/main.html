@@ -16,7 +16,7 @@
         list-style: none;
       }
       body {
-        width: 700px;
+        width: 100%;
         margin: 0 auto;
       }
       .pull-left {
@@ -26,25 +26,36 @@
         float: right;
         display: flex;
       }
+      /* 고정바 고정바 고정바 고정바 고정바 고정바  */
       #main-navigation {
         border-bottom: 1px solid black;
-        height: 40px;
+        height: 80px;
       }
       .nav-logo-mini {
         float: left;
         position: relative;
-        line-height: 30px;
+        line-height: 80px;
         text-align: center;
-        padding: 5px 20px;
+        font-size: xx-large;
+        padding-left: 20px;
       }
       .nav-menu-item {
-        height: 40px;
+        height: 80px;
         float: left;
         position: relative;
       }
       .nav-menu-item:hover {
         background: rgb(164, 175, 249);
         color: white;
+      }
+      .nav-menu-title {
+        display: block;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        margin: 0px 60px;
+        margin-top: 20px;
+        font-size: large;
       }
       .menu-title {
         display: block;
@@ -57,6 +68,7 @@
         display: inline-block;
         height: 40px;
         padding: 7px;
+        margin-top: 20px;
       }
       .input-search {
         display: block;
@@ -65,7 +77,7 @@
         border: 1px solid #cccccc;
         border-radius: 15px 0 0 15px;
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-        width: 120px;
+        width: 180px;
         height: 24px;
         padding: 0 0 0 10px;
         font-size: 15px;
@@ -88,11 +100,13 @@
         display: inline-block;
       }
       #main-header {
-        padding: 0px;
+        width: 100%;
         height: 300px;
         background-color: white;
-        border: 1px solid black;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: rgb(141, 109, 183);
       }
       .main-logo {
         width: 500px;
@@ -125,8 +139,12 @@
         color: white;
       }
       .chart-container {
+        background-color: white;
+        margin: 0 25%;
         height: 400px;
         overflow: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
       }
       .rank {
         border: 1px solid black;
@@ -170,16 +188,16 @@
       <div class="pull-right">
         <ul class="nav-menu">
           <li class="nav-menu-item">
-            <a class="menu-title" href="main.html">ALL</a>
+            <a class="nav-menu-title" href="main.html">ALL</a>
           </li>
           <li class="nav-menu-item">
-            <a class="menu-title" href="menu.html">OTT별</a>
+            <a class="nav-menu-title" href="menu.html">OTT별</a>
           </li>
           <li class="nav-menu-item">
-            <a class="menu-title" href="genreMenu.html">장르별</a>
+            <a class="nav-menu-title" href="genreMenu.html">장르별</a>
           </li>
           <li class="nav-menu-item">
-            <a class="menu-title" href="editorMenu.html">Editor's Pick</a>
+            <a class="nav-menu-title" href="editorMenu.html">Editor's Pick</a>
           </li>
         </ul>
         <div class="nav-search-bar">
