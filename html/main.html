@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OTOTT</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: ‘맑은 고딕’, ‘Malgun Gothic’, Gothic, sans-serif;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      li {
+        list-style: none;
+      }
+      body {
+        width: 700px;
+        margin: 0 auto;
+      }
+      .pull-left {
+        float: left;
+      }
+      .pull-right {
+        float: right;
+        display: flex;
+      }
+      #main-navigation {
+        border-bottom: 1px solid black;
+        height: 40px;
+      }
+      .nav-logo-mini {
+        float: left;
+        position: relative;
+        line-height: 30px;
+        text-align: center;
+        padding: 5px 20px;
+      }
+      .nav-menu-item {
+        height: 40px;
+        float: left;
+        position: relative;
+      }
+      .nav-menu-item:hover {
+        background: rgb(164, 175, 249);
+        color: white;
+      }
+      .menu-title {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        padding: 5px 20px;
+      }
+      .nav-search-bar {
+        display: inline-block;
+        height: 40px;
+        padding: 7px;
+      }
+      .input-search {
+        display: block;
+        float: left;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 15px 0 0 15px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+        width: 120px;
+        height: 24px;
+        padding: 0 0 0 10px;
+        font-size: 15px;
+        color: #555555;
+      }
+      .input-search:focus {
+        border-color: rgba(82, 168, 236, 0.8);
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      }
+      .input-search-submit {
+        display: block;
+        float: left;
+        width: 50px;
+        height: 26px;
+        border-radius: 0 15px 15px 0;
+        border: 1px solid #cccccc;
+        margin-left: -1px;
+        vertical-align: top;
+        display: inline-block;
+      }
+      #main-header {
+        padding: 0px;
+        height: 300px;
+        background-color: white;
+        border: 1px solid black;
+        text-align: center;
+      }
+      .main-logo {
+        width: 500px;
+        height: auto;
+      }
+      #main-top-aside {
+        height: 60px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .aside-menu-item {
+        float: left;
+        position: relative;
+      }
+      .aside-menu-item:hover {
+        background: rgb(164, 175, 249);
+        color: white;
+      }
+
+      /* 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 */
+      #chart-article {
+        background-color: rgb(164, 175, 249);
+        border: 1px solid black;
+        text-align: center;
+      }
+      .chart-title {
+        padding: 20px 0px;
+        color: white;
+      }
+      .chart-container {
+        height: 400px;
+        overflow: auto;
+      }
+      .rank {
+        border: 1px solid black;
+        background-color: rgb(21, 32, 54);
+        height: 50px;
+        padding: 5px;
+        margin: 10px 30px;
+        border-radius: 20px;
+        color: white;
+        overflow: hidden;
+      }
+      .pull-left-rank {
+        height: 50px;
+        float: left;
+        display: flex;
+        align-items: center;
+      }
+      .pull-right-rank {
+        height: 50px;
+        float: right;
+        display: flex;
+        align-items: center;
+      }
+      .poster-img {
+        width: 40px;
+        border-radius: 10px;
+        margin: 0px 10px;
+      }
+      .rank-number {
+        margin: 0px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="main-navigation">
+      <div class="pull-left">
+        <a class="nav-logo-mini" href="main.html">
+          <span>OTOTT</span>
+        </a>
+      </div>
+      <div class="pull-right">
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
+            <a class="menu-title" href="main.html">ALL</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="menu-title" href="menu.html">OTT별</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="menu-title" href="genreMenu.html">장르별</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="menu-title" href="editorMenu.html">Editor's Pick</a>
+          </li>
+        </ul>
+        <div class="nav-search-bar">
+          <form>
+            <input type="text" class="input-search" />
+            <input type="submit" class="input-search-submit" value="검색" />
+          </form>
+        </div>
+      </div>
+    </nav>
+    <header id="main-header">
+      <img class="main-logo" src="../img/logo.png" alt="" />
+    </header>
+    <section id="main-section">
+      <aside id="main-top-aside">
+        <ul class="aside-menu">
+          <li class="aside-menu-item">
+            <a class="menu-title" href="main.html">ALL</a>
+          </li>
+          <li class="aside-menu-item">
+            <a class="menu-title" href="ottMenu.html">OTT별</a>
+          </li>
+          <li class="aside-menu-item">
+            <a class="menu-title" href="genreMenu.html">장르별</a>
+          </li>
+          <li class="aside-menu-item">
+            <a class="menu-title" href="editorMenu.html">Editor's Pick</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- /* 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 */ -->
+      <article id="chart-article">
+        <div class="chart-title">실시간 통합 차트</div>
+        <div class="chart-container">
+          <ul class="chart-list-container">
+            <a href="product.html">
+              <li class="rank">
+                <div class="pull-left-rank">
+                  <img
+                    class="poster-img"
+                    src="https://nujhrcqkiwag1408085.cdn.ntruss.com/static/upload/drama_poster_images/280x400/drama_102591_1681959812.jpg"
+                    alt=""
+                  />
+                  <span class="rank-number">1</span>
+                  <span class="title-text">택배기사</span>
+                </div>
+                <div class="pull-right-rank">
+                  <span class="rank-number">임시</span>
+                </div>
+              </li>
+            </a>
+            <li class="rank">
+              <div class="pull-left-rank">
+                <img
+                  class="poster-img"
+                  src="https://nujhrcqkiwag1408085.cdn.ntruss.com/static/upload/movie_poster_images/280x400/movie_122686_1683047635.JPG"
+                  alt=""
+                />
+                <span class="rank-number">2</span>
+                <span class="title-text">뿅뿅 지구오락실 2</span>
+              </div>
+              <div class="pull-right-rank">
+                <span class="rank-number">임시</span>
+              </div>
+            </li>
+            <li class="rank">
+              <div class="pull-left-rank">
+                <img
+                  class="poster-img"
+                  src="https://nujhrcqkiwag1408085.cdn.ntruss.com/static/upload/movie_poster_images/280x400/movie_101661_1674709973.jpg"
+                  alt=""
+                />
+                <span class="rank-number">3</span>
+                <span class="title-text">스즈메의 문단속</span>
+              </div>
+              <div class="pull-right-rank">
+                <span class="rank-number">임시</span>
+              </div>
+            </li>
+            <li class="rank">
+              <div class="pull-left-rank">
+                <img
+                  class="poster-img"
+                  src="https://nujhrcqkiwag1408085.cdn.ntruss.com/static/upload/drama_poster_images/280x400/drama_119270_1682653507.jpg"
+                  alt=""
+                />
+                <span class="rank-number">4</span>
+                <span class="title-text">낭만닥터 김사부 시즌 3</span>
+              </div>
+              <div class="pull-right-rank">
+                <span class="rank-number">임시</span>
+              </div>
+            </li>
+            <li class="rank">
+              <div class="pull-left-rank">
+                <img
+                  class="poster-img"
+                  src="https://nujhrcqkiwag1408085.cdn.ntruss.com/static/upload/drama_poster_images/280x400/drama_116913_1681789097.JPG"
+                  alt=""
+                />
+                <span class="rank-number">5</span>
+                <span class="title-text">구미호뎐 1938</span>
+              </div>
+              <div class="pull-right-rank">
+                <span class="rank-number">임시</span>
+              </div>
+            </li>
+            <li class="rank">
+              <div class="pull-left-rank">
+                <img
+                  class="poster-img"
+                  src="https://nujhrcqkiwag1408085.cdn.ntruss.com/static/upload/movie_poster_images/280x400/movie_1836_1624521438.jpg"
+                  alt=""
+                />
+                <span class="rank-number">6</span>
+                <span class="title-text">너의 이름은</span>
+              </div>
+              <div class="pull-right-rank">
+                <span class="rank-number">임시</span>
+              </div>
+            </li>
+            <li class="rank">
+              <div class="pull-left-rank">
+                <img
+                  class="poster-img"
+                  src="https://nujhrcqkiwag1408085.cdn.ntruss.com/static/upload/movie_poster_images/280x400/movie_76518_1671216632.jpeg"
+                  alt=""
+                />
+                <span class="rank-number">6</span>
+                <span class="title-text">영웅</span>
+              </div>
+              <div class="pull-right-rank">
+                <span class="rank-number">임시</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <footer class="main-footer"></footer>
+  </body>
+</html>
