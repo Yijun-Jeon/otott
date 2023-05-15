@@ -4,20 +4,14 @@
     <title>OTOTT's Viewers Ranking by OTT</title>
     <!-- <link rel="list-stylesheet" href="css/list.css"> -->
     <style>
-      .list-nav-items {
-        position: relative;
-        margin-left: 90vh;
-      }
-      .list-nav-items li {
-        list-style-type: none;
-        display: inline-block;
-        text-align: center;
-        width: 100px;
-        margin: 0px 5px;
-      }
+      /* nav */
+      /* 여기다 넣어주세요!!!!!!*/
 
+      /*section */
+      /*aside*/
       #list-section {
         background-color: #a2afff;
+        padding-bottom: 50px;
       }
 
       .selection-list {
@@ -56,6 +50,7 @@
         text-align: center;
       }
 
+      /*article section*/
       .ranking-box {
         position: relative;
         background-color: white;
@@ -140,6 +135,89 @@
         .fourth-ranking
         .fifth-ranking {
         position: relative;
+      }
+
+      /*footer section*/
+      #footer-section {
+        display: flex;
+        justify-content: space-between; /*균등 분배*/
+      }
+
+      .footer-li-left,
+      .footer-li-right {
+        display: inline-block;
+        width: 50%;
+      }
+
+      .footer-li-right {
+        text-align: right;
+      }
+
+      .footer-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-listitem-center {
+        list-style: none;
+      }
+
+      #footer-copyrights span {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+        white-space: nowrap; /*텍스트의 줄 바꿈을 제어*/
+      }
+
+      #footer-otott-name-logo {
+        font-size: 25px;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .footer-listitem-left {
+        text-align: left;
+        list-style: none;
+      }
+
+      .footer-listitem-right {
+        list-style: none;
+        padding-right: 5%;
+      }
+
+      .footer-listitem-left li:nth-child(2n + 1),
+      .footer-listitem-right li:nth-child(2n + 1) {
+        color: rgb(160, 158, 158);
+        font-size: 13px;
+      }
+
+      .footer-listitem-left li:nth-child(2n) {
+        margin: 10px 0; /*right 와 높이 맞추기 위해*/
+        font-size: 14px;
+      }
+
+      .footer-listitem-right li:nth-child(2n) {
+        font-size: 14px;
+      }
+
+      #footer-github-icon {
+        width: 25px;
+        height: 25px;
+        /*logo 가운데 위치*/
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .footer-li-content-ott {
+        display: inline-block;
+        margin: 0 1px;
+      }
+
+      .footer-ott {
+        margin: 1px;
+        width: 25px;
+        height: 25px;
       }
     </style>
   </head>
@@ -638,6 +716,96 @@
         </div>
       </article>
     </section>
-    <footer></footer>
+    <footer id="footer-section">
+      <div class="footer-li-left">
+        <ul class="footer-listitem-left">
+          <li class="footer-li-name">Made by</li>
+          <li class="footer-li-content">
+            Yijun Jeon & Hyeonji Yoo & Sumin Lee
+          </li>
+          <li class="footer-li-name">Thanks to</li>
+          <li class="footer-li-content">Subin Yoo & Professor Yong H. Kim</li>
+        </ul>
+      </div>
+      <div class="footer-center">
+        <ul class="footer-listitem-center">
+          <li id="footer-otott-name-logo">OTOTT</li>
+          <li id="footer-copyrights">
+            <span> COPYRIGHTS ⓒ SUNGKYUNKWAN UNIVERSITY </span>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-li-right">
+        <ul class="footer-listitem-right">
+          <li class="footer-li-name">Project Github</li>
+          <li class="footer-li-content">
+            <a href="https://github.com/hyeonnjii/otott">
+              <img
+                id="footer-github-icon"
+                src="../images/footer/github_logo.png"
+                alt="github"
+              />
+            </a>
+          </li>
+          <li class="footer-li-name">Source</li>
+          <li class="footer-li-content">
+            <a href="https://www.netflix.com/kr/" title="Netflix">
+              <li class="footer-li-content-ott">
+                <img
+                  class="footer-ott"
+                  src="../images/footer/netflix.png"
+                  alt="netflix"
+                />
+              </li>
+            </a>
+            <a href="https://www.tving.com/onboarding" title="TVing">
+              <li class="footer-li-content-ott">
+                <img
+                  class="footer-ott"
+                  src="../images/footer/tving.png"
+                  alt="tving"
+                />
+              </li>
+            </a>
+            <a href="https://watcha.com/" title="Watcha">
+              <li class="footer-li-content-ott">
+                <img
+                  class="footer-ott"
+                  src="../images/footer/watcha.png"
+                  alt="watcha"
+                />
+              </li>
+            </a>
+            <a href="https://www.wavve.com/" title="Wavve">
+              <li class="footer-li-content-ott">
+                <img
+                  class="footer-ott"
+                  src="../images/footer/wavve.png"
+                  alt="wavve"
+                />
+              </li>
+            </a>
+            <a href="https://www.coupangplay.com/" title="CoupangPlay">
+              <li class="footer-li-content-ott">
+                <img
+                  class="footer-ott"
+                  src="../images/footer/coupang.jpeg"
+                  alt="coupang"
+                />
+              </li>
+            </a>
+            <a href="https://www.disneyplus.com/ko-kr" title="Disney+">
+              <li class="footer-li-content-ott">
+                <img
+                  class="footer-ott"
+                  src="../images/footer/disney.png"
+                  alt="disney"
+                />
+              </li>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

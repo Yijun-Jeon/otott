@@ -1,108 +1,219 @@
-.list-nav-items {
-    position: relative;
-    margin-left: 90vh;
-}
-.list-nav-items li {
-    list-style-type: none;
-    display: inline-block;
-    text-align: center;
-    width: 100px;
-    margin: 0px 5px;
-}
+/* nav */
+/* .list-nav-items {
+        position: relative;
+        margin-left: 90vh;
+      }
+      .list-nav-items li {
+        list-style-type: none;
+        display: inline-block;
+        text-align: center;
+        width: 100px;
+        margin: 0px 5px;
+      } */
 
+/*section */
+/*aside*/
 #list-section {
-    background-color: #A2AFFF;
+  background-color: #a2afff;
+  padding-bottom: 50px;
 }
 
 .selection-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
 }
 
 .selection-list li {
-    background-color: #7E89C7;
-    color: white;
-    border-radius: 10px;
+  background-color: #7e89c7;
+  color: white;
+  border-radius: 10px;
 
-    list-style-type: none;
-    display: inline-block;
-    text-align: center;
-    width: 110px;
-    height: 40px;
-    margin: 15px;
-    line-height: 2.8;
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  width: 110px;
+  height: 40px;
+  margin: 15px;
+  line-height: 2.8;
 }
-
 
 .view-review-list {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    /* margin-left: 50vh; */
-    transform: translateX(-20%); /*화면 크기에 상관없이 일정 간격 유지 가능*/
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* margin-left: 50vh; */
+  transform: translateX(-20%); /*화면 크기에 상관없이 일정 간격 유지 가능*/
 }
 .view-review-list li {
-    list-style-type: none;
-    display: inline;
-    text-align: center;
+  list-style-type: none;
+  display: inline;
+  text-align: center;
 }
 
+/*article section*/
 .ranking-box {
-    background-color: white;
-    border-radius: 10px;
-    margin: 0 15%;
-    padding-top: 10px;
-    padding-left: 30px;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 15%;
+  padding-top: 10px;
+  padding-left: 30px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-a:hover {
-    color: #7E89C7;
-}
-
-img{
-    position: relative;
-    width: 150px;
-    margin: 10px 10px 0 20px;
-}
-
-p {
-    width: 150px;
-    margin-left: 20px;
-    font-size: 11px;
-}
-
-.ranking-listitem li{
-    position: relative;
-    list-style-type: none;
-    display: inline-block;
-}
-
-.ranking-icon {
+/* .direction-right {
     display: block;
     position: absolute;
-    left: 20px;
-    top: 10px; 
-    width: 28px;
-    height: 28px;
+    right: 20px;
+    bottom: 100px; 
+    width: 34px;
+    height: 34px;
     line-height: 27px;
     z-index: 1;
 
-    background-color: rgba(0, 0, 0, 0.77);
-    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255);
+    border: 1px solid rgb(249, 249, 249);
+    border-radius: 200px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px 0px;
+    background-size: 12px;
     font-weight: 700;
     letter-spacing: normal;
     text-align: center;
     border-radius: 4px;
     opacity: 1;
     transition: opacity 300ms ease 0s;
+} */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #7e89c7;
 }
 
-.first-ranking .second-ranking .third-ranking .fourth-ranking .fifth-ranking{
-    position: relative;
+img {
+  position: relative;
+  width: 150px;
+  margin: 10px 10px 0 20px;
+}
+
+p {
+  width: 150px;
+  margin-left: 20px;
+  font-size: 11px;
+}
+
+.ranking-listitem li {
+  position: relative;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.ranking-icon {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  line-height: 27px;
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.77);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  letter-spacing: normal;
+  text-align: center;
+  border-radius: 4px;
+  opacity: 1;
+  transition: opacity 300ms ease 0s;
+}
+
+.first-ranking .second-ranking .third-ranking .fourth-ranking .fifth-ranking {
+  position: relative;
+}
+
+/*footer section*/
+#footer-section {
+  display: flex;
+  justify-content: space-between; /*균등 분배*/
+}
+
+.footer-li-left,
+.footer-li-right {
+  display: inline-block;
+  width: 50%;
+}
+
+.footer-li-right {
+  text-align: right;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-listitem-center {
+  list-style: none;
+}
+
+#footer-copyrights span {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  white-space: nowrap; /*텍스트의 줄 바꿈을 제어*/
+}
+
+#footer-otott-name-logo {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.footer-listitem-left {
+  text-align: left;
+  list-style: none;
+}
+
+.footer-listitem-right {
+  list-style: none;
+  padding-right: 5%;
+}
+
+.footer-listitem-left li:nth-child(2n + 1),
+.footer-listitem-right li:nth-child(2n + 1) {
+  color: rgb(160, 158, 158);
+  font-size: 13px;
+}
+
+.footer-listitem-left li:nth-child(2n) {
+  margin: 10px 0; /*right 와 높이 맞추기 위해*/
+  font-size: 14px;
+}
+
+.footer-listitem-right li:nth-child(2n) {
+  font-size: 14px;
+}
+
+#footer-github-icon {
+  width: 25px;
+  height: 25px;
+  /*logo 가운데 위치*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-li-content-ott {
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.footer-ott {
+  margin: 1px;
+  width: 25px;
+  height: 25px;
 }
