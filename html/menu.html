@@ -123,7 +123,6 @@
         text-align: center;
       }
       .menu-container {
-        border: 1px solid black;
         height: 229.75px;
         display: flex;
         justify-content: space-evenly;
@@ -139,9 +138,28 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
-
         margin-top: 40px;
+
+        background-size: 82%;
+        background-position: center;
       }
+      /* 넷플릭스 박스 */
+      .info-box-top.netflix:hover {
+        transform: translateY(5px);
+        background-image: url('../img/netflix.png');
+        /* background-image: linear-gradient(90deg, #f61b10, #ef0963); */
+      }
+      /* 티빙 박스 */
+      .info-box-top.tiving:hover {
+        transform: translateY(5px);
+        background-image: url('../img/tving.png');
+      }
+      /* 왓챠 박스 */
+      .info-box-top.watcha:hover {
+        transform: translateY(5px);
+        background-image: url('../img/watcha.png');
+      }
+
       .info-box-bottom {
         height: 150px;
         width: 200px;
@@ -152,14 +170,40 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
-
         margin-bottom: 40px;
+
+        background-size: 85%;
+        background-position: center;
       }
+      /* 웨이브 박스 */
+      .info-box-bottom.wavve:hover {
+        transform: translateY(5px);
+        background-image: url('../img/wavve.png');
+        /* background-image: linear-gradient(90deg, #f61b10, #ef0963); */
+      }
+      /* 쿠팡 플레이 박스 */
+      .info-box-bottom.coupang:hover {
+        transform: translateY(5px);
+        background-image: url('../img/coupang.jpeg');
+      }
+      /* 디즈니 플러스 박스 */
+      .info-box-bottom.disney:hover {
+        transform: translateY(5px);
+        background-image: url('../img/disney.png');
+      }
+
       .info-box-text {
         position: relative;
         color: white;
         font-size: x-large;
         font-weight: bold;
+      }
+
+      .info-box-top:hover .info-box-text {
+        display: none;
+      }
+      .info-box-bottom:hover .info-box-text {
+        display: none;
       }
     </style>
   </head>
@@ -217,20 +261,20 @@
       <article id="menu-article">
         <div class="menu-container">
           <a href="ottViewList.html">
-            <div class="info-box-top">
+            <div class="info-box-top netflix">
               <span class="info-box-text"> 넷플릭스 </span>
               <span class="info-box-text"> Netflix </span>
             </div>
           </a>
 
           <a href="ottViewList.html">
-            <div class="info-box-top">
+            <div class="info-box-top tiving">
               <span class="info-box-text"> 티빙 </span>
               <span class="info-box-text"> Tving </span>
             </div>
           </a>
           <a href="ottViewList.html">
-            <div class="info-box-top">
+            <div class="info-box-top watcha">
               <span class="info-box-text"> 왓챠 </span>
               <span class="info-box-text"> Watcha </span>
             </div>
@@ -238,19 +282,19 @@
         </div>
         <div class="menu-container">
           <a href="ottViewList.html">
-            <div class="info-box-bottom">
+            <div class="info-box-bottom wavve">
               <span class="info-box-text"> 웨이브 </span>
               <span class="info-box-text"> Wavve </span>
             </div>
           </a>
           <a href="ottViewList.html">
-            <div class="info-box-bottom">
+            <div class="info-box-bottom coupang">
               <span class="info-box-text"> 쿠팡플레이 </span>
               <span class="info-box-text"> Coupang Play </span>
             </div>
           </a>
           <a href="ottViewList.html">
-            <div class="info-box-bottom">
+            <div class="info-box-bottom disney">
               <span class="info-box-text"> 디즈니+ </span>
               <span class="info-box-text"> Disney+ </span>
             </div>
