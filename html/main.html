@@ -27,23 +27,22 @@
         display: flex;
       }
       #main-navigation {
-        border-top: 1px solid #c8c8c8;
         border-bottom: 1px solid black;
         height: 40px;
       }
-      .header-logo-mini {
+      .nav-logo-mini {
         float: left;
         position: relative;
         line-height: 30px;
         text-align: center;
         padding: 5px 20px;
       }
-      .outer-menu-item {
+      .nav-menu-item {
         height: 40px;
         float: left;
         position: relative;
       }
-      .outer-menu-item:hover {
+      .nav-menu-item:hover {
         background: rgb(164, 175, 249);
         color: white;
       }
@@ -54,7 +53,7 @@
         text-align: center;
         padding: 5px 20px;
       }
-      .search-bar {
+      .nav-search-bar {
         display: inline-block;
         height: 40px;
         padding: 7px;
@@ -106,11 +105,11 @@
         justify-content: center;
         align-items: center;
       }
-      .inner-menu-item {
+      .aside-menu-item {
         float: left;
         position: relative;
       }
-      .inner-menu-item:hover {
+      .aside-menu-item:hover {
         background: rgb(164, 175, 249);
         color: white;
       }
@@ -164,26 +163,26 @@
   <body>
     <nav id="main-navigation">
       <div class="pull-left">
-        <a class="header-logo-mini" href="main.html">
+        <a class="nav-logo-mini" href="main.html">
           <span>OTOTT</span>
         </a>
       </div>
       <div class="pull-right">
-        <ul class="outer-menu">
-          <li class="outer-menu-item">
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
             <a class="menu-title" href="main.html">ALL</a>
           </li>
-          <li class="outer-menu-item">
+          <li class="nav-menu-item">
             <a class="menu-title" href="menu.html">OTT별</a>
           </li>
-          <li class="outer-menu-item">
+          <li class="nav-menu-item">
             <a class="menu-title" href="genreMenu.html">장르별</a>
           </li>
-          <li class="outer-menu-item">
+          <li class="nav-menu-item">
             <a class="menu-title" href="editorMenu.html">Editor's Pick</a>
           </li>
         </ul>
-        <div class="search-bar">
+        <div class="nav-search-bar">
           <form>
             <input type="text" class="input-search" />
             <input type="submit" class="input-search-submit" value="검색" />
@@ -196,17 +195,17 @@
     </header>
     <section id="main-section">
       <aside id="main-top-aside">
-        <ul class="inner-menu">
-          <li class="inner-menu-item">
+        <ul class="aside-menu">
+          <li class="aside-menu-item">
             <a class="menu-title" href="main.html">ALL</a>
           </li>
-          <li class="inner-menu-item">
+          <li class="aside-menu-item">
             <a class="menu-title" href="ottMenu.html">OTT별</a>
           </li>
-          <li class="inner-menu-item">
+          <li class="aside-menu-item">
             <a class="menu-title" href="genreMenu.html">장르별</a>
           </li>
-          <li class="inner-menu-item">
+          <li class="aside-menu-item">
             <a class="menu-title" href="editorMenu.html">Editor's Pick</a>
           </li>
         </ul>
@@ -321,6 +320,6 @@
         </div>
       </article>
     </section>
-    <footer class="main_footer"></footer>
+    <footer class="main-footer"></footer>
   </body>
 </html>
