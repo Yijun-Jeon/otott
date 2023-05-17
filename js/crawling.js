@@ -29,7 +29,7 @@ const url = 'https://m.kinolights.com/ranking/kino';
         imgSrc: imgSrc,
       });
     }
-    console.log(productsJson);
+    // console.log(productsJson);
 
     // 추출한 차트 목록 json으로 작성
     fs.writeFile(
