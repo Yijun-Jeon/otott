@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:8080/data/products.json')
+fetch('http://localhost:8080/data/products.json')
   .then((response) => response.json())
   .then((data) => {
     // JSON 파일이 성공적으로 로드되었을 때 실행되는 함수
