@@ -2,8 +2,6 @@ const { Builder, By, Key, until } = require('selenium-webdriver'); //모듈 불�
 const chrome = require('selenium-webdriver/chrome');
 const fs = require('fs'); // JSON 파일 작성 모듕
 
-const titleList = [];
-const imgSrcList = [];
 let productsJson = [];
 
 const url = 'https://m.kinolights.com/ranking/kino';
@@ -11,31 +9,34 @@ const url = 'https://m.kinolights.com/ranking/kino';
   let driver = await new Builder().forBrowser('chrome').build(); //가상 브라우저 빌드
   try {
     await driver.get(url);
+    // lazy load 방지 하단 스크롤
     await driver.executeScript(
       'window.scrollTo(0, document.body.scrollHeight);'
     );
+    // 1~20위 차트 li 목록
     var products = await driver.findElements(By.className('rank'));
     console.log(products.length);
 
     for (i = 0; i < products.length; i++) {
-      var img = await products[i].findElement(By.tagName('img'));
-      var title = await products[i].findElement(By.className('title-text'));
-      imgSrcList.push(await img.getAttribute('src'));
-      titleList.push(await title.getText());
+      var imgTag = await products[i].findElement(By.tagName('img'));
+      var titleTag = await products[i].findElement(By.className('title-text'));
+
+      var imgSrc = await imgTag.getAttribute('src');
+      var titleTxt = await titleTag.getText();
 
       await productsJson.push({
-        title: titleList[titleList.length - 1],
-        img: imgSrcList[imgSrcList.length - 1],
+        title: titleTxt,
+        imgSrc: imgSrc,
       });
     }
     console.log(productsJson);
 
-    // 비동기처리방식 + json형식으로 저장
+    // 추출한 차트 목록 json으로 작성
     fs.writeFile(
       './data/chart.json',
       JSON.stringify(productsJson),
       function (err) {
-        console.log('FM 매치엔진 json파일 생성완료');
+        console.log('실시간 통합 차트 json 파일 생성 완료');
       }
     );
   } finally {
@@ -43,21 +44,3 @@ const url = 'https://m.kinolights.com/ranking/kino';
     await driver.quit();
   }
 })();
-
-// json파일을 List로 생성
-let version_array = [
-  {
-    speed_scaler: '10000',
-    very_slow_walk_speed: '4470',
-    slow_walk_speed: '8940',
-    walk_speed: '13410',
-    fast_walk_speed: '17880',
-  },
-  {
-    speed_scaler: '5000',
-    very_slow_walk_speed: '1234',
-    slow_walk_speed: '6666',
-    walk_speed: '7777',
-    fast_walk_speed: '23000',
-  },
-];
