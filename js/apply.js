@@ -1,5 +1,5 @@
 // 문서의 로드가 완료되었을 때 실행 처리
-$(window).load(function () {
+$(document).ready(function () {
   // 차트 1~20위까지의 요소 html 자동 삽입
   for (i = 1; i <= 20; i++) {
     rankElement = `<a href='product.html'>
@@ -21,6 +21,7 @@ $(window).load(function () {
       </div>
     </li>
   </a>`;
+
     document.getElementById('chart').innerHTML += rankElement;
   }
 

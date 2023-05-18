@@ -11,7 +11,7 @@ fetch('http://localhost:8080/data/products.json')
   })
   .catch((error) => {
     // JSON 파일 로드에 실패했을 때 실행되는 함수
-    console.log('JSON 파일 로드 실패', error);
+    console.log('products.json loda fail: ', error);
   });
 
 fetch('http://localhost:8080/data/chart.json')
@@ -27,5 +27,5 @@ fetch('http://localhost:8080/data/chart.json')
   })
   .catch((error) => {
     // JSON 파일 로드에 실패했을 때 실행되는 함수
-    console.log('JSON 파일 로드 실패', error);
+    console.log('chart.json load fail: ', error);
   });
