@@ -35,7 +35,7 @@ const watcha = 'https://pedia.watcha.com/ko-KR';
 
     // #### 검색바 ####
     var search = await driver.findElement(By.name('searchKeyword'));
-    await search.sendKeys('시그널');
+    await search.sendKeys('인터스텔라');
     await search.submit();
 
     // #### 검색한 첫 번째 작품 ####
@@ -51,6 +51,12 @@ const watcha = 'https://pedia.watcha.com/ko-KR';
       '#root > div > div.css-1xm32e0 > section > div > div.css-10ofaaw > div > section > div.css-1p7n6er-Pane.e1svyhwg15 > div > div > div > div > h1'
     ).getText();
     console.log(title);
+
+    // #### 작품 이미지 url ####
+    var imgSrc = await find(driver, '.css-qhzw1o-StyledImg').getAttribute(
+      'src'
+    );
+    console.log(imgSrc);
 
     // #### 작품 상단 정보 ####
     var detail = await find(

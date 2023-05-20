@@ -1,14 +1,182 @@
 [
   {
-    "title": "닥터 차정숙",
-    "imgSrc": "??",
-    "detail": "2023 ・ JTBC ・ 드라마/가족/TV드라마",
-    "rating": "평균 ★3.4 (617명)"
+    "title": "낭만닥터 김사부 3",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/_eUtBO_grdbsqMpRexbxIg.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9ESTNOek13TXpZM01UVTBNVFEwTXpVaWZRLmhQUzlodk0tNU1tTTc1ZGNrWDhfaVlyRGVCTzhuQm10bzUyTVVqRE8xZEU",
+    "detail": "2023 ・ SBS ・ 드라마/로맨스/TV드라마",
+    "rating": "평균 ★3.9 (211명)",
+    "infoTitle": "낭만닥터 김사부\n2023 · SBS · 드라마/로맨스/TV드라마\n한국 · 15세",
+    "info": "누군가를 이기고 싶어 의사가 된 남자와 누군가에게 인정받고 싶어서 의사가 된 여자가 김사부를 만나 삶의 가치를 깨닫는다는 내용을 담은 드라마",
+    "ottList": ["디즈니+", "웨이브"]
   },
   {
-    "title": "너의 이름은.",
-    "imgSrc": "??",
-    "detail": "2016 ・ 애니메이션/드라마/로맨스 ・ 일본",
-    "rating": "평균 ★4.0 (145만명)"
+    "title": "나쁜엄마",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/2B_tYb7t8d9CUIhU7e2xPQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9EQTROVFkyTnpFd09EVTBPREl4T1RnaWZRLmtsMmt3YW9HdGxlalNCanhHY3VISFpGdE5rQXF4Skg0QTRjUFpnRGRucm8",
+    "detail": "2023 ・ JTBC ・ 코미디/드라마/TV드라마",
+    "rating": "평균 ★3.6 (411명)",
+    "infoTitle": "나쁜엄마\n2023 · JTBC · 코미디/드라마/TV드라마\n한국 · 15세",
+    "info": "자식을 위해 악착같이 나쁜 엄마가 될 수밖에 없었던 엄마 '영순'과 어느날 아이가 돼버린 검사 아들 '강호'가 다시 모자 관계를 회복하는 내용을 담은 감동 힐링 코미디",
+    "ottList": ["넷플릭스", "티빙"]
+  },
+  {
+    "title": "구미호뎐1938",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/rELmL8TOXUkWGNSP25Uh8A.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9ETXlOamt4TXpJeE5qa3pNelUyTkRFaWZRLmhxTzlhTzJUWFpnRVFzUjA2R3NhYVA3STRHMVRJZnhwY2stOGNicmJ1NDQ",
+    "detail": "2023 ・ tvN ・ 판타지/액션/시대극",
+    "rating": "평균 ★3.3 (106명)",
+    "infoTitle": "구미호뎐\n2023 · tvN · 판타지/액션/시대극/TV드라마\n한국 · 15세",
+    "info": "1938년 혼돈의 시대에 불시착한 구미호가 현대로 돌아가기 위해 펼치는 K-판타지 액션 활극",
+    "ottList": ["티빙"]
+  },
+  {
+    "title": "하트시그널 시즌 4",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/S7Pvdic6yH9S3Kj_qLAtEQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9EUXpORE0wTVRZMU9UTTFOelUzTVRFaWZRLm9Ob2REY0llVm5nUm51RnRRdWlOWFAzMDZDOGV0RHE1MzFkdEhxS01id00",
+    "detail": "2023 ・ Channel A ・ 예능",
+    "rating": "평균 ★2.7 (13명)",
+    "infoTitle": "하트 시그널\n2023 · Channel A · 예능\n한국 · 15세",
+    "info": "시그널 하우스에서 펼쳐지는 청춘 남녀들의 연애를 관찰하고 분석하며 최종 커플을 추리하는 프로그램",
+    "ottList": ["티빙"]
+  },
+  {
+    "title": "택배기사",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/wGDzx44Fc7WPaaBylrbDRg.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9ETTJOVFU0TXpNNE1URTNNalExTkRVaWZRLi12WlFVd2xqY2JtX2JuZGFZVy1weHJ4c0ZKLXU4cXY2TGVWdVlCeGRnTUk",
+    "detail": "2023 ・ Netflix ・ 드라마/TV드라마",
+    "rating": "평균 ★1.9 (2,328명)",
+    "infoTitle": "택배기사\n2023 · Netflix · 드라마/TV드라마\n한국 · 15세",
+    "info": "대기 오염으로 황폐해진 2071년 디스토피아 세계. 한 난민이 막강한 힘을 자랑하는 택배기사가 되기 위해 힘겨운 싸움을 시작한다. 그래야만 식량을 구해 생존할 수 있기에.",
+    "ottList": ["넷플릭스"]
+  },
+  {
+    "title": "닥터 차정숙",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/VNnZ-R5XRBRUlvyCIFenQQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9EQTJNVEUyT0RVd09UVXdOekE1TmpRaWZRLklFRDNMTlJQRDY4UG9uT290N2JKR0lSWWdGbzJsdDRUTmlQT0U5MkZMemc",
+    "detail": "2023 ・ JTBC ・ 드라마/가족/TV드라마",
+    "rating": "평균 ★3.5 (694명)",
+    "infoTitle": "닥터 차정숙\n2023 · JTBC · 드라마/가족/TV드라마\n한국 · 15세",
+    "info": "가정주부에서 1년차 레지던트가 된 차정숙의 찢어진 인생 봉합기를 그린 드라마",
+    "ottList": ["넷플릭스", "티빙"]
+  },
+  {
+    "title": "어쩌다 마주친, 그대",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/_0aMXpUrwnLEF6kFqY7UQQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk5qazJNVGMyTURVeU9EWTBPVEV4TnpNaWZRLnVJdjEtR0lsN2thTGxEZEZCMWZENWxMRUNZdGF6WVBRRVRyNVBVSEdDNWM",
+    "detail": "2023 ・ KBS2 ・ 판타지/로맨스/드라마",
+    "rating": "평균 ★3.8 (98명)",
+    "infoTitle": "어쩌다 마주친, 그대\n2023 · KBS2 · 판타지/로맨스/드라마/TV드라마\n한국 · 전체",
+    "info": "1987년에 갇혀버린 두 남녀의 이상하고 아름다운 시간 여행기를 그린 드라마",
+    "ottList": ["웨이브"]
+  },
+  {
+    "title": "스즈메의 문단속",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/9XDeIclRe6SdKDknD_aGWg.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk56VTJOVE16TlRNNE9EVTVNVEEyTURVaWZRLkg5WWVENmVKWTdfYl9hNkdhdThHU0E2U1VCR3dqZkMxX0c4c2NnQ1NWVFE",
+    "detail": "2022 ・ 애니메이션/모험/액션 ・ 일본",
+    "rating": "평균 ★3.4 (4만명)",
+    "infoTitle": "すずめの戸締まり\n2022 · 일본 · 애니메이션\n2시간 1분 · 12세",
+    "info": "“이 근처에 폐허 없니? 문을 찾고 있어”\n규슈의 한적한 마을에 살고 있는 소녀 ‘스즈메’는 문을 찾아 여행 중인 청년 ‘소타’를 만난다. 그의 뒤를 쫓아 산속 폐허에서 발견한 낡은 문. 스즈메가 무언가에 이끌리듯 문을 열자 마을에 재난의 위기가 닥쳐오고 가문 대대로 문 너머의 재난을 봉인하는 소타를 도와 간신히 문을 닫는다.\n \n“닫아야만 하잖아요, 여기를!”\n재난을 막았다는 안도감도 잠시, 수수께끼의 고양이 ‘다이진’이 나타나 소타를 의자로 바꿔 버리고 일본 각지의 폐허에 재난을 부르는 문이 열리기 시작하자 스즈메는 의자가 된 소타와 함께 재난을 막기 위한 여정에 나선다.\n \n“꿈이 아니었어”\n규슈, 시코쿠, 고베, 도쿄. 재난을 막기 위해 일본 전역을 돌며 필사적으로 문을 닫아가던 중 어릴 적 고향에 닿은 스즈메는 잊고 있던 진실과 마주하게 되는데…",
+    "ottList": []
+  },
+  {
+    "title": "가디언즈 오브 갤럭시: Volume 3",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/TIxhP_uofjSnN1Wc00igqA.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk56YzFOamN5TmpZek56SXdNVFUwTURRaWZRLmNnT3BLOC1QVEV4bDByQWdJY2dIWWVaOURWZlA4Sk9uVTNVTC1FYXg1T1E",
+    "detail": "2023 ・ 액션/모험/코미디 ・ 미국",
+    "rating": "평균 ★4.1 (4만명)",
+    "infoTitle": "Guardians of the Galaxy Vol. 3\n2023 · 미국 · 액션\n2시간 30분 · 12세",
+    "info": "‘가모라’를 잃고 슬픔에 빠져 있던 ‘피터 퀼’이 위기에 처한 은하계와 동료를 지키기 위해 다시 한번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에 나서는 이야기",
+    "ottList": []
+  },
+  {
+    "title": "킬링 로맨스",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/8nHljziaHcILP4K3UXfkkg.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk56azVNalEwTVRJME5USTFOakUxTXpZaWZRLjBwMlEwM3A5YU5SMlJOeTZWV2VYQjN2YkhlXzQ2NWNOODdudDcySXg4elE",
+    "detail": "2021 ・ 코미디 ・ 한국",
+    "rating": "평균 ★3.4 (8,313명)",
+    "infoTitle": "킬링 로맨스\n2021 · 한국 · 코미디\n1시간 46분 · 15세",
+    "info": "로맨스는 없다! \nJOHN NA 죽여주는 작전만 있을 뿐!\n\n대재앙 같은 발연기로 국민 조롱거리로 전락한 톱스타 ‘여래’(이하늬). 현실에서 벗어나고자 떠난 남태평양 ‘콸라’섬에서 운명처럼 자신을 구해준 재벌 ‘조나단’(이선균)을 만나 결혼을 하고 새로운 인생을 꿈꾸며 돌연 은퇴를 선언한다.\n \n한편, 서울대가 당연한 집안에서 홀로 고독한 입시 싸움 중인 4수생 ‘범우’(공명)는 한때 자신의 최애였던 여래가 옆집에 이사온 것을 알게 되고 날마다 옥상에서 단독 팬미팅(?)을 여는 호사를 누린다.\n\n그러던 어느 날 조나단의 사업 확장을 위한 인형 역할에 지친 여래는 완벽한 스크린 컴백을 위해 범우에게 SOS를 보내게 되고 이들은 여래의 인생을 되찾기 위한 죽여주는 계획을 함께 모의하는데…",
+    "ottList": ["왓챠"]
+  },
+  {
+    "title": "나는 SOLO 그 후, 사랑은 계속된다",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/SlfAANH0lKF0YkMj9kk-mw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk5UazVORFV5T1RVMk56TTFOalUyTnpNaWZRLjh0ODAtaElOcXJoSGE1Ml8tZ0dvU3JTSHVhZ2kxclI4TGpvcXdLaGJVNU0",
+    "detail": "2022 ・ ENA PLAY ・ 예능",
+    "rating": "평균 ★3.0 (198명)",
+    "infoTitle": "나는 SOLO 그 후, 사랑은 계속된다\n2022 · ENA PLAY · 예능\n한국 · 15세",
+    "info": "<나는 SOLO> 출연자들의 사랑은 솔로 나라 밖에서도 계속된다! 솔로 탈출을 꿈꾸며 솔로 나라에 입성한 청춘 남녀의 그 후, 그들의 사랑 이야기를 담은 극사실주의 리얼리티 프로그램.",
+    "ottList": ["왓챠", "넷플릭스"]
+  },
+  {
+    "title": "영웅",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/8BduNtzeho1NSyqJnS6UUQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXhMMjVoZDI5MWVUQmtZbVJ5ZHpKa1oyeGpOblZzSW4wLkdqNVN0WEtOWGlLMXVTRGhGQzZBaEVtaEEtQmZjMXJXRDBUVVFYQV9EczA",
+    "detail": "2002 ・ 액션/모험/시대극 ・ 중국/홍콩",
+    "rating": "평균 ★3.5 (7만명)",
+    "infoTitle": "英雄\n2002 · 중국 · 액션\n1시간 49분 · 12세",
+    "info": "피와 살육의 춘추전국시대, \n난세의 소용돌이 속 영웅들이 움직인다!  \n\n전국 7웅이라 불렸던 막강한 일곱 국가들이 지배하던 춘추전국시대의 중국 대륙. 각각의 왕국은 천하통일의 대업을 이루기 위해 무자비한 전쟁을 일삼고, 그 중 가장 강력한 군대를 갖고 있는 진나라 왕 영정(진도명)은 대륙 전체를 지배하여 첫 번째 황제가 되려는 야심에 가득 차 있다. 그러나 영정에게도 두려운 존재가 있었으니, 전설적인 무예를 보유하고 호시탐탐 자신의 목을 노리는 세 명의 자객 은모장천(견자단)과 파검(양조위) 그리고 비설(장만옥)이 바로 그들이다. 이에 영정은 자신의 백보 안에 그 누구도 가까이 하지 못하게 하는 백보 금지령을 내리고 현상금을 내걸어 그들을 사냥하기에 이른다.  어느 날, 지방에서 백부장으로 녹을 받고 있는 미천한 장수 무명(이연걸)이 정체 모를 세 개의 칠기상자를 가지고 영정을 찾아와 왕궁이 술렁이기 시작하는데…",
+    "ottList": ["왓챠", "넷플릭스", "웨이브"]
+  },
+  {
+    "title": "【최애의 아이】",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/_RJVXrL4Z_o4LJuKf7MKPg.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9ERXpOVE0zTXpVM05UUXhOemMwTVRraWZRLmdyVzNaZUxmRmJKdnhzZ1l2b2RBdFNsR1JWN3VkZWQ1Q2NfcFNyRDQ1aU0",
+    "detail": "2023 ・ TOKYO MX ・ 애니메이션/드라마/미스터리",
+    "rating": "평균 ★4.5 (2,547명)",
+    "infoTitle": "【推しの子】\n2023 · TOKYO MX · 애니메이션/드라마/미스터리\n일본 · 15세",
+    "info": "산부인과 의사로 일하는 고로 앞에 그가 좋아하는 아이돌 B 코마치의 아이가 나타난다. 그녀에겐 어떤 금단의 비밀이 있었고, 두 사람의 최악의 만남에서 운명이 움직이기 시작한다.",
+    "ottList": ["왓챠", "넷플릭스", "웨이브", "티빙"]
+  },
+  {
+    "title": "스파이 패밀리",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/dBYCNg_bG5rKzdzetCrQEQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk5UYzNPREEzTmpneU9UTTJNVEV4TlRZaWZRLm5FZ2F3YmN5RzhTYkh4YktkekpXTUx1YWpSLVU2ZGJEOGV2UFZOcXFMWjA",
+    "detail": "2022 ・ TV Tokyo ・ 애니메이션/액션/코미디",
+    "rating": "평균 ★4.2 (4만명)",
+    "infoTitle": "SPY×FAMILY\n2022 · TV Tokyo · 애니메이션/액션/코미디/드라마/로맨틱 코미디\n일본 · 15세",
+    "info": "스파이 남자, 킬러 여자, 마음을 읽는 초능력자 소녀가 위장 가족이 되어 펼치는 홈 코미디 애니메이션",
+    "ottList": ["왓챠", "넷플릭스", "티빙"]
+  },
+  {
+    "title": "모범택시 2",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/wGsEnHaf8W-uadisdz9dBg.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk56VTBPRFF4T1RVek9ERXhOall3TWpFaWZRLmg1d1NvRC1tTFZVQmFCMmhzYUl1YWduajQ3TzI3RkZDeVMxY3RkRHlNNFE",
+    "detail": "2023 ・ SBS ・ 드라마/TV드라마",
+    "rating": "평균 ★3.4 (3,233명)",
+    "infoTitle": "모범택시\n2023 · SBS · 드라마/TV드라마\n한국 · 청불",
+    "info": "“정의가 실종된 사회, 전화 한 통이면 오케이” 베일에 가려진 택시회사 무지개 운수와 택시기사 김도기가 억울한 피해자를 대신해 복수를 완성하는 사적 복수 대행극",
+    "ottList": ["웨이브"]
+  },
+  {
+    "title": "마루이 비디오",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/vstUd9FtRcbFDt4Wc28s7Q.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk56VXpORFkxTlRrM05Ea3pPVFV6TURFaWZRLkQwcUp1MXlKZnVuX3lSV2ZLU1F4N05iZDdaUXBYOUhiZ2pkLUFHZ1kzNGM",
+    "detail": "2020 ・ 공포/미스터리 ・ 한국",
+    "rating": "평균 ★2.3 (1,445명)",
+    "infoTitle": "마루이 비디오\n2020 · 한국 · 공포\n1시간 27분 · 15세",
+    "info": "국내에서 일어난 사건 영상 중 그 수위가 높아 외부로 유출되면 안 되는 영상물 '마루이 비디오'. 검찰청 지하 보관소에 봉인된 비디오에 대한 소문을 들은 김수찬 PD는 이를 입수해 다큐멘터리를 제작하기로 하는데… 영상 속에 담긴 1992년 동성장 여관방 살인사건과 1987년 아미동 일가족 살인사건의 진실은 과연 무엇인가?",
+    "ottList": ["왓챠", "넷플릭스"]
+  },
+  {
+    "title": "구미호뎐1938",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/rELmL8TOXUkWGNSP25Uh8A.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9ETXlOamt4TXpJeE5qa3pNelUyTkRFaWZRLmhxTzlhTzJUWFpnRVFzUjA2R3NhYVA3STRHMVRJZnhwY2stOGNicmJ1NDQ",
+    "detail": "2023 ・ tvN ・ 판타지/액션/시대극",
+    "rating": "평균 ★3.3 (106명)",
+    "infoTitle": "구미호뎐\n2023 · tvN · 판타지/액션/시대극/TV드라마\n한국 · 15세",
+    "info": "1938년 혼돈의 시대에 불시착한 구미호가 현대로 돌아가기 위해 펼치는 K-판타지 액션 활극",
+    "ottList": ["티빙"]
+  },
+  {
+    "title": "귀멸의 칼날: 도공 마을편",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/W-BkGlA52JPvpVA04K0Tsw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9ERXhNak13TWpjMU5UVTFOalEyTXpRaWZRLm5fdmRFY3NyTVJTN2dVb01rN3F5MTU4SE9TYzZMQ2Z4Zm0weWtOX2NrUlU",
+    "detail": "2023 ・ Fuji TV ・ 애니메이션/액션/판타지",
+    "rating": "평균 ★4.7 (5,379명)",
+    "infoTitle": "鬼滅の刃\n2023 · Fuji TV · 애니메이션/액션/판타지/스릴러\n일본",
+    "info": "규타로와의 전투로 검이 심하게 손상된 탄지로는 대장장이 호타루를 만나러 도공 마을을 방문한다. 한편, 113년 만에 상현 혈귀가 죽자 분개한 무잔은 나머지 혈귀들에게 또 다른 습격 명령을 내린다.",
+    "ottList": ["왓챠", "웨이브", "티빙"]
+  },
+  {
+    "title": "뿅뿅 지구오락실2",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/vdBlNFppvUUWykqEvDOt9g.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9ETTRNamMyT0RZeE56WXhPVFV3T1RnaWZRLlB6M2FvMjAyV3o3NmlIYUF3Rk44NlJmeXJvcXhaalZubGlmeEIyWmdIbnM",
+    "detail": "2023 ・ tvN ・ 예능",
+    "rating": "평균 ★4.4 (110명)",
+    "infoTitle": "뿅뿅 지구오락실\n2023 · tvN · 예능\n한국 · 15세",
+    "info": "지구로 재탈출한 토롱이를 잡기 위해 경력직 지구용사 4인방이 다시 한 번 뭉쳤다! 겨울왕국 ′핀란드′와 신들의 섬 ′발리′에서 펼쳐지는 지구 용사즈의 예측 불허 대모험!",
+    "ottList": ["티빙"]
+  },
+  {
+    "title": "내 이름은 마더",
+    "imgSrc": "https://an2-img.amz.wtchn.net/image/v2/73ryGzFPf-ZjMjK3AAeMdA.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qZ3dlRFF3TUhFNE1DSmRMQ0p3SWpvaUwzWXlMM04wYjNKbEwybHRZV2RsTHpFMk9ERXlOalUwTURnNE5EZzVNRGd6TmpZaWZRLlNRWWhRQ0EwNnJFLUUzWm9wcEhEZGYzcjlrZDJYWF9uMVdWQXlKMlI1bzQ",
+    "detail": "2023 ・ 액션/스릴러 ・ 미국",
+    "rating": "평균 ★2.5 (468명)",
+    "infoTitle": "The Mother\n2023 · 미국 · 액션\n1시간 55분 · 15세",
+    "info": "위험한 적들로부터 도망 중인 암살자(제니퍼 로페즈)가 오래전에 포기한 딸을 지키기 위해 모습을 드러낸다.",
+    "ottList": ["넷플릭스"]
   }
 ]
