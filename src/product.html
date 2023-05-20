@@ -12,10 +12,10 @@
       #product_section_outer {
         background-color: rgb(164, 175, 249);
         border: 1px solid black;
-        height: 1700px;
+        height: 1800px; /*수정된 부분*/
       }
       #product_section_inner {
-        height: 1500px;
+        height: 1600px; /*수정된 부분*/
 
         background-color: white;
         margin: 50px 15%;
@@ -41,7 +41,7 @@
         padding: 3% 7%;
         margin-left: 15px;
         float: left;
-        height: 640px;
+        height: 1110px; /*수정된 부분*/
         border-right: solid 2px rgb(164, 175, 249);
       }
       .product_section_third {
@@ -96,7 +96,6 @@
       }
       .graph_wrap {
         /*border: 1px solid blue;*/
-        /*padding: 6% 6%;*/
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
@@ -125,28 +124,7 @@
         color: #333333;
         text-align: center;
       }
-      /*
-      .graph_main .y-axis {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-      }
-      .graph_main .y-axis > li {
-        position: relative;
-        width: calc(100% - 20px);
-        height: calc(100% / 8);
-        margin-left: 20px;
-        border-top: 1px solid #8c8c8c;
-        text-align: left;
-      }
-      .graph_main .y-axis > li span {
-        position: absolute;
-        top: -7px;
-        left: -20px;
-        font-size: 12px;
-        line-height: 1;
-      }*/
+
       .graph_main .x-axis {
         position: absolute;
         display: flex;
@@ -183,21 +161,11 @@
         height: 100%;
         background: #f1cb7e;
       }
-      /*
-      .graph_bar:before {
-        content: "";
-        position: absolute;
-        top: -2px;
-        left: 3px;
-        height: calc(100% + 4px);
-        width: 1px;
-        background: #8c8c8c;
-      }*/
 
       /*--second_review--*/
       .review_wrap {
         width: 500px;
-        height: 330px;
+        height: 390px;
         border: 1px dotted rgb(164, 175, 249);
         overflow: scroll;
         margin: 5px 5px;
@@ -206,6 +174,7 @@
       .review_item {
         margin: 5px 5px 0 0;
         border: 1px solid rgb(164, 175, 249);
+        height: 190px; /*수정된 부분*/
       }
       .review_item_contents_wrap {
         margin: 5px;
@@ -227,13 +196,36 @@
       }
       .review_actions {
         margin-top: 20px;
-        padding: 0 12%;
-        border: 1px solid orange;
+        padding-left: 52%;
+        /*border: 1px solid orange;*/
       }
       .review_actions > li {
         display: inline-block;
-        margin: 0 10%;
-        border: 1px solid yellow;
+        margin: 0 5px;
+        /*border: 1px solid yellow;*/
+      }
+
+      .review_action_btn {
+        /*수정된 부분*/
+        border: none;
+        background: none;
+      }
+
+      .like_icon {
+        /*수정된 부분*/
+        width: 65px;
+        height: 65px;
+      }
+      .comment_icon {
+        /*수정된 부분*/
+        width: 45px;
+        height: 40px;
+        padding-bottom: 12px;
+      }
+      .share_icon {
+        /*수정된 부분*/
+        width: 65px;
+        height: 65px;
       }
 
       /*--third : contents(sub-title, platform)--*/
@@ -248,16 +240,24 @@
       .product_section_third_platform {
         margin-bottom: 20px;
       }
+      .available_platform {
+        /*수정된 부분*/
+        display: flex;
+        align-items: center;
+        width: 180px;
+      }
       .available_platform:hover {
         color: rgb(164, 175, 249);
       }
       .icon_img:hover {
-        /*왜 이미지는 마우스 갖다대면 바뀌는거 적용이 안되지...*/
+        /*수정된 부분*/
+        border: 2px solid rgb(164, 175, 249);
       }
       .platform_text {
+        /*수정된 부분*/
         justify-content: center;
-        border: 1px solid black;
-        /*패딩, 마진 둘다 조정해도 왜 위치가 안바뀌지...*/
+        /*border: 1px solid black;*/
+        margin-left: 10px;
       }
 
       /*---footer 부분--------------*/
@@ -363,18 +363,6 @@
             <!--그래프는 하드코딩!-->
             <div class="graph_wrap">
               <div class="graph_main">
-                <!--
-                Y축
-                <ul class="y-axis">
-                  <li><span>35</span></li>
-                  <li><span>30</span></li>
-                  <li><span>25</span></li>
-                  <li><span>20</span></li>
-                  <li><span>15</span></li>
-                  <li><span>10</span></li>
-                  <li><span>5</span></li>
-                  <li><span>0</span></li>
-                </ul>-->
                 <!-- X축 -->
                 <ul class="x-axis">
                   <li><span>1</span></li>
@@ -396,7 +384,7 @@
             </div>
           </div>
 
-          <!----리뷰 : 정해진 레이아웃 없음.---->
+          <!----리뷰---->
           <div class="product_section_second_review">
             <article>
               <h3>리뷰</h3>
@@ -434,30 +422,27 @@
                   <div class="review_actions_wrap">
                     <ul class="review_actions">
                       <li class="action_like">
-                        <button id="reviewLikeBtn" class="action">
-                          <i
-                            class="heart_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">좋아요</span>
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Like_blue.png"
+                            class="like_icon"
+                          />
                         </button>
                       </li>
                       <li class="action_comment">
-                        <div class="action">
-                          <i
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Comment_blue.png"
                             class="comment_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">댓글달기</span>
-                        </div>
+                          />
+                        </button>
                       </li>
                       <li class="action_share">
-                        <button class="action">
-                          <i
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Share_blue.png"
                             class="share_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">공유하기</span>
+                          />
                         </button>
                       </li>
                     </ul>
@@ -494,30 +479,27 @@
                   <div class="review_actions_wrap">
                     <ul class="review_actions">
                       <li class="action_like">
-                        <button id="reviewLikeBtn" class="action">
-                          <i
-                            class="heart_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">좋아요</span>
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Like_blue.png"
+                            class="like_icon"
+                          />
                         </button>
                       </li>
                       <li class="action_comment">
-                        <div class="action">
-                          <i
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Comment_blue.png"
                             class="comment_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">댓글달기</span>
-                        </div>
+                          />
+                        </button>
                       </li>
                       <li class="action_share">
-                        <button class="action">
-                          <i
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Share_blue.png"
                             class="share_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">공유하기</span>
+                          />
                         </button>
                       </li>
                     </ul>
@@ -554,30 +536,27 @@
                   <div class="review_actions_wrap">
                     <ul class="review_actions">
                       <li class="action_like">
-                        <button id="reviewLikeBtn" class="action">
-                          <i
-                            class="heart_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">좋아요</span>
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Like_blue.png"
+                            class="like_icon"
+                          />
                         </button>
                       </li>
                       <li class="action_comment">
-                        <div class="action">
-                          <i
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Comment_blue.png"
                             class="comment_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">댓글달기</span>
-                        </div>
+                          />
+                        </button>
                       </li>
                       <li class="action_share">
-                        <button class="action">
-                          <i
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Share_blue.png"
                             class="share_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">공유하기</span>
+                          />
                         </button>
                       </li>
                     </ul>
@@ -614,30 +593,27 @@
                   <div class="review_actions_wrap">
                     <ul class="review_actions">
                       <li class="action_like">
-                        <button id="reviewLikeBtn" class="action">
-                          <i
-                            class="heart_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">좋아요</span>
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Like_blue.png"
+                            class="like_icon"
+                          />
                         </button>
                       </li>
                       <li class="action_comment">
-                        <div class="action">
-                          <i
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Comment_blue.png"
                             class="comment_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">댓글달기</span>
-                        </div>
+                          />
+                        </button>
                       </li>
                       <li class="action_share">
-                        <button class="action">
-                          <i
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Share_blue.png"
                             class="share_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">공유하기</span>
+                          />
                         </button>
                       </li>
                     </ul>
@@ -674,30 +650,27 @@
                   <div class="review_actions_wrap">
                     <ul class="review_actions">
                       <li class="action_like">
-                        <button id="reviewLikeBtn" class="action">
-                          <i
-                            class="heart_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">좋아요</span>
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Like_blue.png"
+                            class="like_icon"
+                          />
                         </button>
                       </li>
                       <li class="action_comment">
-                        <div class="action">
-                          <i
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Comment_blue.png"
                             class="comment_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">댓글달기</span>
-                        </div>
+                          />
+                        </button>
                       </li>
                       <li class="action_share">
-                        <button class="action">
-                          <i
+                        <button type="button" class="review_action_btn">
+                          <img
+                            src="/Users/sumin/SKKU_WP_otott/product/Icon_Share_blue.png"
                             class="share_icon"
-                            style="width: 32px; height: 32px"
-                          ></i>
-                          <span class="text">공유하기</span>
+                          />
                         </button>
                       </li>
                     </ul>
@@ -711,8 +684,7 @@
         <!--오른쪽 열 내용 : CSS로 float right-->
         <!----감상 가능한 곳 : 소제목 "감상 가능한 곳", 플랫폼 아이콘과 이름---->
         <div class="product_section_third">
-          <!-- <!—플랫폼 아이콘과 이름도 테이블을 사용하는 게 좋을지… 아니면 다른 방법…?—> -->
-          <!-- <!—플랫폼 아이콘 이미지는 제안서 피피티에 사용했던 png파일 사용하면 될 듯!—> -->
+          <!-- <!—플랫폼 아이콘 이미지는 제안서 피피티에 사용했던 png파일 사용!—> -->
           <div class="product_section_third_contents">
             <div>
               <h3 class="product_section_third_sub-title">감상 가능한 곳</h3>
@@ -758,7 +730,5 @@
     <footer id="footer">
       <!-- <!———————————————————————————————————————————————————정해진 레이아웃 없음———————————————————————————————————————————————————> -->
     </footer>
-    <!— <!———————————————————————————————————————————————————>
-    —>
   </body>
 </html>
