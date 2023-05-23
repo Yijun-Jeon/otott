@@ -6,13 +6,13 @@ $(document).ready(function () {
     <li class='rank'>
       <div class='pull-left-rank'>
         <img
-          id='ott${i}-img'
+          id='total${i}-img'
           class='poster-img'
           src='https://nujhrcqkiwag1408085.cdn.ntruss.com/static/upload/drama_poster_images/280x400/drama_102591_1681959812.jpg'
           alt=''
         />
         <span class='rank-number'>${i}</span>
-        <span id='ott${i}-text' class='title-text'>
+        <span id='total${i}-text' class='title-text'>
           영화제목
         </span>
       </div>
@@ -28,8 +28,8 @@ $(document).ready(function () {
   // 1~20위까지의 요소 내용 로컬 스토리지 기반 자동 반영
   const elements = document.querySelectorAll('.rank');
   elements.forEach((element, index) => {
-    var product = JSON.parse(localStorage.getItem('ott' + (index + 1)));
-    var productId = 'ott' + (index + 1);
+    var product = JSON.parse(localStorage.getItem('total' + (index + 1)));
+    var productId = 'total' + (index + 1);
     document.getElementById(productId + '-text').innerHTML = product.title;
     document.getElementById(productId + '-img').src = product.imgSrc;
   });
