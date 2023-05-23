@@ -4,12 +4,28 @@
     <title>OTOTT's Viewers Ranking by OTT</title>
     <link rel="stylesheet" href="../css/initial.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!--<script src="node_modules/jquery/dist/jquery.js"></script>-->
+    <script src="../js/scroll.js"></script>
+    <script>
+      $(document).ready(function () {
+        const hash = window.location.hash;
+        console.log(hash); // 가져온 해시 값을 이용하여 가진 위치로 자동 스크롤
+        if (hash) {
+          const target = $(hash);
+          if (target.length > 0) {
+            // 없는 경우 제외
+            $("html, body").animate(
+              {
+                scrollTop: target.offset().top, //offset: 요소의 현재 좌표 정보
+              },
+              500
+            );
+          }
+        }
+      });
+    </script>
     <style>
-      /* nav */
-      /* 여기다 넣어주세요!!!!!!*/
-
-      /*section */
-      /*aside*/
       #list-section {
         background-color: #a2afff;
         padding-bottom: 50px;
@@ -56,33 +72,70 @@
         position: relative;
         background-color: white;
         border-radius: 10px;
-        margin: 0 15%;
+        margin: 10px 15%;
         padding-top: 10px;
         padding-left: 30px;
+        padding-right: 30px;
       }
 
-      /* .direction-right {
-    display: block;
-    position: absolute;
-    right: 20px;
-    bottom: 100px; 
-    width: 34px;
-    height: 34px;
-    line-height: 27px;
-    z-index: 1;
+      h2 {
+        padding: 10px;
+      }
 
-    background-color: rgba(255, 255, 255);
-    border: 1px solid rgb(249, 249, 249);
-    border-radius: 200px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px 0px;
-    background-size: 12px;
-    font-weight: 700;
-    letter-spacing: normal;
-    text-align: center;
-    border-radius: 4px;
-    opacity: 1;
-    transition: opacity 300ms ease 0s;
-} */
+      .ranking-listitem {
+        overflow: auto;
+        white-space: nowrap;
+        /* 스크롤 바를 숨기는 속성 */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+      }
+
+      .ranking-listitem::-webkit-scrollbar {
+        width: 0; /* 스크롤 바의 너비 */
+        background-color: white; /* 스크롤 바의 배경색 */
+      }
+
+      .ranking-listitem::-webkit-scrollbar-thumb {
+        background-color: white; /* 스크롤 바 색상 */
+      }
+
+      .btn-scroll-left,
+      .btn-scroll-right {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        background-color: white;
+        border-radius: 17.5px;
+        border: 3px solid #7e89c7;
+        cursor: pointer;
+      }
+
+      .btn-scroll-left {
+        left: 2%;
+        top: 45%;
+        z-index: 1;
+      }
+
+      .btn-scroll-right {
+        left: 95%;
+        top: 45%;
+      }
+
+      .arrow {
+        border: solid #7e89c7;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3.5px;
+      }
+
+      .right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+
+      .left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+      }
 
       a {
         text-decoration: none;
@@ -94,8 +147,8 @@
 
       img {
         position: relative;
-        width: 150px;
-        margin: 10px 10px 0 20px;
+        width: 165px;
+        margin: 10px 10px 10px 20px;
       }
 
       p {
@@ -137,6 +190,18 @@
         .fifth-ranking {
         position: relative;
       }
+
+      #moveTopBtn {
+        position: fixed;
+        bottom: 10%;
+        right: 6.5%;
+        color: white;
+      }
+
+      #moveTopBtn:hover {
+        cursor: pointer;
+        color: #7e89c7;
+      }
     </style>
   </head>
   <body>
@@ -173,25 +238,28 @@
       <aside>
         <div id="selection-box">
           <ul class="selection-list">
-            <a href="#" title="Netflix"><li>넷플릭스</li></a>
-            <a href="#" title="TVING"><li>티빙</li></a>
-            <a href="#" title="Watcha"><li>왓챠</li></a>
-            <a href="#" title="Wavve"><li>웨이브</li></a>
-            <a href="#" title="CoupangPlay"><li>쿠팡플레이</li></a>
-            <a href="#" title="Disney+"><li>디즈니플러스</li></a>
+            <a href="#netflix" title="Netflix"><li>넷플릭스</li></a>
+            <a href="#tving" title="TVING"><li>티빙</li></a>
+            <a href="#watcha" title="Watcha"><li>왓챠</li></a>
+            <a href="#wavve" title="Wavve"><li>웨이브</li></a>
+            <a href="#coupangplay" title="CoupangPlay"><li>쿠팡플레이</li></a>
+            <a href="#disneyplus" title="Disney+"><li>디즈니플러스</li></a>
           </ul>
         </div>
         <div id="view-review-ranking">
           <ul class="view-review-list">
-            <li><a href="#">시청순</a></li>
+            <li><a href="ottViewList.html">시청순</a></li>
             <li>/</li>
-            <li><a href="#">리뷰순</a></li>
+            <li><a href="#ottReviewList.html">리뷰순</a></li>
           </ul>
         </div>
       </aside>
       <article id="ott-ranking-box">
-        <div id="netflix-ranking-box" class="ranking-box">
+        <div id="netflix" class="ranking-box">
           <h2>넷플릭스 TOP 10</h2>
+          <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
+            <span class="arrow left"></span>
+          </button>
           <ul class="ranking-listitem">
             <li class="first-ranking">
               <a href="#" title="택배기사">
@@ -264,13 +332,91 @@
                 </p>
               </a>
             </li>
+            <li class="sixth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="seventh-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="eighth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="ninth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="tenth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
           </ul>
-          <!-- <div class="direction-right">
-                        >
-                    </div> -->
+          <button
+            type="button"
+            class="btn-scroll-right"
+            onclick="scrollRight()"
+          >
+            <span class="arrow right"></span>
+          </button>
         </div>
-        <div id="tving-ranking-box" class="ranking-box">
+        <!----------------------------------------------------------------------------------------------->
+        <div id="tving" class="ranking-box">
           <h2>티빙 TOP 10</h2>
+          <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
+            <span class="arrow left"></span>
+          </button>
           <ul class="ranking-listitem">
             <li class="first-ranking">
               <a href="#" title="구미호뎐 1938">
@@ -343,10 +489,91 @@
                 </p>
               </a>
             </li>
+            <li class="sixth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="seventh-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="eighth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="ninth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="tenth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
           </ul>
+          <button
+            type="button"
+            class="btn-scroll-right"
+            onclick="scrollRight()"
+          >
+            <span class="arrow right"></span>
+          </button>
         </div>
-        <div id="watcha-ranking-box" class="ranking-box">
+        <!----------------------------------------------------------------------------------------------->
+        <div id="watcha" class="ranking-box">
           <h2>왓챠 TOP 10</h2>
+          <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
+            <span class="arrow left"></span>
+          </button>
           <ul class="ranking-listitem">
             <li class="first-ranking">
               <a href="#" title="귀멸의 칼날: 도공 마을편">
@@ -419,10 +646,91 @@
                 </p>
               </a>
             </li>
+            <li class="sixth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="seventh-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="eighth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="ninth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
+            <li class="tenth-ranking">
+              <a href="#" title="가면의 여왕">
+                <div class="ranking-icon">5</div>
+                <img
+                  src="../images/netflix-ranking/fifth-poster.jpg"
+                  alt="fifth-poster"
+                />
+                <p>
+                  가면의 여왕 <br />
+                  2023・한국・Channel A <br />
+                  평균 ★ 2.2
+                </p>
+              </a>
+            </li>
           </ul>
+          <button
+            type="button"
+            class="btn-scroll-right"
+            onclick="scrollRight()"
+          >
+            <span class="arrow right"></span>
+          </button>
         </div>
-        <div id="wavve-ranking-box" class="ranking-box">
+        <!----------------------------------------------------------------------------------------------->
+        <div id="wavve" class="ranking-box">
           <h2>웨이브 TOP 10</h2>
+          <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
+            <span class="arrow left"></span>
+          </button>
           <ul class="ranking-listitem">
             <li class="first-ranking">
               <a href="#" title="택배기사">
@@ -496,9 +804,21 @@
               </a>
             </li>
           </ul>
+          <button
+            type="button"
+            class="btn-scroll-right"
+            onclick="scrollRight()"
+          >
+            <span class="arrow right"></span>
+          </button>
         </div>
-        <div id="coupangplay-ranking-box" class="ranking-box">
+        <!----------------------------------------------------------------------------------------------->
+
+        <div id="coupangplay" class="ranking-box">
           <h2>쿠팡플레이 TOP 10</h2>
+          <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
+            <span class="arrow left"></span>
+          </button>
           <ul class="ranking-listitem">
             <li class="first-ranking">
               <a href="#" title="택배기사">
@@ -572,9 +892,20 @@
               </a>
             </li>
           </ul>
+          <button
+            type="button"
+            class="btn-scroll-right"
+            onclick="scrollRight()"
+          >
+            <span class="arrow right"></span>
+          </button>
         </div>
-        <div id="disneyplus-ranking-box" class="ranking-box">
+        <!----------------------------------------------------------------------------------------------->
+        <div id="disneyplus" class="ranking-box">
           <h2>디즈니플러스 TOP 10</h2>
+          <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
+            <span class="arrow left"></span>
+          </button>
           <ul class="ranking-listitem">
             <li class="first-ranking">
               <a href="#" title="택배기사">
@@ -648,8 +979,18 @@
               </a>
             </li>
           </ul>
+          <button
+            type="button"
+            class="btn-scroll-right"
+            onclick="scrollRight()"
+          >
+            <span class="arrow right"></span>
+          </button>
         </div>
       </article>
+      <!----------------------------------------------------------------------------------------------->
+      <!--Top 버튼-->
+      <div id="moveTopBtn">TOP▲</div>
     </section>
     <footer id="footer-section">
       <div class="footer-li-left">
