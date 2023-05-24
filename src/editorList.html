@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OTOTT's Viewers Ranking by OTT</title>
+    <title>Editor's Pick</title>
     <link rel="stylesheet" href="../css/initial.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -15,6 +15,7 @@
           const target = $(hash);
           if (target.length > 0) {
             // 없는 경우 제외
+            console.log(target.offset().top);
             $("html, body").animate(
               {
                 scrollTop: target.offset().top, //offset: 요소의 현재 좌표 정보
@@ -31,43 +32,63 @@
         padding-bottom: 50px;
       }
 
-      .selection-list {
+      /*하위바 하위바 하위바 하위바 하위바 하위바 하위바 */
+      .submenu-list {
+        position: relative;
+        margin: 0px 15%;
+        padding-top: 2%;
+        max-width: 100%; /*width 제한*/
+
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start; /* 왼쪽 정렬 */
+        /*align-items: center; 해당 부분의 경우 고정되지 않고 스크롤에 따라 위치 변함*/
         height: 20vh;
+
+        /*다음줄 이동*/
+        flex-wrap: wrap; /*flex 컨테이너 내의 item들이 여러 줄에 걸쳐 배치되도록*/
       }
 
-      .selection-list li {
+      /*하위바 버튼*/
+      .submenu-list #openSubmenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 10px;
+        height: 10px;
+        padding: 10px;
+        margin: 10px;
+
+        border: 0.5px solid #7e89c7;
+        border-radius: 20px;
+        background-color: white;
+        color: #7e89c7;
+      }
+
+      .submenu-list li {
         background-color: #7e89c7;
         color: white;
         border-radius: 10px;
 
         list-style-type: none;
-        display: inline-block;
         text-align: center;
-        width: 110px;
-        height: 40px;
-        margin: 15px;
+        width: auto;
+        height: auto; /*li 요소 높이 동적으로 조정하기 위해 > 줄바꿈을 위한*/
+        margin: 10px;
+        padding: 0px 10px;
         line-height: 2.8;
+
+        white-space: normal; /* 줄 바꿈 허용 */
+
+        font-size: 14px;
       }
 
-      .view-review-list {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        /* margin-left: 50vh; */
-        transform: translateX(
-          -20%
-        ); /*화면 크기에 상관없이 일정 간격 유지 가능*/
-      }
-      .view-review-list li {
-        list-style-type: none;
-        display: inline;
-        text-align: center;
+      /*하위바 누르기 전 초기화 하기 위한 클래스*/
+      .hide {
+        display: none;
       }
 
-      /*article section*/
+      /*article section article section article section article section*/
       .ranking-box {
         position: relative;
         background-color: white;
@@ -237,26 +258,30 @@
     <section id="list-section">
       <aside>
         <div id="selection-box">
-          <ul class="selection-list">
-            <a href="#netflix" title="Netflix"><li>넷플릭스</li></a>
-            <a href="#tving" title="TVING"><li>티빙</li></a>
-            <a href="#watcha" title="Watcha"><li>왓챠</li></a>
-            <a href="#wavve" title="Wavve"><li>웨이브</li></a>
-            <a href="#coupangplay" title="CoupangPlay"><li>쿠팡플레이</li></a>
-            <a href="#disneyplus" title="Disney+"><li>디즈니플러스</li></a>
-          </ul>
-        </div>
-        <div id="view-review-ranking">
-          <ul class="view-review-list">
-            <li><a href="ottViewList.html">시청순</a></li>
-            <li>/</li>
-            <li><a href="#ottReviewList.html">리뷰순</a></li>
+          <ul class="submenu-list">
+            <div id="openSubmenu" onclick="openSubmenu()">▼</div>
+            <a href="#topic1" title="topic1"
+              ><li>#한 여름 밤을 오싹하게 만드는😨</li></a
+            >
+            <a href="#topic2" title="topic2"
+              ><li>#국제적으로 인정받은 시리즈🏆</li></a
+            >
+            <a href="#topic3" title="topic3"
+              ><li>#느긋하게 살고 싶을 때 꺼내보아요🪴</li></a
+            >
+            <a href="#topic4" title="topic4"
+              ><li>#혼자 펑펑 울고 싶을 때 보는💧</li></a
+            >
+            <a href="#topic5" title="topic5"><li>#연애세포를 일깨워줄❤️‍🔥</li></a>
+            <a href="#topic6" title="topic6"
+              ><li>#배꼽빠지게 웃어보자 하하🤣</li></a
+            >
           </ul>
         </div>
       </aside>
-      <article id="ott-ranking-box">
-        <div id="netflix" class="ranking-box">
-          <h2>넷플릭스 TOP 10</h2>
+      <article id="editor-topic-box">
+        <div id="topic1" class="ranking-box">
+          <h2>#한 여름 밤을 오싹하게 만드는😨</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
@@ -412,8 +437,8 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="tving" class="ranking-box">
-          <h2>티빙 TOP 10</h2>
+        <div id="topic2" class="ranking-box">
+          <h2>#국제적으로 인정받은 시리즈🏆</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
@@ -569,8 +594,8 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="watcha" class="ranking-box">
-          <h2>왓챠 TOP 10</h2>
+        <div id="topic3" class="ranking-box">
+          <h2>#느긋하게 살고 싶을 때 꺼내보아요🪴</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
@@ -726,8 +751,8 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="wavve" class="ranking-box">
-          <h2>웨이브 TOP 10</h2>
+        <div id="topic4" class="ranking-box">
+          <h2>#혼자 펑펑 울고 싶을 때 보는💧</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
@@ -813,9 +838,8 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-
-        <div id="coupangplay" class="ranking-box">
-          <h2>쿠팡플레이 TOP 10</h2>
+        <div id="topic5" class="ranking-box">
+          <h2>#연애세포를 일깨워줄❤️‍🔥</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
@@ -901,8 +925,8 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="disneyplus" class="ranking-box">
-          <h2>디즈니플러스 TOP 10</h2>
+        <div id="topic6" class="ranking-box">
+          <h2>#배꼽빠지게 웃어보자 하하🤣</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>

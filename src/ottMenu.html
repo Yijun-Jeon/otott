@@ -4,6 +4,19 @@
     <title>OTOTT</title>
     <link rel="stylesheet" href="../css/initial.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".menu-container a").click(function () {
+          event.preventDefault(); // 기본 동작 방지
+          // 하위 태그 div의 class 속성 가져오기
+          const classList = $(this).find("div").attr("class").split(" ");
+          const pointer = classList[1];
+          //url에 pointer 해시값 추가
+          window.location.href = `ottViewList.html#${pointer}`;
+        });
+      });
+    </script>
     <style>
       /* 헤더 헤더 헤더 헤더 헤더 헤더  */
       #main-header {
@@ -76,18 +89,18 @@
       /* 넷플릭스 박스 */
       .info-box-top.netflix:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/netflix.png');
+        background-image: url("../images/ott-logo/netflix.png");
         /* background-image: linear-gradient(90deg, #f61b10, #ef0963); */
       }
       /* 티빙 박스 */
       .info-box-top.tiving:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/tving.png');
+        background-image: url("../images/ott-logo/tving.png");
       }
       /* 왓챠 박스 */
       .info-box-top.watcha:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/watcha.png');
+        background-image: url("../images/ott-logo/watcha.png");
       }
 
       .info-box-bottom {
@@ -108,18 +121,18 @@
       /* 웨이브 박스 */
       .info-box-bottom.wavve:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/wavve.png');
+        background-image: url("../images/ott-logo/wavve.png");
         /* background-image: linear-gradient(90deg, #f61b10, #ef0963); */
       }
       /* 쿠팡 플레이 박스 */
       .info-box-bottom.coupang:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/coupang.jpeg');
+        background-image: url("../images/ott-logo/coupang.jpeg");
       }
       /* 디즈니 플러스 박스 */
       .info-box-bottom.disney:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/disney.png');
+        background-image: url("../images/ott-logo/disney.png");
       }
 
       .info-box-text {
@@ -198,7 +211,7 @@
           </a>
 
           <a href="ottViewList.html">
-            <div class="info-box-top tiving">
+            <div class="info-box-top tving">
               <span class="info-box-text"> 티빙 </span>
               <span class="info-box-text"> Tving </span>
             </div>
@@ -218,13 +231,13 @@
             </div>
           </a>
           <a href="ottViewList.html">
-            <div class="info-box-bottom coupang">
+            <div class="info-box-bottom coupangplay">
               <span class="info-box-text"> 쿠팡플레이 </span>
               <span class="info-box-text"> Coupang Play </span>
             </div>
           </a>
           <a href="ottViewList.html">
-            <div class="info-box-bottom disney">
+            <div class="info-box-bottom disneyplus">
               <span class="info-box-text"> 디즈니+ </span>
               <span class="info-box-text"> Disney+ </span>
             </div>

@@ -4,6 +4,19 @@
     <title>OTOTT</title>
     <link rel="stylesheet" href="../css/initial.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".menu-container a").click(function () {
+          event.preventDefault(); // 기본 동작 방지
+          // 하위 태그 div의 class 속성 가져오기
+          const classList = $(this).find("div").attr("class").split(" ");
+          const pointer = classList[1];
+          //url에 pointer 해시값 추가
+          window.location.href = `editorList.html#${pointer}`;
+        });
+      });
+    </script>
     <style>
       /* 헤더 헤더 헤더 헤더 헤더 헤더  */
       #main-header {
@@ -73,21 +86,21 @@
         background-size: 82%;
         background-position: center;
       }
-      /* 넷플릭스 박스 */
+      /* 
       .info-box-top.netflix:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/netflix.png');
+        background-image: url("../images/ott-logo/netflix.png");
       }
-      /* 티빙 박스 */
+      
       .info-box-top.tiving:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/tving.png');
+        background-image: url("../images/ott-logo/tving.png");
       }
-      /* 왓챠 박스 */
+      
       .info-box-top.watcha:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/watcha.png');
-      }
+        background-image: url("../images/ott-logo/watcha.png");
+      } */
 
       .info-box-bottom {
         height: 150px;
@@ -104,21 +117,21 @@
         background-size: 85%;
         background-position: center;
       }
-      /* 웨이브 박스 */
-      .info-box-bottom.wavve:hover {
+
+      /* .info-box-bottom.wavve:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/wavve.png');
+        background-image: url("../images/ott-logo/wavve.png");
       }
-      /* 쿠팡 플레이 박스 */
+      
       .info-box-bottom.coupang:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/coupang.jpeg');
+        background-image: url("../images/ott-logo/coupang.jpeg");
       }
-      /* 디즈니 플러스 박스 */
+      
       .info-box-bottom.disney:hover {
         transform: translateY(5px);
-        background-image: url('../images/ott-logo/disney.png');
-      }
+        background-image: url("../images/ott-logo/disney.png");
+      } */
 
       .info-box-text {
         position: relative;
@@ -188,39 +201,43 @@
 
       <article id="menu-article">
         <div class="menu-container top-container">
-          <a href="ottViewList.html">
-            <div class="info-box-top netflix">
+          <a href="editorList.html">
+            <div class="info-box-top topic1">
               <span class="info-box-text">
-                느긋하게 살고 싶을 때 꺼내보는
+                #한 여름 밤을 오싹하게 만드는😨
               </span>
             </div>
           </a>
 
-          <a href="ottViewList.html">
-            <div class="info-box-top tiving">
-              <span class="info-box-text"> 한여름 밤을 오싹하게 만드는 </span>
+          <a href="editorList.html">
+            <div class="info-box-top topic2">
+              <span class="info-box-text"> #국제적으로 인정받은 시리즈🏆 </span>
             </div>
           </a>
-          <a href="ottViewList.html">
-            <div class="info-box-top watcha">
-              <span class="info-box-text"> 연애세포를 일깨울 </span>
+          <a href="editorList.html">
+            <div class="info-box-top topic3">
+              <span class="info-box-text">
+                #느긋하게 살고 싶을 때 꺼내보아요🪴
+              </span>
             </div>
           </a>
         </div>
         <div class="menu-container bottom-container">
-          <a href="ottViewList.html">
-            <div class="info-box-bottom wavve">
-              <span class="info-box-text"> 혼자 펑펑 울고 싶을 때 보는 </span>
+          <a href="editorList.html">
+            <div class="info-box-bottom topic4">
+              <span class="info-box-text">
+                #혼자 펑펑 울고 싶을 때 보는💧
+              </span>
             </div>
           </a>
-          <a href="ottViewList.html">
-            <div class="info-box-bottom coupang">
-              <span class="info-box-text"> 국제적으로 인정받은 시리즈 </span>
+          <a href="editorList.html">
+            <div class="info-box-bottom topic5">
+              <span class="info-box-text"> #연애세포를 일깨워줄❤️‍🔥 </span>
             </div>
           </a>
-          <a href="ottViewList.html">
-            <div class="info-box-bottom disney">
-              <span class="info-box-text"> 배꼽빠지게 웃기게 만드는 </span>
+          <a href="editorList.html">
+            <div class="info-box-bottom topic6">
+              <span class="info-box-text"> #배꼽빠지게 웃어보자 하하🤣 </span>
             </div>
           </a>
         </div>
