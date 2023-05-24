@@ -51,7 +51,7 @@ const watcha = 'https://www.google.com';
     await driver.get(watcha);
 
     var search = await driver.findElement(By.id('APjFqb'));
-    var title = '낭만닥터 김사부 시즌 1';
+    var title = '아바타 5';
     await search.sendKeys(title + ' - 왓챠피디아');
     await search.submit();
 
@@ -109,11 +109,18 @@ const watcha = 'https://www.google.com';
     ).getText();
     console.log(detail);
 
-    // #### 작품 상단 평점 ####
-    var rating = await find(
-      driver,
-      '#root > div > div.css-1xm32e0 > section > div > div.css-10ofaaw > div > section > div.css-1p7n6er-Pane.e1svyhwg15 > div > div > div > div > div.css-og1gu8-ContentRatings.e1svyhwg20'
-    ).getText();
+    // 개봉 예정 작품의 경우 평점이 없을 수 있으므로 에러 처리
+    try {
+      // #### 작품 상단 평점 ####
+      var rating = await find(
+        driver,
+        '#root > div > div.css-1xm32e0 > section > div > div.css-10ofaaw > div > section > div.css-1p7n6er-Pane.e1svyhwg15 > div > div > div > div > div.css-og1gu8-ContentRatings.e1svyhwg20'
+      ).getText();
+      if (rating == ' ' || rating == '' || rating == null)
+        rating = '평균 ★0.0 (0명)';
+    } catch (error) {
+      rating = '평균 ★0.0 (0명)';
+    }
     console.log(rating);
 
     // #### 작품 상세 정보 ####
@@ -124,8 +131,13 @@ const watcha = 'https://www.google.com';
     var showInfo = await find(driver, '.css-1ugqy9j');
     await showInfo.click();
 
-    // #### 작품 내용 ####
-    var info = await find(driver, '.css-17t919k-SummaryDetail').getText();
+    // 새로운 작품의 경우 작품 내용이 없을 수 있으므로 에러 처리
+    try {
+      // #### 작품 내용 ####
+      var info = await find(driver, '.css-17t919k-SummaryDetail').getText();
+    } catch (error) {
+      info = '-';
+    }
     console.log(info);
     await new Navigation(driver).back();
 
