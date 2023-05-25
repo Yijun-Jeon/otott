@@ -7,19 +7,20 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="../js/visibleBar.js"></script>
     <script src="../js/scroll.js"></script>
+    <script src="../js/listApply.js"></script>
     <script>
       $(document).ready(function () {
         const hash = window.location.hash;
         console.log(hash); // 가져온 해시 값을 이용하여 가진 위치로 자동 스크롤
         if (hash) {
-          const target = $(hash);
+          const target = $(hash + '-chart');
           if (target.length > 0) {
             // 없는 경우 제외
-            $("html, body").animate(
+            $('html, body').animate(
               {
-                scrollTop: target.offset().top, //offset: 요소의 현재 좌표 정보
+                scrollTop: target.offset().top - 200, //offset: 요소의 현재 좌표 정보
               },
-              500
+              800
             );
           }
         }
@@ -183,13 +184,13 @@
         transition: opacity 300ms ease 0s;
       }
 
-      .first-ranking
+      /* .first-ranking
         .second-ranking
         .third-ranking
         .fourth-ranking
         .fifth-ranking {
         position: relative;
-      }
+      } */
 
       #moveTopBtn {
         position: fixed;
@@ -238,12 +239,16 @@
       <aside>
         <div id="selection-box">
           <ul class="selection-list">
-            <a href="#netflix" title="Netflix"><li>넷플릭스</li></a>
-            <a href="#tving" title="TVING"><li>티빙</li></a>
-            <a href="#watcha" title="Watcha"><li>왓챠</li></a>
-            <a href="#wavve" title="Wavve"><li>웨이브</li></a>
-            <a href="#coupangplay" title="CoupangPlay"><li>쿠팡플레이</li></a>
-            <a href="#disneyplus" title="Disney+"><li>디즈니플러스</li></a>
+            <a href="#netflix-chart" title="Netflix"><li>넷플릭스</li></a>
+            <a href="#tving-chart" title="TVING"><li>티빙</li></a>
+            <a href="#watcha-chart" title="Watcha"><li>왓챠</li></a>
+            <a href="#wavve-chart" title="Wavve"><li>웨이브</li></a>
+            <a href="#coupangplay-chart" title="CoupangPlay"
+              ><li>쿠팡플레이</li></a
+            >
+            <a href="#disneyplus-chart" title="Disney+"
+              ><li>디즈니플러스</li></a
+            >
           </ul>
         </div>
         <div id="view-review-ranking">
@@ -255,154 +260,12 @@
         </div>
       </aside>
       <article id="ott-ranking-box">
-        <div id="netflix" class="ranking-box">
+        <div id="netflix-chart" class="ranking-box">
           <h2>넷플릭스 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
-          <ul class="ranking-listitem">
-            <li class="first-ranking">
-              <a href="#" title="택배기사">
-                <div class="ranking-icon">1</div>
-                <img
-                  src="../images/netflix-ranking/first-poster.jpg"
-                  alt="first-poster"
-                />
-                <p>
-                  <!--해당 부분 crawling 시 title, 별점은 따로 구분-->
-                  택배기사 <br />
-                  2023・한국・Netflix <br />
-                  평균 ★ 1.9
-                </p>
-              </a>
-            </li>
-            <li class="second-ranking">
-              <a href="#" title="나쁜엄마">
-                <div class="ranking-icon">2</div>
-                <img
-                  src="../images/netflix-ranking/second-poster.jpg"
-                  alt="second-poster"
-                />
-                <p>
-                  나쁜엄마 <br />
-                  2023・한국・JTBC <br />
-                  평균 ★ 3.6
-                </p>
-              </a>
-            </li>
-            <li class="third-ranking">
-              <a href="#" title="닥터 차정숙">
-                <div class="ranking-icon">3</div>
-                <img
-                  src="../images/netflix-ranking/third-poster.jpg"
-                  alt="third-poster"
-                />
-                <p>
-                  닥터 차정숙 <br />
-                  2023・한국・JTBC <br />
-                  평균 ★ 3.4
-                </p>
-              </a>
-            </li>
-            <li class="fourth-ranking">
-              <a href="#" title="종이달">
-                <div class="ranking-icon">4</div>
-                <img
-                  src="../images/netflix-ranking/fourth-poster.jpg"
-                  alt="fourth-poster"
-                />
-                <p>
-                  종이달 <br />
-                  2023・한국・ENA <br />
-                  평균 ★ 3.0
-                </p>
-              </a>
-            </li>
-            <li class="fifth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="sixth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="seventh-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="eighth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="ninth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="tenth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-          </ul>
+          <ul class="ranking-listitem netflix"></ul>
           <button
             type="button"
             class="btn-scroll-right"
@@ -412,154 +275,12 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="tving" class="ranking-box">
+        <div id="tving-chart" class="ranking-box">
           <h2>티빙 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
-          <ul class="ranking-listitem">
-            <li class="first-ranking">
-              <a href="#" title="구미호뎐 1938">
-                <div class="ranking-icon">1</div>
-                <img
-                  src="../images/tving-ranking/first-poster.jpg"
-                  alt="first-poster"
-                />
-                <p>
-                  <!--해당 부분 crawling 시 title, 별점은 따로 구분-->
-                  구미호뎐 1938 <br />
-                  2023・한국・tvN <br />
-                  평균 ★ 3.3
-                </p>
-              </a>
-            </li>
-            <li class="second-ranking">
-              <a href="#" title="닥터 차정숙">
-                <div class="ranking-icon">2</div>
-                <img
-                  src="../images/tving-ranking/second-poster.jpg"
-                  alt="second-poster"
-                />
-                <p>
-                  닥터 차정숙 <br />
-                  2023・한국・JTBC <br />
-                  평균 ★ 3.4
-                </p>
-              </a>
-            </li>
-            <li class="third-ranking">
-              <a href="#" title="뿅뿅 지구오락실 2">
-                <div class="ranking-icon">3</div>
-                <img
-                  src="../images/tving-ranking/third-poster.jpg"
-                  alt="third-poster"
-                />
-                <p>
-                  뿅뿅 지구오락실 2 <br />
-                  2023・한국예능・tvN <br />
-                  평균 ★ 4.5
-                </p>
-              </a>
-            </li>
-            <li class="fourth-ranking">
-              <a href="#" title="영웅">
-                <div class="ranking-icon">4</div>
-                <img
-                  src="../images/tving-ranking/fourth-poster.jpg"
-                  alt="fourth-poster"
-                />
-                <p>
-                  영웅<br />
-                  2022・한국영화<br />
-                  평균 ★ 2.9
-                </p>
-              </a>
-            </li>
-            <li class="fifth-ranking">
-              <a href="#" title="나쁜엄마">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/tving-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  나쁜엄마 <br />
-                  2023・한국・JTBC <br />
-                  평균 ★ 3.6
-                </p>
-              </a>
-            </li>
-            <li class="sixth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="seventh-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="eighth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="ninth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="tenth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-          </ul>
+          <ul class="ranking-listitem tving"></ul>
           <button
             type="button"
             class="btn-scroll-right"
@@ -569,154 +290,12 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="watcha" class="ranking-box">
+        <div id="watcha-chart" class="ranking-box">
           <h2>왓챠 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
-          <ul class="ranking-listitem">
-            <li class="first-ranking">
-              <a href="#" title="귀멸의 칼날: 도공 마을편">
-                <div class="ranking-icon">1</div>
-                <img
-                  src="../images/watcha-ranking/first-poster.jpg"
-                  alt="first-poster"
-                />
-                <p>
-                  <!--해당 부분 crawling 시 title, 별점은 따로 구분-->
-                  귀멸의 칼날: 도공 마을편 <br />
-                  2023・일본・Fuji TV <br />
-                  평균 ★ 4.7
-                </p>
-              </a>
-            </li>
-            <li class="second-ranking">
-              <a href="#" title="최애의 아이">
-                <div class="ranking-icon">2</div>
-                <img
-                  src="../images/watcha-ranking/second-poster.jpg"
-                  alt="second-poster"
-                />
-                <p>
-                  최애의 아이 <br />
-                  2023・일본・TOKYO MX <br />
-                  평균 ★ 4.5
-                </p>
-              </a>
-            </li>
-            <li class="third-ranking">
-              <a href="#" title="스킵과 로퍼">
-                <div class="ranking-icon">3</div>
-                <img
-                  src="../images/watcha-ranking/third-poster.jpg"
-                  alt="third-poster"
-                />
-                <p>
-                  스킵과 로퍼 <br />
-                  2023・일본・TOKYO MX <br />
-                  평균 ★ 4.7
-                </p>
-              </a>
-            </li>
-            <li class="fourth-ranking">
-              <a href="#" title="최강 음양사의 이세계 전생기">
-                <div class="ranking-icon">4</div>
-                <img
-                  src="../images/watcha-ranking/fourth-poster.jpg"
-                  alt="fourth-poster"
-                />
-                <p>
-                  최강 음양사의 이세계전생기<br />
-                  2023・일본・TOKYO MX<br />
-                  평균 ★ 3.5
-                </p>
-              </a>
-            </li>
-            <li class="fifth-ranking">
-              <a href="#" title="Dr.초콜릿">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/watcha-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  Dr.초콜릿 <br />
-                  2023・일본・NTV <br />
-                  평균 ★ 4.3
-                </p>
-              </a>
-            </li>
-            <li class="sixth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="seventh-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="eighth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="ninth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-            <li class="tenth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-          </ul>
+          <ul class="ranking-listitem watcha"></ul>
           <button
             type="button"
             class="btn-scroll-right"
@@ -726,84 +305,12 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="wavve" class="ranking-box">
+        <div id="wavve-chart" class="ranking-box">
           <h2>웨이브 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
-          <ul class="ranking-listitem">
-            <li class="first-ranking">
-              <a href="#" title="택배기사">
-                <div class="ranking-icon">1</div>
-                <img
-                  src="../images/netflix-ranking/first-poster.jpg"
-                  alt="first-poster"
-                />
-                <p>
-                  <!--해당 부분 crawling 시 title, 별점은 따로 구분-->
-                  택배기사 <br />
-                  2023・한국・Netflix <br />
-                  평균 ★ 1.9
-                </p>
-              </a>
-            </li>
-            <li class="second-ranking">
-              <a href="#" title="나쁜엄마">
-                <div class="ranking-icon">2</div>
-                <img
-                  src="../images/netflix-ranking/second-poster.jpg"
-                  alt="second-poster"
-                />
-                <p>
-                  나쁜엄마 <br />
-                  2023・한국・JTBC <br />
-                  평균 ★ 3.6
-                </p>
-              </a>
-            </li>
-            <li class="third-ranking">
-              <a href="#" title="닥터 차정숙">
-                <div class="ranking-icon">3</div>
-                <img
-                  src="../images/netflix-ranking/third-poster.jpg"
-                  alt="third-poster"
-                />
-                <p>
-                  닥터 차정숙 <br />
-                  2023・한국・JTBC <br />
-                  평균 ★ 3.4
-                </p>
-              </a>
-            </li>
-            <li class="fourth-ranking">
-              <a href="#" title="종이달">
-                <div class="ranking-icon">4</div>
-                <img
-                  src="../images/netflix-ranking/fourth-poster.jpg"
-                  alt="fourth-poster"
-                />
-                <p>
-                  종이달 <br />
-                  2023・한국・ENA <br />
-                  평균 ★ 3.0
-                </p>
-              </a>
-            </li>
-            <li class="fifth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-          </ul>
+          <ul class="ranking-listitem wavve"></ul>
           <button
             type="button"
             class="btn-scroll-right"
@@ -814,84 +321,12 @@
         </div>
         <!----------------------------------------------------------------------------------------------->
 
-        <div id="coupangplay" class="ranking-box">
+        <div id="coupangplay-chart" class="ranking-box">
           <h2>쿠팡플레이 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
-          <ul class="ranking-listitem">
-            <li class="first-ranking">
-              <a href="#" title="택배기사">
-                <div class="ranking-icon">1</div>
-                <img
-                  src="../images/netflix-ranking/first-poster.jpg"
-                  alt="first-poster"
-                />
-                <p>
-                  <!--해당 부분 crawling 시 title, 별점은 따로 구분-->
-                  택배기사 <br />
-                  2023・한국・Netflix <br />
-                  평균 ★ 1.9
-                </p>
-              </a>
-            </li>
-            <li class="second-ranking">
-              <a href="#" title="나쁜엄마">
-                <div class="ranking-icon">2</div>
-                <img
-                  src="../images/netflix-ranking/second-poster.jpg"
-                  alt="second-poster"
-                />
-                <p>
-                  나쁜엄마 <br />
-                  2023・한국・JTBC <br />
-                  평균 ★ 3.6
-                </p>
-              </a>
-            </li>
-            <li class="third-ranking">
-              <a href="#" title="닥터 차정숙">
-                <div class="ranking-icon">3</div>
-                <img
-                  src="../images/netflix-ranking/third-poster.jpg"
-                  alt="third-poster"
-                />
-                <p>
-                  닥터 차정숙 <br />
-                  2023・한국・JTBC <br />
-                  평균 ★ 3.4
-                </p>
-              </a>
-            </li>
-            <li class="fourth-ranking">
-              <a href="#" title="종이달">
-                <div class="ranking-icon">4</div>
-                <img
-                  src="../images/netflix-ranking/fourth-poster.jpg"
-                  alt="fourth-poster"
-                />
-                <p>
-                  종이달 <br />
-                  2023・한국・ENA <br />
-                  평균 ★ 3.0
-                </p>
-              </a>
-            </li>
-            <li class="fifth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-          </ul>
+          <ul class="ranking-listitem coupang"></ul>
           <button
             type="button"
             class="btn-scroll-right"
@@ -901,84 +336,12 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="disneyplus" class="ranking-box">
+        <div id="disneyplus-chart" class="ranking-box">
           <h2>디즈니플러스 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
-          <ul class="ranking-listitem">
-            <li class="first-ranking">
-              <a href="#" title="택배기사">
-                <div class="ranking-icon">1</div>
-                <img
-                  src="../images/netflix-ranking/first-poster.jpg"
-                  alt="first-poster"
-                />
-                <p>
-                  <!--해당 부분 crawling 시 title, 별점은 따로 구분-->
-                  택배기사 <br />
-                  2023・한국・Netflix <br />
-                  평균 ★ 1.9
-                </p>
-              </a>
-            </li>
-            <li class="second-ranking">
-              <a href="#" title="나쁜엄마">
-                <div class="ranking-icon">2</div>
-                <img
-                  src="../images/netflix-ranking/second-poster.jpg"
-                  alt="second-poster"
-                />
-                <p>
-                  나쁜엄마 <br />
-                  2023・한국・JTBC <br />
-                  평균 ★ 3.6
-                </p>
-              </a>
-            </li>
-            <li class="third-ranking">
-              <a href="#" title="닥터 차정숙">
-                <div class="ranking-icon">3</div>
-                <img
-                  src="../images/netflix-ranking/third-poster.jpg"
-                  alt="third-poster"
-                />
-                <p>
-                  닥터 차정숙 <br />
-                  2023・한국・JTBC <br />
-                  평균 ★ 3.4
-                </p>
-              </a>
-            </li>
-            <li class="fourth-ranking">
-              <a href="#" title="종이달">
-                <div class="ranking-icon">4</div>
-                <img
-                  src="../images/netflix-ranking/fourth-poster.jpg"
-                  alt="fourth-poster"
-                />
-                <p>
-                  종이달 <br />
-                  2023・한국・ENA <br />
-                  평균 ★ 3.0
-                </p>
-              </a>
-            </li>
-            <li class="fifth-ranking">
-              <a href="#" title="가면의 여왕">
-                <div class="ranking-icon">5</div>
-                <img
-                  src="../images/netflix-ranking/fifth-poster.jpg"
-                  alt="fifth-poster"
-                />
-                <p>
-                  가면의 여왕 <br />
-                  2023・한국・Channel A <br />
-                  평균 ★ 2.2
-                </p>
-              </a>
-            </li>
-          </ul>
+          <ul class="ranking-listitem disney"></ul>
           <button
             type="button"
             class="btn-scroll-right"

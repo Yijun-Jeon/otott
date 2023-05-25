@@ -1,48 +1,48 @@
 // 1) 좌우 스크롤 기능
 function scrollLeft(subclass) {
-  var width = $(".ranking-box").width(); // window 창 변경될 때마다 이동되는 범위 조절을 위한 변수
-  var container = $(`#${subclass}`).find(".ranking-listitem");
+  var width = $('.ranking-box').width(); // window 창 변경될 때마다 이동되는 범위 조절을 위한 변수
+  var container = $(`#${subclass}`).find('.ranking-listitem');
   var scrollPosition = container.scrollLeft();
   container.animate({ scrollLeft: scrollPosition - width }, 500);
 }
 
 function scrollRight(subclass) {
-  var width = $(".ranking-box").width();
-  var container = $(`#${subclass}`).find(".ranking-listitem");
+  var width = $('.ranking-box').width();
+  var container = $(`#${subclass}`).find('.ranking-listitem');
   var scrollPosition = container.scrollLeft();
   container.animate({ scrollLeft: scrollPosition + width }, 500);
 }
 
 $(document).ready(function () {
-  $(".btn-scroll-left").hover(
+  $('.btn-scroll-left').hover(
     function () {
-      $(this).css("background-color", "#7e89c7");
-      $(".left").css("border-color", "white");
+      $(this).css('background-color', '#7e89c7');
+      $('.left').css('border-color', 'white');
     },
     function () {
-      $(this).css("background-color", "");
-      $(".left").css("border-color", "");
+      $(this).css('background-color', '');
+      $('.left').css('border-color', '');
     }
   );
 
-  $(".btn-scroll-right").hover(
+  $('.btn-scroll-right').hover(
     function () {
-      $(this).css("background-color", "#7e89c7");
-      $(".right").css("border-color", "white");
+      $(this).css('background-color', '#7e89c7');
+      $('.right').css('border-color', 'white');
     },
     function () {
-      $(this).css("background-color", "");
-      $(".right").css("border-color", "");
+      $(this).css('background-color', '');
+      $('.right').css('border-color', '');
     }
   );
 
-  $(".btn-scroll-left").on("click", function () {
-    var subclass = $(this).parent().attr("id");
+  $('.btn-scroll-left').on('click', function () {
+    var subclass = $(this).parent().attr('id');
     scrollLeft(subclass);
   });
 
-  $(".btn-scroll-right").on("click", function () {
-    var subclass = $(this).parent().attr("id");
+  $('.btn-scroll-right').on('click', function () {
+    var subclass = $(this).parent().attr('id');
     scrollRight(subclass);
   });
 });
@@ -51,11 +51,11 @@ $(document).ready(function () {
 
 // 2) Top Button 기능
 $(document).ready(function () {
-  const $topBtn = document.getElementById("moveTopBtn");
+  const $topBtn = document.getElementById('moveTopBtn');
 
   // 버튼 클릭 시 맨 위로 이동
-  document.getElementById("moveTopBtn").onclick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  document.getElementById('moveTopBtn').onclick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 });
 
@@ -71,8 +71,8 @@ let resizeObserver; // 전역변수로 설정
 let lis; // li 요소들을 담을 변수
 
 function initSubmenu() {
-  const lineElement = document.querySelector(".submenu-list");
-  lis = lineElement.querySelectorAll("li");
+  const lineElement = document.querySelector('.submenu-list');
+  lis = lineElement.querySelectorAll('li');
 
   resizeObserver = new ResizeObserver(() => {
     let nextLineFlag = false;
@@ -86,7 +86,7 @@ function initSubmenu() {
       }
 
       if (nextLineFlag) {
-        nextLi.classList.add("hide");
+        nextLi.classList.add('hide');
       }
     }
   });
@@ -95,14 +95,14 @@ function initSubmenu() {
 }
 
 function openSubmenu() {
-  const submenu = $(".submenu-list").find("li.hide");
+  const submenu = $('.submenu-list').find('li.hide');
 
-  if (submenu.css("display") === "none") {
+  if (submenu.css('display') === 'none') {
     submenu.slideDown(500);
-    $("#openSubmenu").text("▲");
+    $('#openSubmenu').text('▲');
   } else {
     submenu.slideUp(500);
-    $("#openSubmenu").text("▼");
+    $('#openSubmenu').text('▼');
   }
 }
 
@@ -110,7 +110,7 @@ $(document).ready(function () {
   initSubmenu();
   $(window).resize(function () {
     for (const li of lis) {
-      li.classList.remove("hide");
+      li.classList.remove('hide');
     }
     initSubmenu();
   });
