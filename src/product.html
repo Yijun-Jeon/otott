@@ -5,10 +5,31 @@
     <title>작품명 (개봉연도) - OTOTT</title>
     <link rel="stylesheet" href="../css/initial.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../js/visibleBar.js"></script>
+    <script>
+      $(document).ready(function () {
+        const hash = decodeURI(window.location.hash).trim();
+        const title = hash.substring(1).trim();
+
+        const product = JSON.parse(localStorage.getItem(title));
+
+        $('.product-img').attr('src', product.imgSrc);
+        $('.product-rating').text(product.rating);
+        $('.product-rating-graph').text(product.rating);
+        $('.product-title').text(product.title);
+        $('.graph_title').text(product.title);
+
+        $('.product-detail').text(product.detail);
+        $('.product-infoTitle').html(
+          product.infoTitle.replaceAll('\n', '<br />')
+        );
+        $('.product-info').text(product.info);
+      });
+    </script>
     <!--왓챠피디아 title 방식 참고함-->
     <style>
       /*---section 부분-------------*/
-
       /*--큰 틀 : outer, inner--*/
       #product_section_outer {
         background-color: rgb(164, 175, 249);
@@ -68,7 +89,7 @@
         margin-top: 30px;
       }
       /*--first_right--*/
-      .poster_name {
+      .product-title {
         font-size: xx-large;
       }
 
@@ -76,6 +97,7 @@
       .product_section_second_info {
         /*border: 1px solid rgb(130, 118, 118);*/
         padding: 6% 0;
+        max-width: 520px;
         margin-bottom: 20px;
         border-bottom: 1px dotted rgb(164, 175, 249);
       }
@@ -307,15 +329,15 @@
           <div class="product_section_first_left">
             <!--작품 포스터-->
             <img
-              src="../images/icon/DrChaPoster.JPG"
+              src="http://via.placeholder.com/640x480"
               width="150"
               height="200"
-              class="poster_img"
+              class="poster_img product-img"
               alt="작품 포스터"
             />
           </div>
           <div class="product_section_first_right">
-            <a href="#graph_top"
+            <a href="#graph_top" class="product-rating"
               >평점&nbsp;&nbsp;<img
                 src="../images/icon/Icon_Star.png"
                 width="15px"
@@ -324,9 +346,9 @@
             >
             <br />
             <br />
-            <h1 class="poster_name">닥터 차정숙</h1>
+            <h1 class="product-title">작품 제목</h1>
             <br />
-            <p>2023, JTBC, 드라마/가족/TV드라마</p>
+            <p class="product-detail">년도, 배급사, 카테고리</p>
           </div>
         </div>
 
@@ -338,21 +360,16 @@
           <div class="product_section_second_info">
             <h3>기본 정보</h3>
             <br />
-            <p>닥터 차정숙</p>
-            <p>2023, JTBC, 드라마/가족/TV드라마</p>
-            <p>한국, 15세</p>
+            <p class="product-infoTitle">작품 요약 정보</p>
             <br />
-            <p>
-              가정주부에서 1년차 레지던트가 된 차정숙의 찢어진 인생 봉합기를
-              그린 드라마
-            </p>
+            <p class="product-info">작품 상세 정보</p>
           </div>
 
           <!----별점 그래프 : 소제목 "별점 그래프", 평점, 그래프---->
           <div class="product_section_second_graph">
             <div id="graph_top" class="graph_top">
               <span class="graph_top_left">별점 그래프</span>
-              <span class="graph_top_right">
+              <span class="graph_top_right product-rating-graph">
                 평점&nbsp;&nbsp;<img
                   src="../images/icon/Icon_Star.png"
                   width="15px"

@@ -116,16 +116,24 @@ async function crawlProductInfo(driver, title) {
     };
   }
 
-  // #### 작품 이미지 url ####
-  var imgSrc = await findEle(driver, '.css-qhzw1o-StyledImg').getAttribute(
-    'src'
-  );
+  try {
+    // #### 작품 이미지 url ####
+    var imgSrc = await findEle(driver, '.css-qhzw1o-StyledImg').getAttribute(
+      'src'
+    );
+  } catch (error) {
+    imgSrc = 'http://via.placeholder.com/640x480';
+  }
 
-  // #### 작품 상단 정보 ####
-  var detail = await findEle(
-    driver,
-    '#root > div > div.css-1xm32e0 > section > div > div.css-10ofaaw > div > section > div.css-1p7n6er-Pane.e1svyhwg15 > div > div > div > div > div.css-11h0kfd-Detail.e1svyhwg18'
-  ).getText();
+  try {
+    // #### 작품 상단 정보 ####
+    var detail = await findEle(
+      driver,
+      '#root > div > div.css-1xm32e0 > section > div > div.css-10ofaaw > div > section > div.css-1p7n6er-Pane.e1svyhwg15 > div > div > div > div > div.css-11h0kfd-Detail.e1svyhwg18'
+    ).getText();
+  } catch (error) {
+    detail = 'crawlingFail';
+  }
 
   // 개봉 예정 작품의 경우 평점이 없을 수 있으므로 에러 처리
   try {
@@ -140,8 +148,12 @@ async function crawlProductInfo(driver, title) {
     rating = '평균 ★0.0 (0명)';
   }
 
-  // #### 작품 상세 정보 ####
-  var infoTitle = await findEle(driver, '.css-wvh1uf-Summary').getText();
+  try {
+    // #### 작품 상세 정보 ####
+    var infoTitle = await findEle(driver, '.css-wvh1uf-Summary').getText();
+  } catch (error) {
+    infoTitle = 'crawlingFail';
+  }
 
   // #### 더보기 버튼 클릭 ####
   var showInfo = await findEle(driver, '.css-1ugqy9j');

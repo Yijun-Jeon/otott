@@ -10,7 +10,7 @@ $(document).ready(function () {
       var product = JSON.parse(localStorage.getItem(productId));
       var productInfo = JSON.parse(localStorage.getItem(product.title));
       rankElement = `
-    <li class="${j}th-ranking">
+    <li class="ranking">
       <a href="product.html" title="${product.title}">
         <div class="ranking-icon">${j}</div>
         <img

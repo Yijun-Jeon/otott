@@ -7,10 +7,10 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
       $(document).ready(function () {
-        $(".menu-container a").click(function () {
+        $('.menu-container a').click(function () {
           event.preventDefault(); // 기본 동작 방지
           // 하위 태그 div의 class 속성 가져오기
-          const classList = $(this).find("div").attr("class").split(" ");
+          const classList = $(this).find('div').attr('class').split(' ');
           const pointer = classList[1];
           //url에 pointer 해시값 추가
           window.location.href = `editorList.html#${pointer}`;
@@ -86,21 +86,21 @@
         background-size: 82%;
         background-position: center;
       }
-      /* 
-      .info-box-top.netflix:hover {
+
+      .info-box-top.topic1:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/netflix.png");
+        /* background-image: url("../images/ott-logo/netflix.png"); */
       }
-      
-      .info-box-top.tiving:hover {
+
+      .info-box-top.topic2:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/tving.png");
+        /* background-image: url("../images/ott-logo/tving.png"); */
       }
-      
-      .info-box-top.watcha:hover {
+
+      .info-box-top.topic3:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/watcha.png");
-      } */
+        /* background-image: url("../images/ott-logo/watcha.png"); */
+      }
 
       .info-box-bottom {
         height: 150px;
@@ -118,20 +118,20 @@
         background-position: center;
       }
 
-      /* .info-box-bottom.wavve:hover {
+      .info-box-bottom.topic4:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/wavve.png");
+        /* background-image: url("../images/ott-logo/wavve.png"); */
       }
-      
-      .info-box-bottom.coupang:hover {
+
+      .info-box-bottom.topic5:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/coupang.jpeg");
+        /* background-image: url("../images/ott-logo/coupang.jpeg"); */
       }
-      
-      .info-box-bottom.disney:hover {
+
+      .info-box-bottom.topic6:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/disney.png");
-      } */
+        /* background-image: url("../images/ott-logo/disney.png"); */
+      }
 
       .info-box-text {
         position: relative;
@@ -141,10 +141,10 @@
       }
 
       .info-box-top:hover .info-box-text {
-        display: none;
+        /* display: none; */
       }
       .info-box-bottom:hover .info-box-text {
-        display: none;
+        /* display: none; */
       }
     </style>
   </head>
