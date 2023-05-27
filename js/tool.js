@@ -207,7 +207,18 @@ async function addToNewProductsJson(product, title) {
 }
 
 var genreList = {
-  romance: [],
+  romance: [
+    '샬럿 왕비: 브리저튼 외전',
+    '힘쎈 여자 도봉순',
+    '너의 결혼식',
+    '치즈인더트랩',
+    '말할 수 없는 비밀',
+    '건축학개론',
+    '내 여자친구는 구미호',
+    '꽃보다 남자',
+    '커피 프린스 1호점',
+    '늑대의 유혹',
+  ],
   comedy: [
     '나쁜엄마',
     'SNL',

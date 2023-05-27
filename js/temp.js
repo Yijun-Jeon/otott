@@ -51,7 +51,7 @@ const watcha = 'https://www.google.com';
     await driver.get(watcha);
 
     var search = await driver.findElement(By.id('APjFqb'));
-    var title = '1박 2일 시즌 1';
+    var title = '아일랜드 (2005)';
     await search.sendKeys(title + ' - 왓챠피디아');
     await search.submit();
 
