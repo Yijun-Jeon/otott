@@ -3,50 +3,67 @@
   padding-bottom: 50px;
 }
 
-.selection-list {
+/*하위바 하위바 하위바 하위바 하위바 하위바 하위바 */
+.submenu-list {
+  position: relative;
+  margin: 0px 15%;
+  padding-top: 2%;
+  max-width: 100%; /*width 제한*/
+
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  /*align-items: center; 해당 부분의 경우 고정되지 않고 스크롤에 따라 위치 변함*/
   height: 20vh;
-  width: 100%;
-  flex-wrap: wrap;
+
+  /*다음줄 이동*/
+  flex-wrap: wrap; /*flex 컨테이너 내의 item들이 여러 줄에 걸쳐 배치되도록*/
 }
 
-.selection-list li {
+/*하위바 버튼*/
+.submenu-list #openSubmenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  margin: 10px;
+
+  border: 0.5px solid rgb(120, 89, 161);
+  border-radius: 20px;
+  background-color: white;
+  color: rgb(120, 89, 161);
+}
+
+.submenu-list #openSubmenu:hover {
+  cursor: pointer;
+}
+
+.submenu-list li {
   background-color: rgb(120, 89, 161);
   color: white;
   border-radius: 10px;
 
   list-style-type: none;
-  display: inline-block;
   text-align: center;
-  width: 110px;
-  height: 40px;
-  margin: 15px;
+  width: auto;
+  height: auto; /*li 요소 높이 동적으로 조정하기 위해 > 줄바꿈을 위한*/
+  margin: 10px;
+  padding: 0px 10px;
   line-height: 2.8;
+
+  white-space: normal; /* 줄 바꿈 허용 */
+
+  font-size: 14px;
 }
 
-.view-review-list {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  /* margin-left: 50vh; */
-  transform: translateX(-20%); /*화면 크기에 상관없이 일정 간격 유지 가능*/
-}
-.view-review-list li {
-  list-style-type: none;
-  display: inline;
-  text-align: center;
-  color: white;
-  font-weight: 200;
+/*하위바 누르기 전 초기화 하기 위한 클래스*/
+.hide {
+  display: none;
 }
 
-.view-review-list li > a {
-  color: white;
-  font-weight: 200;
-}
-
-/*article section*/
+/*article section article section article section article section*/
 .ranking-box {
   position: relative;
   background-color: white;
@@ -100,7 +117,7 @@ h2 {
 }
 
 .arrow {
-  border: solid rgb(120, 89, 161);
+  border: solid #7e89c7;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3.5px;
@@ -171,5 +188,5 @@ p {
 
 #moveTopBtn:hover {
   cursor: pointer;
-  color: rgb(170, 137, 213);
+  color: rgb(120, 89, 161);
 }
