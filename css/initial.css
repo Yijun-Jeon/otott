@@ -35,6 +35,12 @@ body {
   font-size: xx-large;
   padding-left: 20px;
 }
+
+.nav-logo-mini,
+.nav-menu-title {
+  position: static;
+}
+
 .otott_logo {
   width: 120px;
   height: auto;
@@ -57,9 +63,8 @@ body {
   height: 70px;
   line-height: 70px;
   text-align: center;
-  margin: 0px 60px;
+  margin: 0px 30px;
   margin-top: 20px;
-  font-size: large;
 }
 .menu-title {
   display: block;
@@ -104,8 +109,15 @@ body {
   display: inline-block;
 }
 
-@media (max-width: 1091px) {
+@media (max-width: 840px) {
+  .nav-search-bar,
+  .input-search {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
   body {
-    width: 1091px;
+    width: 600px;
   }
 }
