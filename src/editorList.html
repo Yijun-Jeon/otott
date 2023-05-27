@@ -12,13 +12,13 @@
         const hash = window.location.hash;
         console.log(hash); // 가져온 해시 값을 이용하여 가진 위치로 자동 스크롤
         if (hash) {
-          const target = $(hash);
+          const target = $(hash + "-chart");
           if (target.length > 0) {
             // 없는 경우 제외
             console.log(target.offset().top);
             $("html, body").animate(
               {
-                scrollTop: target.offset().top, //offset: 요소의 현재 좌표 정보
+                scrollTop: target.offset().top - 200, //offset: 요소의 현재 좌표 정보
               },
               500
             );
@@ -28,7 +28,7 @@
     </script>
     <style>
       #list-section {
-        background-color: #a2afff;
+        background-color: rgb(38, 20, 61);
         padding-bottom: 50px;
       }
 
@@ -59,14 +59,18 @@
         padding: 10px;
         margin: 10px;
 
-        border: 0.5px solid #7e89c7;
+        border: 0.5px solid rgb(120, 89, 161);
         border-radius: 20px;
         background-color: white;
-        color: #7e89c7;
+        color: rgb(120, 89, 161);
+      }
+
+      .submenu-list #openSubmenu:hover {
+        cursor: pointer;
       }
 
       .submenu-list li {
-        background-color: #7e89c7;
+        background-color: rgb(120, 89, 161);
         color: white;
         border-radius: 10px;
 
@@ -126,7 +130,7 @@
         height: 35px;
         background-color: white;
         border-radius: 17.5px;
-        border: 3px solid #7e89c7;
+        border: 3px solid rgb(120, 89, 161);
         cursor: pointer;
       }
 
@@ -163,7 +167,7 @@
         color: black;
       }
       a:hover {
-        color: #7e89c7;
+        color: rgb(120, 89, 161);
       }
 
       img {
@@ -221,7 +225,7 @@
 
       #moveTopBtn:hover {
         cursor: pointer;
-        color: #7e89c7;
+        color: rgb(120, 89, 161);
       }
     </style>
   </head>
@@ -229,7 +233,7 @@
     <nav id="main-navigation">
       <div class="pull-left">
         <a class="nav-logo-mini" href="main.html">
-          <span>OTOTT</span>
+          <span><img class="otott_logo" alt="" /></span>
         </a>
       </div>
       <div class="pull-right">
@@ -280,7 +284,7 @@
         </div>
       </aside>
       <article id="editor-topic-box">
-        <div id="topic1" class="ranking-box">
+        <div id="topic1-chart" class="ranking-box">
           <h2>#한 여름 밤을 오싹하게 만드는😨</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
@@ -437,7 +441,7 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="topic2" class="ranking-box">
+        <div id="topic2-chart" class="ranking-box">
           <h2>#국제적으로 인정받은 시리즈🏆</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
@@ -594,7 +598,7 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="topic3" class="ranking-box">
+        <div id="topic3-chart" class="ranking-box">
           <h2>#느긋하게 살고 싶을 때 꺼내보아요🪴</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
@@ -751,7 +755,7 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="topic4" class="ranking-box">
+        <div id="topic4-chart" class="ranking-box">
           <h2>#혼자 펑펑 울고 싶을 때 보는💧</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
@@ -838,7 +842,7 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="topic5" class="ranking-box">
+        <div id="topic5-chart" class="ranking-box">
           <h2>#연애세포를 일깨워줄❤️‍🔥</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
@@ -925,7 +929,7 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="topic6" class="ranking-box">
+        <div id="topic6-chart" class="ranking-box">
           <h2>#배꼽빠지게 웃어보자 하하🤣</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>

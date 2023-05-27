@@ -16,7 +16,7 @@ function scrollRight(subclass) {
 $(document).ready(function () {
   $(".btn-scroll-left").hover(
     function () {
-      $(this).css("background-color", "#7e89c7");
+      $(this).css("background-color", "rgb(170, 137, 213)");
       $(".left").css("border-color", "white");
     },
     function () {
@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   $(".btn-scroll-right").hover(
     function () {
-      $(this).css("background-color", "#7e89c7");
+      $(this).css("background-color", "rgb(170, 137, 213)");
       $(".right").css("border-color", "white");
     },
     function () {
