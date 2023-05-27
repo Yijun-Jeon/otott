@@ -25,7 +25,7 @@ body {
 #main-navigation {
   /*border-bottom: 1px solid black;*/
   height: 80px;
-  background-color: rgb(48, 7, 92);
+  background-color: rgb(38, 20, 61);
 }
 .nav-logo-mini {
   float: left;
@@ -102,4 +102,10 @@ body {
   margin-left: -1px;
   vertical-align: top;
   display: inline-block;
+}
+
+@media (max-width: 1091px) {
+  body {
+    width: 1091px;
+  }
 }
