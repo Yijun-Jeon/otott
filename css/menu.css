@@ -1,0 +1,107 @@
+/* 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더   */
+#main-header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(38, 20, 61);
+  padding-bottom: 10px;
+}
+.main-logo {
+  width: 100px;
+  height: 70px;
+  content: url(../images/otott-logo/main_otott.png);
+}
+
+#main-section {
+  background-color: rgb(38, 20, 61);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#main-top-aside {
+  width: 700px;
+  background-color: rgb(38, 20, 61);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-title {
+  color: white;
+}
+.aside-menu-item {
+  float: left;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.aside-menu-item:hover {
+  background: rgb(120, 89, 161);
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.aside-menu-item.aside-menu-item-cur {
+  background: rgb(170, 137, 213);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/*메뉴 메뉴 메뉴 메뉴 메뉴*/
+#menu-article {
+  background-color: rgb(38, 20, 61);
+  padding-bottom: 50px;
+  height: 459.5px;
+  text-align: center;
+}
+.menu-container {
+  width: 700px;
+  height: 210px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+}
+.top-container {
+  border-radius: 10px 10px 0px 0px;
+  border-top: 5px solid rgb(170, 137, 213);
+  border-left: 5px solid rgb(170, 137, 213);
+  border-right: 5px solid rgb(170, 137, 213);
+}
+.bottom-container {
+  border-radius: 0px 0px 10px 10px;
+  border-bottom: 5px solid rgb(170, 137, 213);
+  border-left: 5px solid rgb(170, 137, 213);
+  border-right: 5px solid rgb(170, 137, 213);
+}
+.info-box-top {
+  height: 150px;
+  width: 200px;
+  background-color: rgb(120, 89, 161);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 40px;
+
+  background-size: 82%;
+  background-position: center;
+}
+.info-box-bottom {
+  height: 150px;
+  width: 200px;
+  background-color: rgb(120, 89, 161);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 40px;
+
+  background-size: 85%;
+  background-position: center;
+}
