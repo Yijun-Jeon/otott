@@ -10,6 +10,10 @@
   width: 50%;
 }
 
+.footer-li-left {
+  padding-left: 2%;
+}
+
 .footer-li-right {
   text-align: right;
 }
@@ -24,13 +28,19 @@
 .footer-listitem-center {
   list-style: none;
 }
+.otott-footer-image {
+  width: 30px;
+  height: auto;
+  content: url(../images/otott-logo/footer_image.png);
+  margin-bottom: -4px;
+  margin-left: 10px;
+}
 
 #footer-copyrights span {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
   white-space: nowrap; /*텍스트의 줄 바꿈을 제어*/
 }
-
 #footer-otott-name-logo {
   font-size: 25px;
   font-weight: 700;

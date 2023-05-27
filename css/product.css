@@ -1,0 +1,258 @@
+.product-body {
+  background-color: rgb(38, 20, 61);
+}
+
+/*---section 부분-------------*/
+/*--큰 틀 : outer, inner--*/
+#product_section_outer {
+  background-color: rgb(38, 20, 61);
+  height: 1900px;
+}
+#product_section_inner {
+  height: 1700px;
+  width: 1000px;
+
+  background-color: rgba(254, 253, 253, 0.95);
+  margin: 5% auto;
+  padding-top: 30px;
+
+  border-radius: 50px 50px 50px 50px;
+}
+
+/*--작은 틀 : first, second, third--*/
+.product_section_first {
+  padding: 6% 10%;
+  height: 200px;
+}
+
+.section_btwFirstAndSecond {
+  margin: 0 7%;
+  border: solid 1px rgb(38, 20, 61);
+}
+
+.product_section_second {
+  padding: 3% 7%;
+  margin-left: 15px;
+  float: left;
+  height: 1220px;
+  border-right: solid 2px rgb(38, 20, 61);
+}
+.product_section_third {
+  padding: 3% 0;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  height: 640px;
+}
+
+/*--first : left, right--*/
+.product_section_first_left {
+  float: left;
+  margin-left: 50px;
+}
+.product_section_first_right {
+  padding: 30px;
+  margin-left: 230px;
+  margin-top: 30px;
+}
+/*--first_left--*/
+.product-img {
+  width: 150px;
+  height: 200px;
+}
+/*--first_right--*/
+.icon-star {
+  width: 15px;
+  height: 15px;
+  content: url(../images/icon/Icon_Star.png);
+}
+.product-title {
+  font-size: xx-large;
+}
+
+/*--second : info, graph, review--*/
+.product_section_second_info {
+  padding: 6% 0;
+  max-width: 520px;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted rgb(164, 175, 249);
+}
+.product_section_second_graph {
+  padding: 6% 0;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted rgb(164, 175, 249);
+}
+.product_section_second_review {
+  padding: 6% 0;
+  margin-bottom: 20px;
+}
+/*--second_graph--*/
+.graph_top {
+  padding-bottom: 6%;
+}
+.graph_wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.graph_top_left {
+  width: 100px;
+  font-size: large;
+  font-weight: bold;
+}
+.graph_top_right {
+  float: right;
+}
+
+.graph_main {
+  position: relative;
+  height: 185px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.graph_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+}
+
+.graph_main .x-axis {
+  position: absolute;
+  display: flex;
+  bottom: -8px;
+  left: 20px;
+  width: calc(100% - 20px);
+  justify-content: space-around;
+  text-align: center;
+  z-index: 2;
+}
+.graph_main .x-axis > li {
+  font-size: 12px;
+}
+.graph_bar {
+  display: flex;
+  position: absolute;
+  left: 20px;
+  bottom: 16px;
+  width: calc(100% - 20px);
+  height: calc(100% - 16px);
+  justify-content: space-around;
+  align-items: flex-end;
+  text-align: center;
+  z-index: 3;
+}
+.graph_bar > li {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+.graph_bar > li span {
+  display: inline-block;
+  max-width: 80px;
+  width: 100%;
+  height: 100%;
+  background: #f1cb7e;
+}
+
+/*--second_review--*/
+.review_wrap {
+  width: 500px;
+  height: 390px;
+  border: 1px dotted rgb(38, 20, 61);
+  overflow: scroll;
+  margin: 5px 5px;
+  padding: 5px 5px;
+}
+.review_item {
+  margin: 5px 5px 0 0;
+  border: 1px solid rgb(164, 175, 249);
+  height: 190px;
+}
+.review_item_contents_wrap {
+  margin: 5px;
+}
+.user_info_wrap {
+  margin-bottom: 5px;
+}
+.icon-owl {
+  width: 15px;
+  height: 15px;
+  content: url(../images/icon/Icon_Owl.png);
+}
+.review_write_ago {
+  float: right;
+}
+.review_rate_wrap {
+  margin-bottom: 5px;
+}
+.review_contents {
+  margin-bottom: 5px;
+}
+.review_actions_wrap {
+  margin-bottom: 5px;
+}
+.review_actions {
+  margin-top: 20px;
+  padding-left: 52%;
+}
+.review_actions > li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.review_action_btn {
+  border: none;
+  background: none;
+}
+
+.like_icon {
+  width: 65px;
+  height: 65px;
+}
+.comment_icon {
+  width: 45px;
+  height: 40px;
+  padding-bottom: 12px;
+}
+.share_icon {
+  width: 65px;
+  height: 65px;
+}
+
+/*--third : contents(sub-title, platform)--*/
+.product_section_third_contents {
+  display: block;
+}
+
+.product_section_third_sub-title {
+  padding: 15% 0;
+  margin-bottom: 10px;
+}
+.product_section_third_platform {
+  margin-bottom: 20px;
+}
+.available_platform {
+  display: flex;
+  align-items: center;
+  width: 180px;
+}
+.available_platform:hover {
+  color: rgb(164, 175, 249);
+}
+.icon_img {
+  width: 90px;
+  height: 90px;
+}
+.icon_img:hover {
+  border: 2px solid rgb(164, 175, 249);
+}
+.platform_text {
+  justify-content: center;
+  margin-left: 10px;
+}
+
+/*---footer 부분--------------*/
+#footer-section {
+  background-color: white;
+}

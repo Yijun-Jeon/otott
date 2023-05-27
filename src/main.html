@@ -6,61 +6,184 @@
     <link rel="stylesheet" href="../css/footer.css" />
     <script type="module" src="../js/store.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="../js/scroll.js"></script>
     <script src="../js/mainApply.js"></script>
     <script src="../js/setHash.js"></script>
     <script></script>
     <style>
-      /* 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더   */
-      #main-header {
-        width: 100%;
-        height: 300px;
+      body {
+        background-color: rgb(38, 20, 61);
+      }
+
+      footer {
         background-color: white;
+      }
+      #main-nav {
+        display: inline-block;
+        background-color: rgb(38, 20, 61);
+      }
+
+      #main-header {
+        height: 76.5vh;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(38, 20, 61);
+      }
+
+      .upper-main-header {
+        height: 100%;
+        padding: 1% 3% 3% 3%;
+        display: flex;
+        margin-bottom: 1%;
+      }
+
+      #main-header-logo,
+      #main-header-intro {
+        flex: 1;
+        width: 50%;
+      }
+
+      #main-header-intro {
+        padding: 7% 10%;
+      }
+
+      .main-intro-title {
+        color: rgb(170, 137, 213);
+        font-size: 35px;
+        margin: 30px 0;
+      }
+
+      .main-intro-explanation {
+        color: white;
+        font-size: 20px;
+      }
+
+      #main-header-button {
+        margin-top: auto;
+      }
+
+      .btn-scroll-down {
+        background-color: transparent;
+        border: none;
+      }
+
+      .arrow {
+        border: solid rgb(170, 137, 213);
+        border-width: 0 4px 4px 0;
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+
+      #main-section1 {
+        background-color: white;
+        height: 100vh;
+      }
+
+      #main-section2 {
+        background-color: rgba(254, 253, 253, 0.95);
+        height: 100vh;
+      }
+
+      .main-section-explanation {
+        font-size: 35px;
         display: flex;
         justify-content: center;
-        align-content: center;
-        background-color: rgb(141, 109, 183);
+        align-items: center;
+        padding-top: 10%;
+        margin-bottom: 2%;
       }
-      .main-logo {
-        width: 500px;
-        height: auto;
-      }
-      #main-top-aside {
-        height: 60px;
-        border: 1px solid black;
+
+      .aside-menu,
+      .aside-ott {
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
       }
+
+      .ott-logo-item {
+        float: left;
+        position: relative;
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .aside-menu {
+        margin-top: 5%;
+      }
+
       .aside-menu-item {
         float: left;
         position: relative;
-      }
-      .aside-menu-item:hover {
-        background: rgb(164, 175, 249);
-        color: white;
+        background-color: rgb(120, 89, 161);
+        border-radius: 20px;
+        width: 200px;
+        height: 100px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      /* 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 */
-      #chart-article {
-        background-color: rgb(164, 175, 249);
-        border: 1px solid black;
-        text-align: center;
-      }
-      .chart-title {
-        padding: 20px 0px;
+      .aside-menu-item a {
         color: white;
+        font-size: 20px;
+        font-weight: 600;
       }
+
+      .aside-menu-item:hover {
+        background: rgb(170, 137, 213);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      /*chart chart chart*/
+      .chart-title {
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5%;
+        margin-bottom: 2%;
+      }
+
       .chart-container {
-        background-color: white;
         margin: 0 25%;
-        height: 400px;
+        height: 550px;
         overflow: auto;
-        border-radius: 10px;
+        border-radius: 20px;
         margin-bottom: 20px;
       }
+
+      /* Chrome, Safari 등 웹킷 기반 브라우저 */
+      .chart-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Firefox */
+      .chart-container {
+        scrollbar-width: none;
+      }
+
+      /* Edge, Internet Explorer 11 */
+      .chart-container {
+        -ms-overflow-style: none;
+      }
+
       .rank {
-        border: 1px solid black;
-        background-color: rgb(21, 32, 54);
+        background-color: rgb(120, 89, 161);
         height: 50px;
         padding: 5px;
         margin: 10px 30px;
@@ -68,6 +191,11 @@
         color: white;
         overflow: hidden;
       }
+
+      .rank:hover {
+        background: rgb(170, 137, 213);
+      }
+
       .pull-left-rank {
         height: 50px;
         float: left;
@@ -91,13 +219,13 @@
     </style>
   </head>
   <body>
-    <nav id="main-navigation">
+    <nav id="main-nav">
       <div class="pull-left">
         <a class="nav-logo-mini" href="main.html">
-          <span>OTOTT</span>
+          <span><img class="otott_logo" alt="" /></span>
         </a>
       </div>
-      <div class="pull-right">
+      <!--<div class="pull-right">
         <ul class="nav-menu">
           <li class="nav-menu-item">
             <a class="nav-menu-title" href="main.html">ALL</a>
@@ -118,32 +246,79 @@
             <input type="submit" class="input-search-submit" value="검색" />
           </form>
         </div>
-      </div>
+      </div>-->
     </nav>
     <header id="main-header">
-      <img class="main-logo" src="../images/otott-logo/logo.png" alt="" />
+      <div class="upper-main-header">
+        <div id="main-header-logo">
+          <img
+            id="otott-logo"
+            src="../images/otott-logo/logo.png"
+            alt="main-logo"
+          />
+        </div>
+        <div id="main-header-intro">
+          <h2 class="main-intro-title">About OTOTT</h2>
+          <p class="main-intro-explanation">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
+            minima cupiditate aperiam laborum temporibus assumenda ea facere
+            necessitatibus, explicabo laudantium consectetur, eius earum
+            accusantium soluta odit culpa tenetur possimus. Sapiente.
+          </p>
+        </div>
+      </div>
+      <div class="lower-main-header">
+        <div id="main-header-button">
+          <button type="button" class="btn-scroll-down">
+            <span class="arrow down"></span>
+          </button>
+        </div>
+      </div>
     </header>
-    <section id="main-section">
+    <section id="main-section1">
+      <h3 class="main-section-explanation">
+        흩어져있어 잘 몰랐던 OTT 작품을 쉽게 경험해봐요.
+      </h3>
       <aside id="main-top-aside">
+        <ul class="aside-ott">
+          <li class="aside-logo-item">
+            <img class="ott-logo-item" src="../images/footer/netflix.png" />
+          </li>
+          <li class="aside-logo-item">
+            <img class="ott-logo-item" src="../images/footer/tving.png" />
+          </li>
+          <li class="aside-logo-item">
+            <img class="ott-logo-item" src="../images/footer/watcha.png" />
+          </li>
+          <li class="aside-logo-item">
+            <img class="ott-logo-item" src="../images/footer/wavve.png" />
+          </li>
+          <li class="aside-logo-item">
+            <img class="ott-logo-item" src="../images/footer/coupang.jpeg" />
+          </li>
+          <li class="aside-logo-item">
+            <img class="ott-logo-item" src="../images/footer/disney.png" />
+          </li>
+        </ul>
         <ul class="aside-menu">
           <li class="aside-menu-item">
-            <a class="menu-title" href="main.html">ALL</a>
+            <a id="all-chart" class="menu-title" href="#">통합 차트</a>
           </li>
           <li class="aside-menu-item">
-            <a class="menu-title" href="ottMenu.html">OTT별</a>
+            <a class="menu-title" href="ottMenu.html">OTT별 차트</a>
           </li>
           <li class="aside-menu-item">
-            <a class="menu-title" href="genreMenu.html">장르별</a>
+            <a class="menu-title" href="genreMenu.html">장르별 차트</a>
           </li>
           <li class="aside-menu-item">
             <a class="menu-title" href="editorMenu.html">Editor's Pick</a>
           </li>
         </ul>
       </aside>
-
-      <!-- /* 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 */ -->
+    </section>
+    <section id="main-section2">
       <article id="chart-article">
-        <div class="chart-title">실시간 통합 차트</div>
+        <h3 class="chart-title">실시간 통합 TOP20</h3>
         <div class="chart-container">
           <ul id="chart" class="chart-list-container">
             <!-- 자동화된 파트 -->
@@ -181,7 +356,9 @@
       </div>
       <div class="footer-center">
         <ul class="footer-listitem-center">
-          <li id="footer-otott-name-logo">OTOTT</li>
+          <li id="footer-otott-name-logo">
+            OTOTT<img class="otott-footer-image" alt="" />
+          </li>
           <li id="footer-copyrights">
             <span> COPYRIGHTS ⓒ SUNGKYUNKWAN UNIVERSITY </span>
           </li>

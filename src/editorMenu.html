@@ -4,14 +4,15 @@
     <title>OTOTT</title>
     <link rel="stylesheet" href="../css/initial.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../js/setHash.js"></script>
     <script>
       $(document).ready(function () {
-        $('.menu-container a').click(function () {
+        $(".menu-container a").click(function () {
           event.preventDefault(); // 기본 동작 방지
           // 하위 태그 div의 class 속성 가져오기
-          const classList = $(this).find('div').attr('class').split(' ');
+          const classList = $(this).find("div").attr("class").split(" ");
           const pointer = classList[1];
           //url에 pointer 해시값 추가
           window.location.href = `editorList.html#${pointer}`;
@@ -19,75 +20,7 @@
       });
     </script>
     <style>
-      /* 헤더 헤더 헤더 헤더 헤더 헤더  */
-      #main-header {
-        width: 100%;
-        height: 300px;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        background-color: rgb(141, 109, 183);
-      }
-      .main-logo {
-        width: 500px;
-        height: auto;
-      }
-      #main-top-aside {
-        height: 60px;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .aside-menu-item {
-        float: left;
-        position: relative;
-      }
-      .aside-menu-item:hover {
-        background: rgb(164, 175, 249);
-        color: white;
-      }
       /* 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 */
-      #menu-article {
-        background-color: rgb(164, 175, 249);
-        border: 1px solid black;
-        height: 459.5px;
-        text-align: center;
-      }
-      .menu-container {
-        height: 210px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 0px 25%;
-        background-color: white;
-      }
-      .top-container {
-        margin-top: 20px;
-        border-radius: 10px 10px 0px 0px;
-      }
-
-      .bottom-container {
-        border-radius: 0px 0px 10px 10px;
-      }
-
-      .info-box-top {
-        height: 150px;
-        width: 200px;
-        background-color: rgb(128, 137, 194);
-        border-radius: 20px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        margin-top: 40px;
-
-        background-size: 82%;
-        background-position: center;
-      }
-
       .info-box-top.topic1:hover {
         transform: translateY(5px);
         /* background-image: url("../images/ott-logo/netflix.png"); */
@@ -102,23 +35,6 @@
         transform: translateY(5px);
         /* background-image: url("../images/ott-logo/watcha.png"); */
       }
-
-      .info-box-bottom {
-        height: 150px;
-        width: 200px;
-        background-color: rgb(128, 137, 194);
-        border-radius: 20px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        margin-bottom: 40px;
-
-        background-size: 85%;
-        background-position: center;
-      }
-
       .info-box-bottom.topic4:hover {
         transform: translateY(5px);
         /* background-image: url("../images/ott-logo/wavve.png"); */
@@ -153,7 +69,7 @@
     <nav id="main-navigation">
       <div class="pull-left">
         <a class="nav-logo-mini" href="main.html">
-          <span>OTOTT</span>
+          <span><img class="otott_logo" alt="" /></span>
         </a>
       </div>
       <div class="pull-right">
@@ -180,7 +96,8 @@
       </div>
     </nav>
     <header id="main-header">
-      <img class="main-logo" src="../images/otott-logo/logo.png" alt="" />
+      <img class="main-logo" alt="" />
+      <!--main_image.png도 initial.css로 넣는 걸로 통일!-->
     </header>
     <section id="main-section">
       <aside id="main-top-aside">
@@ -194,7 +111,7 @@
           <li class="aside-menu-item">
             <a class="menu-title" href="genreMenu.html">장르별</a>
           </li>
-          <li class="aside-menu-item">
+          <li class="aside-menu-item aside-menu-item-cur">
             <a class="menu-title" href="editorMenu.html">Editor's Pick</a>
           </li>
         </ul>
@@ -257,7 +174,9 @@
       </div>
       <div class="footer-center">
         <ul class="footer-listitem-center">
-          <li id="footer-otott-name-logo">OTOTT</li>
+          <li id="footer-otott-name-logo">
+            OTOTT<img class="otott-footer-image" alt="" />
+          </li>
           <li id="footer-copyrights">
             <span> COPYRIGHTS ⓒ SUNGKYUNKWAN UNIVERSITY </span>
           </li>

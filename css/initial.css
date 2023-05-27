@@ -23,8 +23,9 @@ body {
 }
 /* 고정바 고정바 고정바 고정바 고정바 고정바  */
 #main-navigation {
-  border-bottom: 1px solid black;
+  /*border-bottom: 1px solid black;*/
   height: 80px;
+  background-color: rgb(38, 20, 61);
 }
 .nav-logo-mini {
   float: left;
@@ -34,26 +35,39 @@ body {
   font-size: xx-large;
   padding-left: 20px;
 }
+
+.nav-logo-mini,
+.nav-menu-title {
+  position: static;
+}
+
+.otott_logo {
+  width: 120px;
+  height: auto;
+  content: url(../images/otott-logo/otott_logo.png);
+}
 .nav-menu {
   visibility: hidden;
 }
 .nav-menu-item {
-  height: 80px;
+  margin-top: 25px;
+  height: 30px;
   float: left;
   position: relative;
 }
-.nav-menu-item:hover {
-  background: rgb(164, 175, 249);
+.nav-menu-title:hover {
+  background: rgba(129, 129, 129, 0.211);
   color: white;
+  border-radius: 10px;
 }
 .nav-menu-title {
-  display: block;
-  height: 70px;
-  line-height: 70px;
+  display: inline-block;
+  height: 30px;
   text-align: center;
-  margin: 0px 60px;
-  margin-top: 20px;
-  font-size: large;
+  margin: 0px 20px;
+  margin-top: 25px;
+  color: white;
+  padding: 5px 10px;
 }
 .menu-title {
   display: block;
@@ -88,41 +102,23 @@ body {
 }
 .input-search-submit {
   display: block;
-  float: left;
   width: 50px;
   height: 26px;
   border-radius: 0 15px 15px 0;
   border: 1px solid #cccccc;
   margin-left: -1px;
-  vertical-align: top;
   display: inline-block;
 }
-/* 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더   */
-#main-header {
-  width: 100%;
-  height: 300px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(141, 109, 183);
+
+@media (max-width: 840px) {
+  .nav-search-bar,
+  .input-search {
+    display: none;
+  }
 }
-.main-logo {
-  width: 500px;
-  height: auto;
-}
-#main-top-aside {
-  height: 60px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.aside-menu-item {
-  float: left;
-  position: relative;
-}
-.aside-menu-item:hover {
-  background: rgb(164, 175, 249);
-  color: white;
+
+@media (max-width: 640px) {
+  body {
+    width: 640px;
+  }
 }
