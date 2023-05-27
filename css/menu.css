@@ -20,6 +20,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 20px;
 }
 #main-top-aside {
   width: 700px;
@@ -38,13 +40,13 @@
   border-top-right-radius: 10px;
 }
 .aside-menu-item:hover {
-  background: rgb(120, 89, 161);
+  background: rgb(165, 165, 165);
   color: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 .aside-menu-item.aside-menu-item-cur {
-  background: rgb(170, 137, 213);
+  background: rgb(120, 89, 161);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -65,15 +67,15 @@
 }
 .top-container {
   border-radius: 10px 10px 0px 0px;
-  border-top: 5px solid rgb(170, 137, 213);
-  border-left: 5px solid rgb(170, 137, 213);
-  border-right: 5px solid rgb(170, 137, 213);
+  border-top: 5px solid rgb(120, 89, 161);
+  border-left: 5px solid rgb(120, 89, 161);
+  border-right: 5px solid rgb(120, 89, 161);
 }
 .bottom-container {
   border-radius: 0px 0px 10px 10px;
-  border-bottom: 5px solid rgb(170, 137, 213);
-  border-left: 5px solid rgb(170, 137, 213);
-  border-right: 5px solid rgb(170, 137, 213);
+  border-bottom: 5px solid rgb(120, 89, 161);
+  border-left: 5px solid rgb(120, 89, 161);
+  border-right: 5px solid rgb(120, 89, 161);
 }
 .info-box-top {
   height: 150px;

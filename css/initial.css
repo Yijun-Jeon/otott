@@ -50,21 +50,24 @@ body {
   visibility: hidden;
 }
 .nav-menu-item {
-  height: 80px;
+  margin-top: 25px;
+  height: 30px;
   float: left;
   position: relative;
 }
-.nav-menu-item:hover {
-  background: rgb(164, 175, 249);
+.nav-menu-title:hover {
+  background: rgba(129, 129, 129, 0.211);
   color: white;
+  border-radius: 10px;
 }
 .nav-menu-title {
-  display: block;
-  height: 70px;
-  line-height: 70px;
+  display: inline-block;
+  height: 30px;
   text-align: center;
-  margin: 0px 30px;
-  margin-top: 20px;
+  margin: 0px 20px;
+  margin-top: 25px;
+  color: white;
+  padding: 5px 10px;
 }
 .menu-title {
   display: block;
@@ -99,13 +102,11 @@ body {
 }
 .input-search-submit {
   display: block;
-  float: left;
   width: 50px;
   height: 26px;
   border-radius: 0 15px 15px 0;
   border: 1px solid #cccccc;
   margin-left: -1px;
-  vertical-align: top;
   display: inline-block;
 }
 
@@ -116,8 +117,8 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   body {
-    width: 600px;
+    width: 640px;
   }
 }
