@@ -51,7 +51,7 @@ const watcha = 'https://www.google.com';
     await driver.get(watcha);
 
     var search = await driver.findElement(By.id('APjFqb'));
-    var title = '아바타 5';
+    var title = '1박 2일 시즌 1';
     await search.sendKeys(title + ' - 왓챠피디아');
     await search.submit();
 
@@ -94,20 +94,20 @@ const watcha = 'https://www.google.com';
     // );
     // await product.click();
 
-    console.log(titleP);
+    console.log('"title": ' + '"' + title + '",');
 
     // #### 작품 이미지 url ####
     var imgSrc = await find(driver, '.css-qhzw1o-StyledImg').getAttribute(
       'src'
     );
-    console.log(imgSrc);
+    console.log('"imgSrc": ' + '"' + imgSrc + '",');
 
     // #### 작품 상단 정보 ####
     var detail = await find(
       driver,
       '#root > div > div.css-1xm32e0 > section > div > div.css-10ofaaw > div > section > div.css-1p7n6er-Pane.e1svyhwg15 > div > div > div > div > div.css-11h0kfd-Detail.e1svyhwg18'
     ).getText();
-    console.log(detail);
+    console.log('"detail": ' + '"' + detail + '",');
 
     // 개봉 예정 작품의 경우 평점이 없을 수 있으므로 에러 처리
     try {
@@ -121,11 +121,11 @@ const watcha = 'https://www.google.com';
     } catch (error) {
       rating = '평균 ★0.0 (0명)';
     }
-    console.log(rating);
+    console.log('"rating": ' + '"' + rating + '",');
 
     // #### 작품 상세 정보 ####
     var infoTitle = await find(driver, '.css-wvh1uf-Summary').getText();
-    console.log(infoTitle);
+    console.log('"infoTitle": ' + '"' + infoTitle + '",');
 
     // #### 더보기 버튼 클릭 ####
     var showInfo = await find(driver, '.css-1ugqy9j');
@@ -138,7 +138,7 @@ const watcha = 'https://www.google.com';
     } catch (error) {
       info = '-';
     }
-    console.log(info);
+    console.log('"info": ' + '"' + info + '",');
     await new Navigation(driver).back();
 
     // #### 감상 가능한 곳 ####
@@ -155,7 +155,7 @@ const watcha = 'https://www.google.com';
     ottList = ottList.filter(function (element) {
       return element !== '';
     });
-    console.log(ottList);
+    console.log('"ottList": ' + ottList);
   } finally {
     // 가상 브라우저 종료
     await driver.quit();
