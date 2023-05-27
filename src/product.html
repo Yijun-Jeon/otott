@@ -5,6 +5,7 @@
     <title>작품명 (개봉연도) - OTOTT</title>
     <link rel="stylesheet" href="../css/initial.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/product.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../js/visibleBar.js"></script>
     <script>
@@ -14,277 +15,19 @@
 
         const product = JSON.parse(localStorage.getItem(title));
 
-        $('.product-img').attr('src', product.imgSrc);
-        $('.product-rating').text(product.rating);
-        $('.product-rating-graph').text(product.rating);
-        $('.product-title').text(product.title);
-        $('.graph_title').text(product.title);
+        $(".product-img").attr("src", product.imgSrc);
+        $(".product-rating").text(product.rating);
+        $(".product-rating-graph").text(product.rating);
+        $(".product-title").text(product.title);
+        $(".graph_title").text(product.title);
 
-        $('.product-detail').text(product.detail);
-        $('.product-infoTitle').html(
-          product.infoTitle.replaceAll('\n', '<br />')
+        $(".product-detail").text(product.detail);
+        $(".product-infoTitle").html(
+          product.infoTitle.replaceAll("\n", "<br />")
         );
-        $('.product-info').text(product.info);
+        $(".product-info").text(product.info);
       });
     </script>
-    <!--왓챠피디아 title 방식 참고함-->
-    <style>
-      /*---section 부분-------------*/
-      /*--큰 틀 : outer, inner--*/
-      #product_section_outer {
-        background-color: rgb(164, 175, 249);
-        border: 1px solid black;
-        height: 1800px; /*수정된 부분*/
-      }
-      #product_section_inner {
-        height: 1600px; /*수정된 부분*/
-
-        background-color: white;
-        margin: 50px 15%;
-        padding-top: 30px;
-
-        border-radius: 50px 50px 50px 50px;
-      }
-
-      /*--작은 틀 : first, second, third--*/
-      .product_section_first {
-        /*border: 3px solid black;*/
-        padding: 6% 10%;
-        height: 200px;
-      }
-
-      .section_btwFirstAndSecond {
-        margin: 0 7%;
-        border: solid 1px rgb(164, 175, 249);
-      }
-
-      .product_section_second {
-        /*border: 3px solid black;*/
-        padding: 3% 7%;
-        margin-left: 15px;
-        float: left;
-        height: 1110px; /*수정된 부분*/
-        border-right: solid 2px rgb(164, 175, 249);
-      }
-      .product_section_third {
-        /*border: 3px solid black;*/
-        padding: 3% 0;
-        display: flex;
-        justify-content: center;
-        align-items: top;
-        height: 640px;
-      }
-
-      /*--first : left, right--*/
-      .product_section_first_left {
-        float: left;
-        /*border: 1px solid black;*/
-        margin-left: 50px;
-      }
-      .product_section_first_right {
-        float: right;
-        /*border: 1px solid black;*/
-        padding: 30px;
-        margin-right: 200px;
-        margin-top: 30px;
-      }
-      /*--first_right--*/
-      .product-title {
-        font-size: xx-large;
-      }
-
-      /*--second : info, graph, review--*/
-      .product_section_second_info {
-        /*border: 1px solid rgb(130, 118, 118);*/
-        padding: 6% 0;
-        max-width: 520px;
-        margin-bottom: 20px;
-        border-bottom: 1px dotted rgb(164, 175, 249);
-      }
-      .product_section_second_graph {
-        /*border: 1px solid rgb(130, 118, 118);*/
-        padding: 6% 0;
-        margin-bottom: 20px;
-        border-bottom: 1px dotted rgb(164, 175, 249);
-      }
-      .product_section_second_review {
-        /*border: 1px solid rgb(130, 118, 118);*/
-        padding: 6% 0;
-        margin-bottom: 20px;
-      }
-      /*--second_graph--*/
-      .graph_top {
-        /*border: 1px solid blue;*/
-        padding-bottom: 6%;
-      }
-      .graph_wrap {
-        /*border: 1px solid blue;*/
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      .graph_top_left {
-        /*border: 1px solid black;*/
-        width: 100px;
-        font-size: large;
-        font-weight: bold;
-      }
-      .graph_top_right {
-        float: right;
-        /*border: 1px solid black;*/
-      }
-
-      .graph_main {
-        position: relative;
-        height: 185px;
-        margin-top: 15px;
-        margin-bottom: 20px;
-      }
-      .graph_title {
-        font-size: 16px;
-        font-weight: 500;
-        color: #333333;
-        text-align: center;
-      }
-
-      .graph_main .x-axis {
-        position: absolute;
-        display: flex;
-        bottom: -8px;
-        left: 20px;
-        width: calc(100% - 20px);
-        justify-content: space-around;
-        text-align: center;
-        z-index: 2;
-      }
-      .graph_main .x-axis > li {
-        font-size: 12px;
-      }
-      .graph_bar {
-        display: flex;
-        position: absolute;
-        left: 20px;
-        bottom: 16px;
-        width: calc(100% - 20px);
-        height: calc(100% - 16px);
-        justify-content: space-around;
-        align-items: flex-end;
-        text-align: center;
-        z-index: 3;
-      }
-      .graph_bar > li {
-        flex-grow: 1;
-        margin: 0 10px;
-      }
-      .graph_bar > li span {
-        display: inline-block;
-        max-width: 80px;
-        width: 100%;
-        height: 100%;
-        background: #f1cb7e;
-      }
-
-      /*--second_review--*/
-      .review_wrap {
-        width: 500px;
-        height: 390px;
-        border: 1px dotted rgb(164, 175, 249);
-        overflow: scroll;
-        margin: 5px 5px;
-        padding: 5px 5px;
-      }
-      .review_item {
-        margin: 5px 5px 0 0;
-        border: 1px solid rgb(164, 175, 249);
-        height: 190px; /*수정된 부분*/
-      }
-      .review_item_contents_wrap {
-        margin: 5px;
-      }
-      .user_info_wrap {
-        margin-bottom: 5px;
-      }
-      .review_write_ago {
-        float: right;
-      }
-      .review_rate_wrap {
-        margin-bottom: 5px;
-      }
-      .review_contents {
-        margin-bottom: 5px;
-      }
-      .review_actions_wrap {
-        margin-bottom: 5px;
-      }
-      .review_actions {
-        margin-top: 20px;
-        padding-left: 52%;
-        /*border: 1px solid orange;*/
-      }
-      .review_actions > li {
-        display: inline-block;
-        margin: 0 5px;
-        /*border: 1px solid yellow;*/
-      }
-
-      .review_action_btn {
-        /*수정된 부분*/
-        border: none;
-        background: none;
-      }
-
-      .like_icon {
-        /*수정된 부분*/
-        width: 65px;
-        height: 65px;
-      }
-      .comment_icon {
-        /*수정된 부분*/
-        width: 45px;
-        height: 40px;
-        padding-bottom: 12px;
-      }
-      .share_icon {
-        /*수정된 부분*/
-        width: 65px;
-        height: 65px;
-      }
-
-      /*--third : contents(sub-title, platform)--*/
-      .product_section_third_contents {
-        display: block;
-      }
-
-      .product_section_third_sub-title {
-        padding: 15% 0;
-        margin-bottom: 10px;
-      }
-      .product_section_third_platform {
-        margin-bottom: 20px;
-      }
-      .available_platform {
-        /*수정된 부분*/
-        display: flex;
-        align-items: center;
-        width: 180px;
-      }
-      .available_platform:hover {
-        color: rgb(164, 175, 249);
-      }
-      .icon_img:hover {
-        /*수정된 부분*/
-        border: 2px solid rgb(164, 175, 249);
-      }
-      .platform_text {
-        /*수정된 부분*/
-        justify-content: center;
-        /*border: 1px solid black;*/
-        margin-left: 10px;
-      }
-
-      /*---footer 부분--------------*/
-    </style>
   </head>
 
   <body>
@@ -330,19 +73,13 @@
             <!--작품 포스터-->
             <img
               src="http://via.placeholder.com/640x480"
-              width="150"
-              height="200"
-              class="poster_img product-img"
+              class="product-img"
               alt="작품 포스터"
             />
           </div>
           <div class="product_section_first_right">
             <a href="#graph_top" class="product-rating"
-              >평점&nbsp;&nbsp;<img
-                src="../images/icon/Icon_Star.png"
-                width="15px"
-                height="15px"
-              />&nbsp;3.4</a
+              >평점&nbsp;&nbsp;<img class="icon-star" alt="별" />&nbsp;3.4</a
             >
             <br />
             <br />
@@ -370,11 +107,7 @@
             <div id="graph_top" class="graph_top">
               <span class="graph_top_left">별점 그래프</span>
               <span class="graph_top_right product-rating-graph">
-                평점&nbsp;&nbsp;<img
-                  src="../images/icon/Icon_Star.png"
-                  width="15px"
-                  height="15px"
-                />&nbsp;3.4
+                평점&nbsp;&nbsp;<img class="icon-star" alt="별" />&nbsp;3.4
               </span>
             </div>
 
@@ -414,22 +147,12 @@
               <div class="review_item">
                 <div class="review_item_contents_wrap">
                   <div class="user_info_wrap">
-                    <img
-                      src="../images/icon/Icon_Owl.png"
-                      width="15px"
-                      height="15px"
-                      class="user_icon"
-                    />
+                    <img class="icon-owl" alt="" />
                     <span class="user_name">이수민1</span>
                     <span class="review_write_ago">2일 전</span>
                   </div>
                   <div class="review_rate_wrap">
-                    <img
-                      src="../images/icon/Icon_Star.png"
-                      width="15px"
-                      height="15px"
-                      class="star_icon"
-                    />
+                    <img class="icon-star" />
                     <span class="user_star_score">4.5</span>
                   </div>
                   <div class="review_contents">
@@ -475,22 +198,12 @@
               <div class="review_item">
                 <div class="review_item_contents_wrap">
                   <div class="user_info_wrap">
-                    <img
-                      src="../images/icon/Icon_Owl.png"
-                      width="15px"
-                      height="15px"
-                      class="user_icon"
-                    />
-                    <span class="user_name">이수민2</span>
+                    <img class="icon-owl" alt="" />
+                    <span class="user_name">이수민1</span>
                     <span class="review_write_ago">2일 전</span>
                   </div>
                   <div class="review_rate_wrap">
-                    <img
-                      src="../images/icon/Icon_Star.png"
-                      width="15px"
-                      height="15px"
-                      class="star_icon"
-                    />
+                    <img class="icon-star" />
                     <span class="user_star_score">4.5</span>
                   </div>
                   <div class="review_contents">
@@ -501,7 +214,11 @@
                   <div class="review_actions_wrap">
                     <ul class="review_actions">
                       <li class="action_like">
-                        <button type="button" class="review_action_btn">
+                        <button
+                          type="button"
+                          class="review_action_btn"
+                          onclick="alert('hi')"
+                        >
                           <img
                             src="../images/icon/Icon_Like_blue.png"
                             class="like_icon"
@@ -532,22 +249,12 @@
               <div class="review_item">
                 <div class="review_item_contents_wrap">
                   <div class="user_info_wrap">
-                    <img
-                      src="../images/icon/Icon_Owl.png"
-                      width="15px"
-                      height="15px"
-                      class="user_icon"
-                    />
-                    <span class="user_name">이수민3</span>
+                    <img class="icon-owl" alt="" />
+                    <span class="user_name">이수민1</span>
                     <span class="review_write_ago">2일 전</span>
                   </div>
                   <div class="review_rate_wrap">
-                    <img
-                      src="../images/icon/Icon_Star.png"
-                      width="15px"
-                      height="15px"
-                      class="star_icon"
-                    />
+                    <img class="icon-star" />
                     <span class="user_star_score">4.5</span>
                   </div>
                   <div class="review_contents">
@@ -558,7 +265,11 @@
                   <div class="review_actions_wrap">
                     <ul class="review_actions">
                       <li class="action_like">
-                        <button type="button" class="review_action_btn">
+                        <button
+                          type="button"
+                          class="review_action_btn"
+                          onclick="alert('hi')"
+                        >
                           <img
                             src="../images/icon/Icon_Like_blue.png"
                             class="like_icon"
@@ -589,22 +300,12 @@
               <div class="review_item">
                 <div class="review_item_contents_wrap">
                   <div class="user_info_wrap">
-                    <img
-                      src="../images/icon/Icon_Owl.png"
-                      width="15px"
-                      height="15px"
-                      class="user_icon"
-                    />
-                    <span class="user_name">이수민4</span>
+                    <img class="icon-owl" alt="" />
+                    <span class="user_name">이수민1</span>
                     <span class="review_write_ago">2일 전</span>
                   </div>
                   <div class="review_rate_wrap">
-                    <img
-                      src="../images/icon/Icon_Star.png"
-                      width="15px"
-                      height="15px"
-                      class="star_icon"
-                    />
+                    <img class="icon-star" />
                     <span class="user_star_score">4.5</span>
                   </div>
                   <div class="review_contents">
@@ -615,7 +316,11 @@
                   <div class="review_actions_wrap">
                     <ul class="review_actions">
                       <li class="action_like">
-                        <button type="button" class="review_action_btn">
+                        <button
+                          type="button"
+                          class="review_action_btn"
+                          onclick="alert('hi')"
+                        >
                           <img
                             src="../images/icon/Icon_Like_blue.png"
                             class="like_icon"
@@ -646,22 +351,12 @@
               <div class="review_item">
                 <div class="review_item_contents_wrap">
                   <div class="user_info_wrap">
-                    <img
-                      src="../images/icon/Icon_Owl.png"
-                      width="15px"
-                      height="15px"
-                      class="user_icon"
-                    />
-                    <span class="user_name">이수민5</span>
+                    <img class="icon-owl" alt="" />
+                    <span class="user_name">이수민1</span>
                     <span class="review_write_ago">2일 전</span>
                   </div>
                   <div class="review_rate_wrap">
-                    <img
-                      src="../images/icon/Icon_Star.png"
-                      width="15px"
-                      height="15px"
-                      class="star_icon"
-                    />
+                    <img class="icon-star" />
                     <span class="user_star_score">4.5</span>
                   </div>
                   <div class="review_contents">
@@ -672,7 +367,11 @@
                   <div class="review_actions_wrap">
                     <ul class="review_actions">
                       <li class="action_like">
-                        <button type="button" class="review_action_btn">
+                        <button
+                          type="button"
+                          class="review_action_btn"
+                          onclick="alert('hi')"
+                        >
                           <img
                             src="../images/icon/Icon_Like_blue.png"
                             class="like_icon"
@@ -703,10 +402,8 @@
           </div>
         </div>
 
-        <!--오른쪽 열 내용 : CSS로 float right-->
         <!----감상 가능한 곳 : 소제목 "감상 가능한 곳", 플랫폼 아이콘과 이름---->
         <div class="product_section_third">
-          <!-- <!—플랫폼 아이콘 이미지는 제안서 피피티에 사용했던 png파일 사용!—> -->
           <div class="product_section_third_contents">
             <div>
               <h3 class="product_section_third_sub-title">감상 가능한 곳</h3>
@@ -716,12 +413,7 @@
                 href="https://www.netflix.com/browse"
                 class="available_platform"
               >
-                <img
-                  src="../images/ott-logo/netflix.png"
-                  width="90"
-                  height="90"
-                  class="icon_img"
-                />
+                <img src="../images/ott-logo/netflix.png" class="icon_img" />
                 <span class="platform_text">넷플릭스</span>
               </a>
             </div>
@@ -730,12 +422,7 @@
                 href="https://www.tving.com/onboarding"
                 class="available_platform"
               >
-                <img
-                  src="../images/ott-logo/tving.png"
-                  width="90"
-                  height="90"
-                  class="icon_img"
-                />
+                <img src="../images/ott-logo/tving.png" class="icon_img" />
                 <span class="platform_text">티빙</span>
               </a>
             </div>
@@ -743,12 +430,12 @@
         </div>
       </article>
 
-      <!-- <!—top버튼—> -->
+      <!-- top버튼 -->
       <aside>
         <a id="product_scroll_top_btn" href="" class="content_top"></a>
       </aside>
     </section>
-    <!-- <!———————————————————————————————————————————————————footer 부분———————————————————————————————————————————————————> -->
+    <!--———————————————————————————————————————————————————footer 부분——————————————————————————————————————————————————-->
     <footer id="footer-section">
       <div class="footer-li-left">
         <ul class="footer-listitem-left">
