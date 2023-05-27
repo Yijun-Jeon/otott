@@ -1,12 +1,12 @@
-let domainList = ['netflix', 'tving', 'watcha', 'wavve', 'coupang', 'disney'];
+let topicList = ['topic1', 'topic2', 'topic3', 'topic4', 'topic5', 'topic6'];
 
 // 문서의 로드가 완료되었을 때 실행 처리
 $(document).ready(function () {
   for (var i = 0; i < 6; i++) {
-    // 각 ott별 차트 1~20위까지의 요소 html 자동 삽입
-    // 1~20위까지의 요소 내용 로컬 스토리지 기반 자동 반영
+    // 각 장르별 차트 1~10위까지의 요소 html 자동 삽입
+    // 1~10위까지의 요소 내용 로컬 스토리지 기반 자동 반영
     for (var j = 1; j <= 10; j++) {
-      var productId = domainList[i] + '-' + j;
+      var productId = topicList[i] + '-' + j;
       var product = JSON.parse(localStorage.getItem(productId));
       var productInfo = JSON.parse(localStorage.getItem(product.title));
       rankElement = `

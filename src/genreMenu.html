@@ -4,6 +4,19 @@
     <title>OTOTT</title>
     <link rel="stylesheet" href="../css/initial.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.menu-container a').click(function () {
+          event.preventDefault(); // 기본 동작 방지
+          // 하위 태그 div의 class 속성 가져오기
+          const classList = $(this).find('div').attr('class').split(' ');
+          const pointer = classList[1];
+          //url에 pointer 해시값 추가
+          window.location.href = `genreViewList.html#${pointer}`;
+        });
+      });
+    </script>
     <style>
       /* 헤더 헤더 헤더 헤더 헤더 헤더  */
       #main-header {
@@ -190,35 +203,35 @@
 
       <article id="menu-article">
         <div class="menu-container top-container">
-          <a href="ottViewList.html">
+          <a href="genreViewList.html">
             <div class="info-box-top romance">
-              <span class="info-box-text"> 로멘스 </span>
+              <span class="info-box-text"> 로맨스 </span>
             </div>
           </a>
 
-          <a href="ottViewList.html">
+          <a href="genreViewList.html">
             <div class="info-box-top comedy">
               <span class="info-box-text"> 코미디 </span>
             </div>
           </a>
-          <a href="ottViewList.html">
+          <a href="genreViewList.html">
             <div class="info-box-top horror">
               <span class="info-box-text"> 공포/스릴러 </span>
             </div>
           </a>
         </div>
         <div class="menu-container bottom-container">
-          <a href="ottViewList.html">
+          <a href="genreViewList.html">
             <div class="info-box-bottom sf">
-              <span class="info-box-text"> SF </span>
+              <span class="info-box-text"> SF/액션 </span>
             </div>
           </a>
-          <a href="ottViewList.html">
+          <a href="genreViewList.html">
             <div class="info-box-bottom history">
               <span class="info-box-text"> 사극 </span>
             </div>
           </a>
-          <a href="ottViewList.html">
+          <a href="genreViewList.html">
             <div class="info-box-bottom family">
               <span class="info-box-text"> 가족 </span>
             </div>

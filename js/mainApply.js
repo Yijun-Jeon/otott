@@ -2,7 +2,7 @@
 $(document).ready(function () {
   // 차트 1~20위까지의 요소 html 자동 삽입
   for (i = 1; i <= 20; i++) {
-    var productId = 'total' + i;
+    var productId = 'total-' + i;
     var product = JSON.parse(localStorage.getItem(productId));
     rankElement = `<a href='product.html'>
     <li class='rank'>

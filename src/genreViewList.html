@@ -7,8 +7,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="../js/visibleBar.js"></script>
     <script src="../js/scroll.js"></script>
-    <script src="../js/listApply.js"></script>
     <script src="../js/setHash.js"></script>
+    <script src="../js/genreListApply.js"></script>
     <script>
       $(document).ready(function () {
         const hash = window.location.hash;
@@ -240,29 +240,25 @@
       <aside>
         <div id="selection-box">
           <ul class="selection-list">
-            <a href="#netflix-chart" title="Netflix"><li>넷플릭스</li></a>
-            <a href="#tving-chart" title="TVING"><li>티빙</li></a>
-            <a href="#watcha-chart" title="Watcha"><li>왓챠</li></a>
-            <a href="#wavve-chart" title="Wavve"><li>웨이브</li></a>
-            <a href="#coupangplay-chart" title="CoupangPlay"
-              ><li>쿠팡플레이</li></a
-            >
-            <a href="#disneyplus-chart" title="Disney+"
-              ><li>디즈니플러스</li></a
-            >
+            <a href="#romance-chart" title="Netflix"><li>로맨스</li></a>
+            <a href="#comedy-chart" title="TVING"><li>코미디</li></a>
+            <a href="#horror-chart" title="Watcha"><li>공포/스릴러</li></a>
+            <a href="#sf-chart" title="Wavve"><li>SF/액션</li></a>
+            <a href="#history-chart" title="CoupangPlay"><li>사극</li></a>
+            <a href="#family-chart" title="Disney+"><li>가족</li></a>
           </ul>
         </div>
         <div id="view-review-ranking">
           <ul class="view-review-list">
-            <li><a href="ottViewList.html">시청순</a></li>
+            <li><a href="genreViewList.html">시청순</a></li>
             <li>&nbsp;/&nbsp;</li>
-            <li><a href="ottRatingList.html">평점순</a></li>
+            <li><a href="genreRatingList.html">평점순</a></li>
           </ul>
         </div>
       </aside>
       <article id="ott-ranking-box">
-        <div id="netflix-chart" class="ranking-box">
-          <h2>넷플릭스 TOP 10</h2>
+        <div id="romance-chart" class="ranking-box">
+          <h2>로맨스 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
@@ -276,8 +272,8 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="tving-chart" class="ranking-box">
-          <h2>티빙 TOP 10</h2>
+        <div id="comedy-chart" class="ranking-box">
+          <h2>코미디 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
@@ -291,8 +287,8 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="watcha-chart" class="ranking-box">
-          <h2>왓챠 TOP 10</h2>
+        <div id="horror-chart" class="ranking-box">
+          <h2>공포/스릴러 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
@@ -306,8 +302,8 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="wavve-chart" class="ranking-box">
-          <h2>웨이브 TOP 10</h2>
+        <div id="sf-chart" class="ranking-box">
+          <h2>SF/액션 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
@@ -322,8 +318,8 @@
         </div>
         <!----------------------------------------------------------------------------------------------->
 
-        <div id="coupangplay-chart" class="ranking-box">
-          <h2>쿠팡플레이 TOP 10</h2>
+        <div id="history-chart" class="ranking-box">
+          <h2>사극 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>
@@ -337,8 +333,8 @@
           </button>
         </div>
         <!----------------------------------------------------------------------------------------------->
-        <div id="disneyplus-chart" class="ranking-box">
-          <h2>디즈니플러스 TOP 10</h2>
+        <div id="family-chart" class="ranking-box">
+          <h2>가족 TOP 10</h2>
           <button type="button" class="btn-scroll-left" onclick="scrollLeft()">
             <span class="arrow left"></span>
           </button>

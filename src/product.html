@@ -13,7 +13,6 @@
         const title = hash.substring(1).trim();
 
         const product = JSON.parse(localStorage.getItem(title));
-
         $('.product-img').attr('src', product.imgSrc);
         $('.product-rating').text(product.rating);
         $('.product-rating-graph').text(product.rating);
