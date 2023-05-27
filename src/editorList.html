@@ -4,6 +4,7 @@
     <title>Editor's Pick</title>
     <link rel="stylesheet" href="../css/initial.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/editorList.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../js/scroll.js"></script>
     <script src="../js/visibleBar.js"></script>
@@ -28,208 +29,6 @@
         }
       });
     </script>
-    <style>
-      #list-section {
-        background-color: rgb(38, 20, 61);
-        padding-bottom: 50px;
-      }
-
-      /*하위바 하위바 하위바 하위바 하위바 하위바 하위바 */
-      .submenu-list {
-        position: relative;
-        margin: 0px 15%;
-        padding-top: 2%;
-        max-width: 100%; /*width 제한*/
-
-        display: flex;
-        justify-content: flex-start; /* 왼쪽 정렬 */
-        /*align-items: center; 해당 부분의 경우 고정되지 않고 스크롤에 따라 위치 변함*/
-        height: 20vh;
-
-        /*다음줄 이동*/
-        flex-wrap: wrap; /*flex 컨테이너 내의 item들이 여러 줄에 걸쳐 배치되도록*/
-      }
-
-      /*하위바 버튼*/
-      .submenu-list #openSubmenu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 10px;
-        height: 10px;
-        padding: 10px;
-        margin: 10px;
-
-        border: 0.5px solid rgb(120, 89, 161);
-        border-radius: 20px;
-        background-color: white;
-        color: rgb(120, 89, 161);
-      }
-
-      .submenu-list #openSubmenu:hover {
-        cursor: pointer;
-      }
-
-      .submenu-list li {
-        background-color: rgb(120, 89, 161);
-        color: white;
-        border-radius: 10px;
-
-        list-style-type: none;
-        text-align: center;
-        width: auto;
-        height: auto; /*li 요소 높이 동적으로 조정하기 위해 > 줄바꿈을 위한*/
-        margin: 10px;
-        padding: 0px 10px;
-        line-height: 2.8;
-
-        white-space: normal; /* 줄 바꿈 허용 */
-
-        font-size: 14px;
-      }
-
-      /*하위바 누르기 전 초기화 하기 위한 클래스*/
-      .hide {
-        display: none;
-      }
-
-      /*article section article section article section article section*/
-      .ranking-box {
-        position: relative;
-        background-color: white;
-        border-radius: 10px;
-        margin: 10px 15%;
-        padding-top: 10px;
-        padding-left: 30px;
-        padding-right: 30px;
-      }
-
-      h2 {
-        padding: 10px;
-      }
-
-      .ranking-listitem {
-        overflow: auto;
-        white-space: nowrap;
-        /* 스크롤 바를 숨기는 속성 */
-        -ms-overflow-style: none; /* Internet Explorer 10+ */
-      }
-
-      .ranking-listitem::-webkit-scrollbar {
-        width: 0; /* 스크롤 바의 너비 */
-        background-color: white; /* 스크롤 바의 배경색 */
-      }
-
-      .ranking-listitem::-webkit-scrollbar-thumb {
-        background-color: white; /* 스크롤 바 색상 */
-      }
-
-      .btn-scroll-left,
-      .btn-scroll-right {
-        position: absolute;
-        width: 35px;
-        height: 35px;
-        background-color: white;
-        border-radius: 17.5px;
-        border: 3px solid rgb(120, 89, 161);
-        cursor: pointer;
-      }
-
-      .btn-scroll-left {
-        left: 2%;
-        top: 45%;
-        z-index: 1;
-      }
-
-      .btn-scroll-right {
-        left: 95%;
-        top: 45%;
-      }
-
-      .arrow {
-        border: solid #7e89c7;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3.5px;
-      }
-
-      .right {
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-      }
-
-      .left {
-        transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
-      }
-
-      a {
-        text-decoration: none;
-        color: black;
-      }
-      a:hover {
-        color: rgb(120, 89, 161);
-      }
-
-      img {
-        position: relative;
-        width: 165px;
-        margin: 10px 10px 10px 20px;
-      }
-
-      p {
-        width: 150px;
-        margin-left: 20px;
-        font-size: 11px;
-      }
-
-      .ranking-listitem li {
-        position: relative;
-        list-style-type: none;
-        display: inline-block;
-      }
-
-      .ranking-icon {
-        display: block;
-        position: absolute;
-        left: 20px;
-        top: 10px;
-        width: 28px;
-        height: 28px;
-        line-height: 27px;
-        z-index: 1;
-
-        background-color: rgba(0, 0, 0, 0.77);
-        color: rgb(255, 255, 255);
-        font-weight: 700;
-        letter-spacing: normal;
-        text-align: center;
-        border-radius: 4px;
-        opacity: 1;
-        transition: opacity 300ms ease 0s;
-      }
-
-      .first-ranking
-        .second-ranking
-        .third-ranking
-        .fourth-ranking
-        .fifth-ranking {
-        position: relative;
-      }
-
-      #moveTopBtn {
-        position: fixed;
-        bottom: 10%;
-        right: 6.5%;
-        color: white;
-      }
-
-      #moveTopBtn:hover {
-        cursor: pointer;
-        color: rgb(120, 89, 161);
-      }
-    </style>
   </head>
   <body>
     <nav id="main-navigation">
@@ -266,20 +65,22 @@
         <div id="selection-box">
           <ul class="submenu-list">
             <div id="openSubmenu" onclick="openSubmenu()">▼</div>
-            <a href="#topic1" title="topic1"
+            <a href="#topic1-chart" title="topic1"
               ><li>#한 여름 밤을 오싹하게 만드는😨</li></a
             >
-            <a href="#topic2" title="topic2"
+            <a href="#topic2-chart" title="topic2"
               ><li>#국제적으로 인정받은 시리즈🏆</li></a
             >
-            <a href="#topic3" title="topic3"
+            <a href="#topic3-chart" title="topic3"
               ><li>#느긋하게 살고 싶을 때 꺼내보아요🪴</li></a
             >
-            <a href="#topic4" title="topic4"
+            <a href="#topic4-chart" title="topic4"
               ><li>#혼자 펑펑 울고 싶을 때 보는💧</li></a
             >
-            <a href="#topic5" title="topic5"><li>#연애세포를 일깨워줄❤️‍🔥</li></a>
-            <a href="#topic6" title="topic6"
+            <a href="#topic5-chart" title="topic5"
+              ><li>#연애세포를 일깨워줄❤️‍🔥</li></a
+            >
+            <a href="#topic6-chart" title="topic6"
               ><li>#배꼽빠지게 웃어보자 하하🤣</li></a
             >
           </ul>
