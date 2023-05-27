@@ -1,0 +1,69 @@
+/* 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더   */
+#main-header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(48, 7, 92);
+}
+.main-logo {
+  width: 100px;
+  height: 70px;
+  content: url(../images/otott-logo/main_otott.png);
+}
+
+#main-top-aside {
+  height: 40px;
+  background-color: rgb(48, 7, 92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aside-menu-item {
+  float: left;
+  position: relative;
+}
+.aside-menu-item:hover {
+  background: rgb(164, 175, 249);
+  color: white;
+}
+
+/*메뉴 메뉴 메뉴 메뉴 메뉴*/
+#menu-article {
+  background-color: rgb(48, 7, 92);
+  padding-top: 1px;
+  padding-bottom: 50px;
+  height: 459.5px;
+  text-align: center;
+}
+.menu-container {
+  height: 210px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px 25%;
+  background-color: white;
+}
+.top-container {
+  margin-top: 20px;
+  border-radius: 10px 10px 0px 0px;
+}
+.bottom-container {
+  border-radius: 0px 0px 10px 10px;
+}
+.info-box-top {
+  height: 150px;
+  width: 200px;
+  background-color: rgb(128, 137, 194);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 40px;
+
+  background-size: 82%;
+  background-position: center;
+}

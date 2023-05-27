@@ -9,40 +9,10 @@
     <script src="../js/mainApply.js"></script>
     <script src="../js/setHash.js"></script>
     <style>
-      /* 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더   */
-      #main-header {
-        width: 100%;
-        height: 300px;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        background-color: rgb(141, 109, 183);
-      }
-      .main-logo {
-        width: 500px;
-        height: auto;
-      }
-      #main-top-aside {
-        height: 60px;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .aside-menu-item {
-        float: left;
-        position: relative;
-      }
-      .aside-menu-item:hover {
-        background: rgb(164, 175, 249);
-        color: white;
-      }
-
       /* 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 차트 파트 */
       #chart-article {
-        background-color: rgb(164, 175, 249);
-        border: 1px solid black;
+        background-color: rgb(48, 7, 92);
+        border-bottom: 1px solid black;
         text-align: center;
       }
       .chart-title {
@@ -93,7 +63,7 @@
     <nav id="main-navigation">
       <div class="pull-left">
         <a class="nav-logo-mini" href="main.html">
-          <span>OTOTT</span>
+          <span><img class="otott_logo" alt="" /></span>
         </a>
       </div>
       <div class="pull-right">
@@ -120,7 +90,8 @@
       </div>
     </nav>
     <header id="main-header">
-      <img class="main-logo" src="../images/otott-logo/logo.png" alt="" />
+      <img class="main-logo" alt="" />
+      <!--main_image.png도 initial.css로 넣는 걸로 통일!-->
     </header>
     <section id="main-section">
       <aside id="main-top-aside">

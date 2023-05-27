@@ -23,8 +23,9 @@ body {
 }
 /* 고정바 고정바 고정바 고정바 고정바 고정바  */
 #main-navigation {
-  border-bottom: 1px solid black;
+  /*border-bottom: 1px solid black;*/
   height: 80px;
+  background-color: rgb(48, 7, 92);
 }
 .nav-logo-mini {
   float: left;
@@ -33,6 +34,11 @@ body {
   text-align: center;
   font-size: xx-large;
   padding-left: 20px;
+}
+.otott_logo {
+  width: 120px;
+  height: auto;
+  content: url(../images/otott-logo/otott_logo.png);
 }
 .nav-menu {
   visibility: hidden;
@@ -96,33 +102,4 @@ body {
   margin-left: -1px;
   vertical-align: top;
   display: inline-block;
-}
-/* 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더 헤더   */
-#main-header {
-  width: 100%;
-  height: 300px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(141, 109, 183);
-}
-.main-logo {
-  width: 500px;
-  height: auto;
-}
-#main-top-aside {
-  height: 60px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.aside-menu-item {
-  float: left;
-  position: relative;
-}
-.aside-menu-item:hover {
-  background: rgb(164, 175, 249);
-  color: white;
 }
