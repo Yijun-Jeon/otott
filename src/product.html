@@ -8,26 +8,8 @@
     <link rel="stylesheet" href="../css/product.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../js/visibleBar.js"></script>
-    <script>
-      $(document).ready(function () {
-        const hash = decodeURI(window.location.hash).trim();
-        const title = hash.substring(1).trim();
-
-        const product = JSON.parse(localStorage.getItem(title));
-
-        $(".product-img").attr("src", product.imgSrc);
-        $(".product-rating").text(product.rating);
-        $(".product-rating-graph").text(product.rating);
-        $(".product-title").text(product.title);
-        $(".graph_title").text(product.title);
-
-        $(".product-detail").text(product.detail);
-        $(".product-infoTitle").html(
-          product.infoTitle.replaceAll("\n", "<br />")
-        );
-        $(".product-info").text(product.info);
-      });
-    </script>
+    <script src="../js/productBridge.js"></script>
+    <script src="../js/setHash.js"></script>
   </head>
 
   <body class="product-body">
@@ -54,7 +36,7 @@
           </li>
         </ul>
         <div class="nav-search-bar">
-          <form>
+          <form id="search-form">
             <input type="text" class="input-search" />
             <input type="submit" class="input-search-submit" value="검색" />
           </form>
@@ -408,6 +390,7 @@
             <div>
               <h3 class="product_section_third_sub-title">감상 가능한 곳</h3>
             </div>
+            <<<<<<< HEAD =======
             <div class="product_section_third_platform">
               <a
                 href="https://www.netflix.com/browse"
@@ -426,6 +409,7 @@
                 <span class="platform_text">티빙</span>
               </a>
             </div>
+            >>>>>>> main
           </div>
         </div>
       </article>

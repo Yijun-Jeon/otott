@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/menu.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../js/setHash.js"></script>
     <script>
       $(document).ready(function () {
         $(".menu-container a").click(function () {
@@ -87,7 +88,7 @@
           </li>
         </ul>
         <div class="nav-search-bar">
-          <form>
+          <form id="search-form">
             <input type="text" class="input-search" />
             <input type="submit" class="input-search-submit" value="검색" />
           </form>
