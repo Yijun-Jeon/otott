@@ -9,10 +9,10 @@
     <script src="../js/setHash.js"></script>
     <script>
       $(document).ready(function () {
-        $(".menu-container a").click(function () {
+        $('.menu-container a').click(function () {
           event.preventDefault(); // 기본 동작 방지
           // 하위 태그 div의 class 속성 가져오기
-          const classList = $(this).find("div").attr("class").split(" ");
+          const classList = $(this).find('div').attr('class').split(' ');
           const pointer = classList[1];
           //url에 pointer 해시값 추가
           window.location.href = `ottViewList.html#${pointer}`;
@@ -24,34 +24,34 @@
       /* 넷플릭스 박스 */
       .info-box-top.netflix:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/netflix.png");
+        background-image: url('../images/ott-logo/netflix.png');
         /* background-image: linear-gradient(90deg, #f61b10, #ef0963); */
       }
       /* 티빙 박스 */
       .info-box-top.tving:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/tving.png");
+        background-image: url('../images/ott-logo/tving.png');
       }
       /* 왓챠 박스 */
       .info-box-top.watcha:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/watcha.png");
+        background-image: url('../images/ott-logo/watcha.png');
       }
       /* 웨이브 박스 */
       .info-box-bottom.wavve:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/wavve.png");
+        background-image: url('../images/ott-logo/wavve.png');
         /* background-image: linear-gradient(90deg, #f61b10, #ef0963); */
       }
       /* 쿠팡 플레이 박스 */
       .info-box-bottom.coupangplay:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/coupang.jpeg");
+        background-image: url('../images/ott-logo/coupangplay.jpeg');
       }
       /* 디즈니 플러스 박스 */
       .info-box-bottom.disneyplus:hover {
         transform: translateY(5px);
-        background-image: url("../images/ott-logo/disney.png");
+        background-image: url('../images/ott-logo/disneyplus.png');
       }
 
       .info-box-text {
