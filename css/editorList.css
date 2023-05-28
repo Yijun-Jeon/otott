@@ -190,3 +190,7 @@ p {
   cursor: pointer;
   color: rgb(120, 89, 161);
 }
+
+.submenu-list > a {
+  max-height: 39.2px;
+}

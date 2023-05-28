@@ -8,8 +8,16 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="../js/scroll.js"></script>
     <script src="../js/mainApply.js"></script>
-    <script src="../js/setHash.js"></script>
-    <script></script>
+    <script>
+      $(document).ready(function () {
+        $('.rank').click(function () {
+          event.preventDefault(); // 기본 동작 방지
+          // 하위 태그 div의 class 속성 가져오기
+          var title = $(this).find('.title-text').text();
+          window.location.href = `product.html#${title}`;
+        });
+      });
+    </script>
     <style>
       body {
         background-color: rgb(38, 20, 61);
@@ -216,6 +224,18 @@
       .rank-number {
         margin: 0px 10px;
       }
+
+      #moveTopBtn {
+        position: fixed;
+        bottom: 10%;
+        right: 6.5%;
+        color: black;
+      }
+
+      #moveTopBtn:hover {
+        cursor: pointer;
+        color: rgb(170, 137, 213);
+      }
     </style>
   </head>
   <body>
@@ -262,11 +282,12 @@
         <div id="main-header-intro">
           <h2 class="main-intro-title">About OTOTT</h2>
           <p class="main-intro-explanation">
-            "Over The Over The Top"<br />: OTT 플랫폼 통합 정보 제공 웹사이트<br /><br />작품들이
-            여러 OTT 플랫폼에 여기저기 흩어져 있어,<br />보고 싶은 작품이 어느
-            플랫폼에서 제공해주는지 한눈에 알아보기 어렵다는 문제점을 해결하기
-            위해 등장한 웹사이트. <br /><br />OTO(owl-head) + TT(owl-feet) =
-            OTOTT(owl)
+            <span style="font-weight: bold"> " Over The Over The Top "</span
+            ><br /><br />OTT 플랫폼 통합 정보 제공 웹사이트<br /><br />작품들이
+            여러 OTT 플랫폼에 여기저기 흩어져 있어,<br />최근 인기 작품과 보고
+            싶은 작품이 어느 플랫폼에서 제공해주는지 한눈에 알아보기 어렵다는
+            문제점을 해결하기 위해 등장한 웹사이트 <br /><br />OTO(owl-head) +
+            TT(owl-feet) = OTOTT(owl)
           </p>
         </div>
       </div>
@@ -345,6 +366,7 @@
           </ul>
         </div>
       </article>
+      <div id="moveTopBtn">TOP▲</div>
     </section>
     <footer id="footer-section">
       <div class="footer-li-left">

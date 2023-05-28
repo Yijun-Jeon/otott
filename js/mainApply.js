@@ -18,9 +18,6 @@ $(document).ready(function () {
           ${product.title}
         </span>
       </div>
-      <div class='pull-right-rank'>
-        <span class='rank-number'>임시</span>
-      </div>
     </li>
   </a>`;
 
