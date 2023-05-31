@@ -144,9 +144,13 @@ function openSubmenu() {
 $(document).ready(function () {
   initSubmenu();
   $(window).resize(function () {
-    for (const li of lis) {
-      li.classList.remove('hide');
+    try {
+      for (const li of lis) {
+        li.classList.remove('hide');
+      }
+      initSubmenu();
+    } catch (error) {
+      return;
     }
-    initSubmenu();
   });
 });

@@ -1,4 +1,4 @@
-var temp = require('./js/crawling.js');
+//var startCrawling = require('./js/crawling.js');
 
 var express = require('express');
 var http = require('http');
