@@ -147,8 +147,8 @@ $(document).ready(function () {
     try {
       for (const li of lis) {
         li.classList.remove('hide');
+        initSubmenu();
       }
-      initSubmenu();
     } catch (error) {
       return;
     }

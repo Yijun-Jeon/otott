@@ -122,3 +122,15 @@ body {
     width: 640px;
   }
 }
+
+#moveTopBtn {
+  position: fixed;
+  bottom: 10%;
+  right: 6.5%;
+  color: white;
+}
+
+#moveTopBtn:hover {
+  cursor: pointer;
+  color: rgb(170, 137, 213);
+}

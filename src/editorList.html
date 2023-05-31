@@ -13,12 +13,11 @@
     <script>
       $(document).ready(function () {
         const hash = window.location.hash;
-        console.log(hash); // 가져온 해시 값을 이용하여 가진 위치로 자동 스크롤
+        // 가져온 해시 값을 이용하여 가진 위치로 자동 스크롤
         if (hash) {
           const target = $(hash + '-chart');
           if (target.length > 0) {
             // 없는 경우 제외
-            console.log(target.offset().top);
             $('html, body').animate(
               {
                 scrollTop: target.offset().top - 200, //offset: 요소의 현재 좌표 정보

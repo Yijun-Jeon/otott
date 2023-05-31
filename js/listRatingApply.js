@@ -19,11 +19,8 @@ $(document).ready(function () {
         var aEnd = arating.indexOf('(');
         var bStart = brating.indexOf('★') + 1;
         var bEnd = brating.indexOf('(');
-        console.log(arating.substring(aStart, aEnd));
         var aFloat = parseFloat(arating.substring(aStart, aEnd));
         var bFloat = parseFloat(brating.substring(bStart, bEnd));
-        console.log(aFloat);
-        console.log(bFloat);
         if (aFloat > bFloat) {
           return -1;
         }
