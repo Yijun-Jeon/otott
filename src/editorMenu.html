@@ -9,10 +9,10 @@
     <script src="../js/setHash.js"></script>
     <script>
       $(document).ready(function () {
-        $(".menu-container a").click(function () {
+        $('.menu-container a').click(function () {
           event.preventDefault(); // 기본 동작 방지
           // 하위 태그 div의 class 속성 가져오기
-          const classList = $(this).find("div").attr("class").split(" ");
+          const classList = $(this).find('div').attr('class').split(' ');
           const pointer = classList[1];
           //url에 pointer 해시값 추가
           window.location.href = `editorList.html#${pointer}`;
@@ -135,7 +135,7 @@
           <a href="editorList.html">
             <div class="info-box-top topic3">
               <span class="info-box-text">
-                #느긋하게 살고 싶을 때 꺼내보아요🪴
+                #느긋하게 살고 싶을 때 꺼내보아요🍀
               </span>
             </div>
           </a>

@@ -11,5 +11,10 @@ $(document).ready(function () {
     // 하위 태그 div의 class 속성 가져오기
     var value = document.getElementsByClassName('input-search')[0].value;
     window.location.href = `product.html#${value}`;
+    if ($('body').attr('class') == 'product-body') {
+      setTimeout(function () {
+        location.reload();
+      }, 100);
+    }
   });
 });
