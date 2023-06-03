@@ -1,3 +1,6 @@
+// 4개의 json data에 접근하여 해당 정보를 로컬 스토리지로 올리는 역할
+
+// 작품 정보 저장
 fetch('http://localhost:8080/data/products.json')
   .then((response) => response.json())
   .then((data) => {
@@ -22,6 +25,7 @@ let domainList = [
   'watcha',
 ];
 
+// 인기차트 정보 저장
 fetch('http://localhost:8080/data/chart.json')
   .then((response) => response.json())
   .then((data) => {
@@ -44,6 +48,7 @@ fetch('http://localhost:8080/data/chart.json')
 
 let genreList = ['romance', 'comedy', 'horror', 'sf', 'history', 'family'];
 
+// 장르별 차트 저장
 fetch('http://localhost:8080/data/genre.json')
   .then((response) => response.json())
   .then((data) => {
@@ -64,6 +69,7 @@ fetch('http://localhost:8080/data/genre.json')
 
 let editorList = ['topic1', 'topic2', 'topic3', 'topic4', 'topic5', 'topic6'];
 
+// 에디터 추천 픽 차트 저장
 fetch('http://localhost:8080/data/editor.json')
   .then((response) => response.json())
   .then((data) => {

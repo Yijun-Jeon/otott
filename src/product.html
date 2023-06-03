@@ -3,17 +3,30 @@
   <head>
     <meta charset="UTF-16" />
     <title>OTOTT</title>
+    <!-- 공통 CSS -->
     <link rel="stylesheet" href="../css/initial.css" />
+    <!-- 외부 폰트 CSS -->
+    <link
+      href="https://webfontworld.github.io/gmarket/GmarketSans.css"
+      rel="stylesheet"
+    />
+    <!-- footer CSS -->
     <link rel="stylesheet" href="../css/footer.css" />
+    <!-- product 파트 CSS -->
     <link rel="stylesheet" href="../css/product.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- 상단 고정 nav 표시를 위한 js -->
     <script src="../js/visibleBar.js"></script>
+    <!-- 검색 기능을 위한 JS -->
     <script src="../js/setHash.js"></script>
+    <!-- 작품 정보 연동을 위한 js -->
     <script src="../js/productBridge.js"></script>
+    <!-- 각종 스크롤 기능 및 버튼을 위한 js -->
+    <script src="../js/scroll.js"></script>
   </head>
 
   <body class="product-body">
-    <!------------------------------------------------------------------------------------------------------>
+    <!-- ----- 공통 네비게이션 ----- -->
     <nav id="main-navigation">
       <div class="pull-left">
         <a class="nav-logo-mini" href="main.html">
@@ -43,16 +56,15 @@
         </div>
       </div>
     </nav>
-    <!------------------------------------------------------------------------------------------------------>
-    <!--section 부분-->
+
     <section id="product_section_outer">
-      <!--보라 전체 배경-->
+      <!-- 보라 전체 배경 -->
       <article id="product_section_inner">
-        <!--하양 내부 배경-->
-        <!----간략 정보 : 작품 포스터, 평점, 작품명, 개봉연도, 방송사, 장르---->
+        <!-- 하양 내부 배경 -->
+        <!-- 간략 정보 : 작품 포스터, 평점, 작품명, 개봉연도, 방송사, 장르 -->
         <div class="product_section_first">
           <div class="product_section_first_left">
-            <!--작품 포스터-->
+            <!-- 작품 포스터 -->
             <img
               src="http://via.placeholder.com/640x480"
               class="product-img"
@@ -73,9 +85,9 @@
 
         <hr class="section_btwFirstAndSecond" />
 
-        <!--왼쪽 열 내용 : CSS로 float left-->
+        <!-- 왼쪽 열 내용 -->
         <div class="product_section_second">
-          <!----기본 정보 : 소제목 "기본 정보", 작품명, 개봉연도, 방송사, 장르, 국가, 연령제한, 줄거리---->
+          <!-- 기본 정보 : 소제목 "기본 정보", 작품명, 개봉연도, 방송사, 장르, 국가, 연령제한, 줄거리 -->
           <div class="product_section_second_info">
             <h3>기본 정보</h3>
             <br />
@@ -84,7 +96,7 @@
             <p class="product-info">작품 상세 정보</p>
           </div>
 
-          <!----별점 그래프 : 소제목 "별점 그래프", 평점, 그래프---->
+          <!-- 별점 그래프 : 소제목 "별점 그래프", 평점, 그래프 -->
           <div class="product_section_second_graph">
             <div id="graph_top" class="graph_top">
               <span class="graph_top_left">별점 그래프</span>
@@ -93,7 +105,7 @@
               </span>
             </div>
 
-            <!--그래프는 하드코딩!-->
+            <!--  그래프는 하드코딩!  -->
             <div class="graph_wrap">
               <div class="graph_main">
                 <!-- X축 -->
@@ -117,7 +129,7 @@
             </div>
           </div>
 
-          <!----리뷰---->
+          <!-- 리뷰 -->
           <div class="product_section_second_review">
             <article>
               <h3>리뷰</h3>
@@ -125,7 +137,7 @@
               <h5>모든 리뷰</h5>
             </article>
             <div class="review_wrap">
-              <!--첫번째 리뷰-->
+              <!--  첫번째 리뷰  -->
               <div class="review_item">
                 <div class="review_item_contents_wrap">
                   <div class="user_info_wrap">
@@ -176,7 +188,7 @@
                   </div>
                 </div>
               </div>
-              <!--두번째 리뷰-->
+              <!-- 두번째 리뷰 -->
               <div class="review_item">
                 <div class="review_item_contents_wrap">
                   <div class="user_info_wrap">
@@ -227,7 +239,7 @@
                   </div>
                 </div>
               </div>
-              <!--세번째 리뷰-->
+              <!-- 세번째 리뷰 -->
               <div class="review_item">
                 <div class="review_item_contents_wrap">
                   <div class="user_info_wrap">
@@ -278,7 +290,7 @@
                   </div>
                 </div>
               </div>
-              <!--네번째 리뷰-->
+              <!-- 네번째 리뷰 -->
               <div class="review_item">
                 <div class="review_item_contents_wrap">
                   <div class="user_info_wrap">
@@ -329,7 +341,7 @@
                   </div>
                 </div>
               </div>
-              <!--다섯번째 리뷰-->
+              <!-- 다섯번째 리뷰 -->
               <div class="review_item">
                 <div class="review_item_contents_wrap">
                   <div class="user_info_wrap">
@@ -384,7 +396,7 @@
           </div>
         </div>
 
-        <!----감상 가능한 곳 : 소제목 "감상 가능한 곳", 플랫폼 아이콘과 이름---->
+        <!-- 감상 가능한 곳 : 소제목 "감상 가능한 곳", 플랫폼 아이콘과 이름 -->
         <div class="product_section_third">
           <div class="product_section_third_contents">
             <div>
@@ -393,13 +405,11 @@
           </div>
         </div>
       </article>
-
-      <!-- top버튼 -->
-      <aside>
-        <a id="product_scroll_top_btn" href="" class="content_top"></a>
-      </aside>
+      <!-- ----- Top 버튼 ----- -->
+      <div id="moveTopBtn">TOP▲</div>
     </section>
-    <!--———————————————————————————————————————————————————footer 부분——————————————————————————————————————————————————-->
+
+    <!-- ----- 공통 footer ----- -->
     <footer id="footer-section">
       <div class="footer-li-left">
         <ul class="footer-listitem-left">

@@ -1,3 +1,5 @@
+// 각종 스크롤 기능 및 버튼
+
 // 1) 좌우 스크롤 기능
 function scrollLeft(subclass) {
   var width = $('.ranking-box').width(); // window 창 변경될 때마다 이동되는 범위 조절을 위한 변수

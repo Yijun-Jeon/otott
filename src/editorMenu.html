@@ -2,52 +2,56 @@
 <html>
   <head>
     <title>OTOTT</title>
+    <!-- 공통 CSS -->
     <link rel="stylesheet" href="../css/initial.css" />
+    <!-- 외부 폰트 CSS -->
+    <link
+      href="https://webfontworld.github.io/gmarket/GmarketSans.css"
+      rel="stylesheet"
+    />
+    <!-- footer CSS -->
     <link rel="stylesheet" href="../css/footer.css" />
+    <!-- menu 파트 공통 CSS -->
     <link rel="stylesheet" href="../css/menu.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- 검색 기능을 위한 JS -->
     <script src="../js/setHash.js"></script>
     <script>
+      // 스크롤 자동 기능을 위한 herf 설정 함수
       $(document).ready(function navigateToPageWithScroll() {
-        $(".menu-container a").click(function () {
+        $('.menu-container a').click(function () {
           event.preventDefault(); // 기본 동작 방지
           // 하위 태그 div의 class 속성 가져오기
-          const classList = $(this).find("div").attr("class").split(" ");
-          const pointer = classList[1];
+          const classList = $(this).find('div').attr('class').split(' ');
+          const pointer = classList[1]; // 뒷 클래스 가져오기
           //url에 pointer 해시값 추가
           window.location.href = `editorList.html#${pointer}`;
         });
       });
     </script>
     <style>
-      /* 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 메뉴 파트 */
+      /* ----- 각 메뉴 박스 -----*/
       .info-box-top.topic1:hover {
         transform: translateY(5px);
-        /* background-image: url("../images/ott-logo/netflix.png"); */
       }
 
       .info-box-top.topic2:hover {
         transform: translateY(5px);
-        /* background-image: url("../images/ott-logo/tving.png"); */
       }
 
       .info-box-top.topic3:hover {
         transform: translateY(5px);
-        /* background-image: url("../images/ott-logo/watcha.png"); */
       }
       .info-box-bottom.topic4:hover {
         transform: translateY(5px);
-        /* background-image: url("../images/ott-logo/wavve.png"); */
       }
 
       .info-box-bottom.topic5:hover {
         transform: translateY(5px);
-        /* background-image: url("../images/ott-logo/coupang.jpeg"); */
       }
 
       .info-box-bottom.topic6:hover {
         transform: translateY(5px);
-        /* background-image: url("../images/ott-logo/disney.png"); */
       }
 
       .info-box-text {
@@ -56,16 +60,10 @@
         font-size: 22px;
         font-weight: bold;
       }
-
-      .info-box-top:hover .info-box-text {
-        /* display: none; */
-      }
-      .info-box-bottom:hover .info-box-text {
-        /* display: none; */
-      }
     </style>
   </head>
   <body>
+    <!-- ----- 공통 네비게이션 ----- -->
     <nav id="main-navigation">
       <div class="pull-left">
         <a class="nav-logo-mini" href="main.html">
@@ -95,10 +93,12 @@
         </div>
       </div>
     </nav>
+
     <header id="main-header">
       <img class="main-logo" alt="" />
-      <!--main_image.png도 initial.css로 넣는 걸로 통일!-->
     </header>
+
+    <!-- ----- 메뉴 이동 aside ----- -->
     <section id="main-section">
       <aside id="main-top-aside">
         <ul class="aside-menu">
@@ -117,6 +117,7 @@
         </ul>
       </aside>
 
+      <!-- ----- 메뉴 box article ----- -->
       <article id="menu-article">
         <div class="menu-container top-container">
           <a href="editorList.html">
@@ -161,6 +162,8 @@
         </div>
       </article>
     </section>
+
+    <!-- ----- 공통 footer ----- -->
     <footer id="footer-section">
       <div class="footer-li-left">
         <ul class="footer-listitem-left">

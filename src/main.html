@@ -2,18 +2,31 @@
 <html>
   <head>
     <title>OTOTT</title>
+    <!-- 공통 CSS -->
     <link rel="stylesheet" href="../css/initial.css" />
+    <!-- footer CSS -->
     <link rel="stylesheet" href="../css/footer.css" />
+    <!-- 외부 폰트 CSS -->
+    <link
+      href="https://webfontworld.github.io/gmarket/GmarketSans.css"
+      rel="stylesheet"
+    />
+
+    <!-- 데이터 로컬 스토리지 저장을 위한 js -->
     <script type="module" src="../js/localStorage.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- 각종 스크롤 기능 및 버튼을 위한 js -->
     <script src="../js/scroll.js"></script>
+    <!-- 통합 차트 정보 자동 반영을 위한 js -->
     <script src="../js/mainApply.js"></script>
+
+    <!-- 인기차트 해당 작품 클릭 시 product.html 정보 갱신을 위한 href 설정 함수 -->
     <script>
       $(document).ready(function () {
-        $(".rank").click(function () {
+        $('.rank').click(function () {
           event.preventDefault(); // 기본 동작 방지
           // 하위 태그 div의 class 속성 가져오기
-          var title = $(this).find(".title-text").text();
+          var title = $(this).find('.title-text').text();
           window.location.href = `product.html#${title}`;
         });
       });
@@ -26,6 +39,7 @@
       footer {
         background-color: white;
       }
+
       #main-nav {
         display: inline-block;
         background-color: rgb(38, 20, 61);
@@ -239,35 +253,16 @@
     </style>
   </head>
   <body>
+    <!-- ----- 공통 네비게이션 ----- -->
     <nav id="main-nav">
       <div class="pull-left">
         <a class="nav-logo-mini" href="main.html">
           <span><img class="otott_logo" alt="" /></span>
         </a>
       </div>
-      <!--<div class="pull-right">
-        <ul class="nav-menu">
-          <li class="nav-menu-item">
-            <a class="nav-menu-title" href="main.html">ALL</a>
-          </li>
-          <li class="nav-menu-item">
-            <a class="nav-menu-title" href="ottMenu.html">OTT별</a>
-          </li>
-          <li class="nav-menu-item">
-            <a class="nav-menu-title" href="genreMenu.html">장르별</a>
-          </li>
-          <li class="nav-menu-item">
-            <a class="nav-menu-title" href="editorMenu.html">Editor's Pick</a>
-          </li>
-        </ul>
-        <div class="nav-search-bar">
-          <form id="search-form">
-            <input type="text" class="input-search" />
-            <input type="submit" class="input-search-submit" value="검색" />
-          </form>
-        </div>
-      </div>-->
     </nav>
+
+    <!-- ----- 로고 및 소개글 메인 헤더 ----- -->
     <header id="main-header">
       <div class="upper-main-header">
         <div id="main-header-logo">
@@ -299,10 +294,14 @@
         </div>
       </div>
     </header>
+
+    <!-- ----- 메뉴 소개 section ----- -->
     <section id="main-section1">
       <h3 class="main-section-explanation">
         흩어져있어 잘 몰랐던 OTT 작품을 쉽게 경험해봐요.
       </h3>
+
+      <!-- ----- 메뉴 이동 aside ----- -->
       <aside id="main-top-aside">
         <ul class="aside-ott">
           <li class="aside-logo-item">
@@ -340,12 +339,14 @@
         </ul>
       </aside>
     </section>
+
+    <!-- ----- 통합 차트 section ----- -->
     <section id="main-section2">
       <article id="chart-article">
         <h3 class="chart-title">실시간 통합 TOP20</h3>
         <div class="chart-container">
           <ul id="chart" class="chart-list-container">
-            <!-- 자동화된 파트 -->
+            <!-- mainApply.js 를 통해 자동으로 삽입되는 파트 -->
             <!-- <a href="product.html">
               <li class="rank">
                 <div class="pull-left-rank">
@@ -366,8 +367,12 @@
           </ul>
         </div>
       </article>
+
+      <!-- ----- Top 버튼 ----- -->
       <div id="moveTopBtn">TOP▲</div>
     </section>
+
+    <!-- ----- 공통 footer ----- -->
     <footer id="footer-section">
       <div class="footer-li-left">
         <ul class="footer-listitem-left">

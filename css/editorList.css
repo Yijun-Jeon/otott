@@ -3,7 +3,7 @@
   padding-bottom: 50px;
 }
 
-/*하위바 하위바 하위바 하위바 하위바 하위바 하위바 */
+/* 하위바 */
 .submenu-list {
   position: relative;
   margin: 0px 15%;
@@ -12,14 +12,13 @@
 
   display: flex;
   justify-content: flex-start; /* 왼쪽 정렬 */
-  /*align-items: center; 해당 부분의 경우 고정되지 않고 스크롤에 따라 위치 변함*/
   height: 20vh;
 
   /*다음줄 이동*/
   flex-wrap: wrap; /*flex 컨테이너 내의 item들이 여러 줄에 걸쳐 배치되도록*/
 }
 
-/*하위바 버튼*/
+/* 하위바 버튼 */
 .submenu-list #openSubmenu {
   display: flex;
   align-items: center;
@@ -58,12 +57,12 @@
   font-size: 14px;
 }
 
-/*하위바 누르기 전 초기화 하기 위한 클래스*/
+/* 하위바 누르기 전 초기화 하기 위한 클래스 */
 .hide {
   display: none;
 }
 
-/*article section article section article section article section*/
+/* article section */
 .ranking-box {
   position: relative;
   background-color: white;

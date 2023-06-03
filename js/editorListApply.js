@@ -1,3 +1,5 @@
+// 에디터 추천 픽 차트 정보를 반영하는 역할
+
 let topicList = ['topic1', 'topic2', 'topic3', 'topic4', 'topic5', 'topic6'];
 
 // 문서의 로드가 완료되었을 때 실행 처리

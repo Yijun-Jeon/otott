@@ -1,3 +1,5 @@
+// 검색한 작품 정보를 href로 설정해주는 역할
+
 $(document).ready(function () {
   // 기본 폼 제출 동작 제거
   document

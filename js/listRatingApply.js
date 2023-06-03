@@ -1,10 +1,12 @@
+// ott별 평점순 인기 차트 정보를 반영하는 역할
+
 let domainList = ['netflix', 'tving', 'watcha', 'wavve', 'coupang', 'disney'];
 let products = [];
 // 문서의 로드가 완료되었을 때 실행 처리
 $(document).ready(function () {
   for (var i = 0; i < 6; i++) {
-    // 각 ott별 차트 1~20위까지의 요소 html 자동 삽입
-    // 1~20위까지의 요소 내용 로컬 스토리지 기반 자동 반영
+    // 각 ott별 차트 1~10위까지의 요소 html 자동 삽입
+    // 1~10위까지의 요소 내용 로컬 스토리지 기반 자동 반영
     let products = [];
     for (var j = 1; j <= 10; j++) {
       var productId = domainList[i] + '-' + j;
@@ -12,6 +14,7 @@ $(document).ready(function () {
       var productInfo = JSON.parse(localStorage.getItem(product.title));
       products.push(productInfo);
 
+      // 평점 높은 순으로 재정렬
       products = products.sort((a, b) => {
         var arating = a.rating;
         var brating = b.rating;

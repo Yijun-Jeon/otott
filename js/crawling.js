@@ -1,3 +1,5 @@
+// 인기차트와 작품 정보를 크롤링 하는 역할
+
 const { Builder, By, Key, until } = require('selenium-webdriver'); //모듈 불러오기
 const { Navigation } = require('selenium-webdriver/lib/webdriver');
 const chrome = require('selenium-webdriver/chrome');

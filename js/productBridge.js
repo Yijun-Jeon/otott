@@ -1,3 +1,5 @@
+// 로컬 스토리지애 등록된 작품 정보를 product.html과 연동하는 역할
+
 OTTS = {
   넷플릭스: 'netflix',
   티빙: 'tving',
@@ -21,6 +23,7 @@ $(document).ready(function () {
   $('.product-infoTitle').html(product.infoTitle.replaceAll('\n', '<br />'));
   $('.product-info').text(product.info);
 
+  // 감상 가능한 ott 목록 div 자동 삽입
   product.ottList.forEach((element) => {
     ottElement = `<div class="product_section_third_platform">
                 <a

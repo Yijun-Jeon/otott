@@ -1,3 +1,5 @@
+// 장르별 시청순 차트 정보를 반영하는 역할
+
 let genreList = ['romance', 'comedy', 'horror', 'sf', 'history', 'family'];
 
 // 문서의 로드가 완료되었을 때 실행 처리

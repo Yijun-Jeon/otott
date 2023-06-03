@@ -2,8 +2,8 @@
   background-color: rgb(38, 20, 61);
 }
 
-/*---section 부분-------------*/
-/*--큰 틀 : outer, inner--*/
+/*-- section 부분 --*/
+/*-- 큰 틀 : outer, inner --*/
 #product_section_outer {
   background-color: rgb(38, 20, 61);
   height: 1900px;
@@ -19,7 +19,7 @@
   border-radius: 50px 50px 50px 50px;
 }
 
-/*--작은 틀 : first, second, third--*/
+/*-- 작은 틀 : first, second, third --*/
 .product_section_first {
   padding: 6% 10%;
   height: 200px;
@@ -45,7 +45,7 @@
   height: 640px;
 }
 
-/*--first : left, right--*/
+/*-- first section: left, right --*/
 .product_section_first_left {
   float: left;
   margin-left: 50px;
@@ -55,12 +55,10 @@
   margin-left: 230px;
   margin-top: 30px;
 }
-/*--first_left--*/
 .product-img {
   width: 150px;
   height: 200px;
 }
-/*--first_right--*/
 .icon-star {
   width: 15px;
   height: 15px;
@@ -70,7 +68,7 @@
   font-size: xx-large;
 }
 
-/*--second : info, graph, review--*/
+/*-- second section: info, graph, review --*/
 .product_section_second_info {
   padding: 6% 0;
   max-width: 520px;
@@ -86,7 +84,7 @@
   padding: 6% 0;
   margin-bottom: 20px;
 }
-/*--second_graph--*/
+/*-- 별점 그래프 --*/
 .graph_top {
   padding-bottom: 6%;
 }
@@ -155,7 +153,7 @@
   background: #f1cb7e;
 }
 
-/*--second_review--*/
+/*-- second_review --*/
 .review_wrap {
   width: 500px;
   height: 390px;
@@ -220,7 +218,7 @@
   height: 65px;
 }
 
-/*--third : contents(sub-title, platform)--*/
+/*-- third section: contents(sub-title, platform) --*/
 .product_section_third_contents {
   display: block;
 }
@@ -252,7 +250,19 @@
   margin-left: 10px;
 }
 
-/*---footer 부분--------------*/
+/*-- footer 부분 --*/
 #footer-section {
   background-color: white;
+}
+
+#moveTopBtn {
+  position: fixed;
+  bottom: 10%;
+  right: 6.5%;
+  color: white;
+}
+
+#moveTopBtn:hover {
+  cursor: pointer;
+  color: rgb(120, 89, 161);
 }
