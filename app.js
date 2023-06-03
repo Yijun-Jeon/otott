@@ -1,5 +1,5 @@
 // 아래 크롤링 옵션을 주석을 통해 조절 가능
-var startCrawling = require('./js/crawling.js');
+//var startCrawling = require('./js/crawling.js');
 
 var express = require('express');
 var http = require('http');

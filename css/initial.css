@@ -1,23 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: ‘맑은 고딕’, ‘Malgun Gothic’, Gothic, sans-serif;
+  font-family: 'GmarketSans', ‘Malgun Gothic’, Gothic, sans-serif;
 }
 a {
   color: black;
   text-decoration: none;
-  font-family: 'GmarketSans';
 }
 
-p {
-  font-family: 'GmarketSans';
-}
-span {
-  font-family: 'GmarketSans';
-}
-h3 {
-  font-family: 'GmarketSans';
-}
 li {
   list-style: none;
 }
@@ -34,7 +24,7 @@ body {
 }
 /* 고정바  */
 #main-navigation {
-  /*border-bottom: 1px solid black;*/
+  border-bottom: 2px solid rgb(38, 20, 61);
   height: 80px;
   background-color: rgb(38, 20, 61);
 }
