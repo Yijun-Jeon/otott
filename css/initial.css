@@ -111,7 +111,7 @@ body {
   display: inline-block;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 890px) {
   .nav-search-bar,
   .input-search {
     display: none;

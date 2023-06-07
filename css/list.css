@@ -30,8 +30,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* margin-left: 50vh; */
-  transform: translateX(-20%); /*화면 크기에 상관없이 일정 간격 유지 가능*/
+  transform: translateX(-20%);
 }
 .view-review-list li {
   list-style-type: none;

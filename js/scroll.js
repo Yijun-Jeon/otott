@@ -1,6 +1,7 @@
-// 각종 스크롤 기능 및 버튼
+// 각종 스크롤 기능 및 버튼 관련 함수 및 적용 파일
 
-// 1) 좌우 스크롤 기능
+// ############################################# 좌우 스크롤 #############################################
+// 리스트 파트 왼쪽 스크롤 기능 담당 함수
 function scrollLeft(subclass) {
   var width = $('.ranking-box').width(); // window 창 변경될 때마다 이동되는 범위 조절을 위한 변수
   var container = $(`#${subclass}`).find('.ranking-listitem');
@@ -8,6 +9,7 @@ function scrollLeft(subclass) {
   container.animate({ scrollLeft: scrollPosition - width }, 500);
 }
 
+// 리스트 파트 오른쪽 스크롤 기능 담당 함수
 function scrollRight(subclass) {
   var width = $('.ranking-box').width();
   var container = $(`#${subclass}`).find('.ranking-listitem');
@@ -15,6 +17,7 @@ function scrollRight(subclass) {
   container.animate({ scrollLeft: scrollPosition + width }, 500);
 }
 
+// 리스트 파트 스크롤 버튼 css 동적 변경
 $(document).ready(function () {
   $('.btn-scroll-left').hover(
     function () {
@@ -49,17 +52,14 @@ $(document).ready(function () {
   });
 });
 
-//-------------------------------------------------------------//
-// function scrollDown() {
-//   const windowHeight = $(window).height();
-//   $("html, body").animate({ scrollTop: "+=" + windowHeight }, 500);
-// }
-
+// ############################################# main 파트 하단 스크롤 #############################################
+// main 파트 스크롤 다운 기능 담당 함수
 function scrollDown(sectionId) {
   const sectionOffset = $(sectionId).offset().top;
   $('html, body').animate({ scrollTop: sectionOffset }, 500);
 }
 
+// main 파트 스크롤 버튼 클릭 이벤트 지정 및 css 동적 변경
 $(document).ready(function () {
   $('.btn-scroll-down').on('click', function () {
     scrollDown('#main-section1');
@@ -75,26 +75,14 @@ $(document).ready(function () {
   );
 });
 
+// main 파트 통합 차트 메뉴 클릭 이벤트 지정
 $(document).ready(function () {
   $('#all-chart').on('click', function () {
     scrollDown('#main-section2');
   });
 });
 
-//-------------------------------------------------------------//
-// 3) Top Button 기능
-$(document).ready(function () {
-  const $topBtn = document.getElementById('moveTopBtn');
-
-  // 버튼 클릭 시 맨 위로 이동
-  document.getElementById('moveTopBtn').onclick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-});
-
-//-------------------------------------------------------------//
-
-// 4) 하위바 펼치기 기능
+// ############################################# 하위바 관련 함수 #############################################
 
 // 줄바꿈 이벤트 감지(white-space: normal 속성으로 줄바꿈 발생 이벤트 감지 어려움)
 // 대상 요소 크기 변경 감지
@@ -103,6 +91,7 @@ $(document).ready(function () {
 let resizeObserver; // 전역변수로 설정
 let lis; // li 요소들을 담을 변수
 
+// 하위바 접기 기능 담당 함수
 function initSubmenu() {
   const lineElement = document.querySelector('.submenu-list');
   try {
@@ -131,6 +120,7 @@ function initSubmenu() {
   resizeObserver.observe(lineElement);
 }
 
+// 하위바 펼치기 기능 담당 함수
 function openSubmenu() {
   const submenu = $('.submenu-list').find('li.hide');
 
@@ -143,6 +133,7 @@ function openSubmenu() {
   }
 }
 
+// 하위바 버튼 클릭시 이벤트 핸들링
 $(document).ready(function () {
   initSubmenu();
   $(window).resize(function () {
@@ -155,4 +146,16 @@ $(document).ready(function () {
       return;
     }
   });
+});
+
+// ############################################# Top 버튼 #############################################
+
+// Top Button 기능
+$(document).ready(function () {
+  const $topBtn = document.getElementById('moveTopBtn');
+
+  // 버튼 클릭 시 맨 위로 이동
+  document.getElementById('moveTopBtn').onclick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 });

@@ -1,0 +1,218 @@
+body {
+  background-color: rgb(38, 20, 61);
+}
+
+footer {
+  background-color: white;
+}
+
+#main-nav {
+  display: inline-block;
+  background-color: rgb(38, 20, 61);
+}
+
+#main-header {
+  height: 76.5vh;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(38, 20, 61);
+}
+
+.upper-main-header {
+  height: 100%;
+  padding: 1% 3% 3% 3%;
+  display: flex;
+  margin-bottom: 1%;
+}
+
+#main-header-logo,
+#main-header-intro {
+  flex: 1;
+  width: 600px;
+}
+
+#main-header-intro {
+  padding: 7% 10%;
+}
+
+.main-intro-title {
+  color: rgb(170, 137, 213);
+  font-size: 35px;
+  margin: 30px 0;
+}
+
+.main-intro-explanation {
+  color: white;
+  font-size: 20px;
+}
+
+#main-header-button {
+  margin-top: auto;
+}
+
+.btn-scroll-down {
+  background-color: transparent;
+  border: none;
+}
+
+.arrow {
+  border: solid rgb(170, 137, 213);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+#main-section1 {
+  background-color: white;
+  height: 100vh;
+}
+
+#main-section2 {
+  background-color: rgba(254, 253, 253, 0.95);
+  height: 100vh;
+}
+
+.main-section-explanation {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  margin-bottom: 2%;
+}
+
+.aside-menu,
+.aside-ott {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ott-logo-item {
+  float: left;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside-menu {
+  margin-top: 5%;
+}
+
+.aside-menu-item {
+  float: left;
+  position: relative;
+  background-color: rgb(120, 89, 161);
+  border-radius: 20px;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside-menu-item a {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.aside-menu-item:hover {
+  background: rgb(170, 137, 213);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/*chart chart chart*/
+.chart-title {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  margin-bottom: 2%;
+}
+
+.chart-container {
+  margin: 0 25%;
+  height: 550px;
+  overflow: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* Chrome, Safari 등 웹킷 기반 브라우저 */
+.chart-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+.chart-container {
+  scrollbar-width: none;
+}
+
+/* Edge, Internet Explorer 11 */
+.chart-container {
+  -ms-overflow-style: none;
+}
+
+.rank {
+  background-color: rgb(120, 89, 161);
+  height: 50px;
+  padding: 5px;
+  margin: 10px 30px;
+  border-radius: 20px;
+  color: white;
+  overflow: hidden;
+}
+
+.rank:hover {
+  background: rgb(170, 137, 213);
+}
+
+.pull-left-rank {
+  height: 50px;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+.pull-right-rank {
+  height: 50px;
+  float: right;
+  display: flex;
+  align-items: center;
+}
+.poster-img {
+  width: 40px;
+  border-radius: 10px;
+  margin: 0px 10px;
+}
+.rank-number {
+  margin: 0px 10px;
+}
+
+#moveTopBtn {
+  position: fixed;
+  bottom: 10%;
+  right: 6.5%;
+  color: black;
+}
+
+#moveTopBtn:hover {
+  cursor: pointer;
+  color: rgb(170, 137, 213);
+}
