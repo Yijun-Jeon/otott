@@ -53,5 +53,7 @@ OTOTT 웹사이트에서 제공할 서비스는 다음과 같습니다.
 쿠팡플레이 : https://www.coupangplay.com/
 
 
+
+Created by 전이준, 유현지, 이수민
 디즈니+ : https://www.disneyplus.com/ko-kr
 
