@@ -1,4 +1,4 @@
-# <img src="https://hackmd.io/_uploads/ry6dynWA2.png"  height="30"> OTOTT
+# <img src="https://user-images.githubusercontent.com/89140546/265250102-02d8cb2c-e63c-4ab7-b340-6d7c2979817b.png"  height="30"> OTOTT
 
 > 플랫폼 통합 서비스 제공 플랫폼
 > <SKKU 웹프로그래밍실습 수업 프로젝트>
@@ -11,7 +11,7 @@
     * [차트 페이지](#차트-페이지)
     * [작품 페이지](#작품-페이지)
 * [세부 특징](#세부-특징)
-    * [프론트엔드](#클라이언트)
+    * [프론트엔드](#프론트엔드)
     * [백엔드](#백엔드)
 * [참고 사이트](#참고-사이트)
 * [개발 팀원](#개발-팀원)
@@ -38,8 +38,7 @@ OTOTT 웹사이트에서 제공할 서비스는 다음과 같습니다.
 * 개별 작품을 감상 가능한 OTT 플랫폼 리스트 제공
 
 ### 메인 페이지
-
-![](https://hackmd.io/_uploads/HJIgwh-Rn.gif)
+<img src="https://user-images.githubusercontent.com/89140546/265250105-d8a17ecc-6a79-46ae-a97d-a3e74915ae42.gif">
 
 
 OTOTT 시작 메인 페이지입니다. 소개글 및 목차 페이지와 OTT & 장르 구분없는 통합 인기차트 확인이 가능합니다
@@ -47,22 +46,19 @@ OTOTT 시작 메인 페이지입니다. 소개글 및 목차 페이지와 OTT & 
 
 
 ### 메뉴 페이지
-![](https://hackmd.io/_uploads/BkkdD2-02.gif)
-
+<img src="https://user-images.githubusercontent.com/89140546/265250242-e5fcb42e-f1de-47da-bc69-d9e9d4d9d8c5.gif">
 
 OTT별, 장르별, Editor‘s pick 목차 별로 간편하게 이동할 수 있는 메뉴 화면입니다.각 Menu 아래의 박스 선택 시, 해당 페이지로 넘어가면서 해당 박스별 순위차트 위치로 자동 스크롤링 됩니다.
 
 
 ### 차트 페이지
-
-![](https://hackmd.io/_uploads/HJSoq3-A2.gif)
-
+<img src="https://user-images.githubusercontent.com/89140546/265250707-b15206f7-347d-4c4f-bca9-0a6c3dbf7203.gif">
 
 시청순 / 평점순으로 OTT별, 장르별 TOP10 순위를 확인할 수 있는 페이지입니다. 키노라이츠의 차트 데이터를 크롤링한 정보가 자동으로 반영됩니다. 페이지 상단 selection-box 클릭 시 해당 item 구간으로 이동합니다.
 
 
 ### 작품 페이지
-![](https://hackmd.io/_uploads/HJP6O3-C3.png)
+<img width="279" alt="image" src="https://github.com/Yijun-Jeon/otott/assets/89140546/3a37769d-61ce-47d7-a5d6-3dbada5f0f07">
 
 각 프로그램 정보를 보여주는 페이지입니다. 왓챠피디아 데이터를 크롤링한 정보가 자동으로 반영됩니다.작품의 기본 정보 및 포스터, 별점 그래프, 감상 가능한 곳, 리뷰로 구성되어 있습니다. 
 
